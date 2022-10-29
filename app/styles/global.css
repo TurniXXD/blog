@@ -1,0 +1,93 @@
+@media (prefers-color-scheme:dark) {
+  html {
+    color-scheme: dark
+  }
+
+  body {
+    color: #7dd8ff;
+    overflow: hidden;
+    background: #0f172a
+  }
+}
+
+.h-more {
+  height: 37.75rem;
+}
+
+.kek * {
+  transition: all .3s ease-in-out;
+}
+
+.t-01 {
+  top: 0.1rem;
+}
+
+.t-175 {
+  top: 1.75rem;
+}
+
+.b-01 {
+  bottom: 0.1rem;
+}
+
+.b-175 {
+  bottom: 1.75rem;
+}
+
+.l-01 {
+  left: 0.1rem;
+}
+
+.l-175 {
+  left: 1.75rem;
+}
+
+.r-01 {
+  right: 0.1rem;
+}
+
+.b-175 {
+  bottom: 1.75rem;
+}
+
+.mobile-menu-corner-tl {
+  width: 1rem;
+  height: 1.6rem;
+  left: 1.8rem;
+  top: 1.5rem;
+  rotate: 45deg;
+}
+
+.mobile-menu-corner-tr {
+  width: 1rem;
+  height: 1.6rem;
+  right: 1.8rem;
+  top: 1.5rem;
+  rotate: 135deg;
+}
+
+.mobile-menu-corner-br {
+  width: 1rem;
+  height: 1.6rem;
+  right: 1.8rem;
+  bottom: 1.5rem;
+  rotate: -135deg;
+
+}
+
+.mobile-menu-corner-bl {
+  width: 1rem;
+  height: 1.6rem;
+  left: 1.8rem;
+  bottom: 1.5rem;
+  rotate: -45deg;
+
+}
+
+[class*=flex-] {
+  display: flex
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
