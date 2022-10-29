@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { MetaFunction } from "@remix-run/node";
+//import { XTerm } from 'xterm-for-react'
 import {
   Links,
   LiveReload,
@@ -9,11 +10,16 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Navigation from "./components/navigation";
+import Terminal from "./components/terminal";
 
-import styles from "~/styles/tailwind.css"
+import tailwindcss from "~/styles/tailwind.css"
+import terminalcss from "node_modules/xterm/css/xterm.css"
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }]
+  return [
+    { rel: "stylesheet", href: tailwindcss },
+    { rel: "stylesheet", href: terminalcss }
+  ]
 }
 
 export const meta: MetaFunction = () => ({
@@ -26,11 +32,13 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false)
   const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false)
+
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
+        <script src="xterm.js"></script>
       </head>
       <body className="h-screen">
         <div className="absolute t-01 l-01 bg-gray-900 border-r-2 border-r-sky-400 h-8 w-8 rotate-45"></div>
@@ -59,10 +67,11 @@ export default function App() {
           <div className="absolute mobile-menu-corner-br bg-gray-900 border-r-2 border-r-sky-400"></div>
           <div className="absolute mobile-menu-corner-bl bg-gray-900 border-r-2 border-r-sky-400"></div>
           <div className="p-4">
+            {/* //Need to fix this to h-full somehow */}
             <div className={`grid content-end bg-gray-900 border-2 border-sky-400 ${mobileMenuOpen && 'h-more'}`}>
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}
-                {mobileTerminalOpen && <div>kek</div>}
+                {mobileTerminalOpen && <Terminal/>}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">
@@ -71,7 +80,7 @@ export default function App() {
                     mobileNavigationOpen && setMobileNavigationOpen(false)
                     setMobileTerminalOpen(true)
                   }}>
-                    <span className="text-gray-900">Bash</span>
+                    <img src="/svg/nav-terminal.svg" className="scale-75" />
                   </div>
                   {mobileMenuOpen && (
                     <div className="flex-col w-6/12 h-20 bg-sky-400 justify-center items-center" onClick={() => {
@@ -79,7 +88,7 @@ export default function App() {
                       mobileNavigationOpen && setMobileNavigationOpen(false)
                       mobileTerminalOpen && setMobileTerminalOpen(false)
                     }}>
-                      <span className="text-gray-900">Cross</span>
+                      <img src="/svg/nav-cross.svg" className="scale-75" />
                     </div>
                   )}
                   <div className="flex-col w-3/12 h-20 bg-sky-400 justify-center items-center pl-1" onClick={() => {
@@ -87,7 +96,7 @@ export default function App() {
                     mobileTerminalOpen && setMobileTerminalOpen(false)
                     setMobileNavigationOpen(true)
                   }}>
-                    <span className="text-gray-900">Menu</span>
+                    <img src="/svg/nav-menu.svg" className="scale-75" />
                   </div>
                 </div>
               </div>

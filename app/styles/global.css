@@ -3,10 +3,13 @@
     color-scheme: dark
   }
 
+  html,
   body {
     color: #7dd8ff;
     overflow: hidden;
-    background: #0f172a
+    background: #0f172a;
+    margin: 0;
+    height: 100%;
   }
 }
 
