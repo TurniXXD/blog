@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import type { MetaFunction } from "@remix-run/node";
-//import { XTerm } from 'xterm-for-react'
 import {
   Links,
   LiveReload,
@@ -10,15 +9,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Navigation from "./components/navigation";
-import Terminal from "./components/terminal";
+import Terminal from "./components/terminal/terminal";
 
 import tailwindcss from "~/styles/tailwind.css"
-import terminalcss from "node_modules/xterm/css/xterm.css"
 
 export function links() {
   return [
     { rel: "stylesheet", href: tailwindcss },
-    { rel: "stylesheet", href: terminalcss }
   ]
 }
 
@@ -32,6 +29,7 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false)
   const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false)
+  const [focusOnInput, setFocusOnInput] = useState(false)
 
   return (
     <html lang="en">
@@ -57,8 +55,8 @@ export default function App() {
               kek
             </div>
           </div>
-          <div className="hidden sm:grid col-span-3 border-2 border-sky-400 p-4">
-            kek
+          <div className="hidden sm:grid col-span-3 border-2 border-sky-400 p-4 overflow-y-scroll" onClick={() => setFocusOnInput(true)}>
+            <Terminal focusOnInput={focusOnInput}/>
           </div>
         </div>
         <div className={`kek block absolute bottom-0 sm:hidden w-full p-4`}>
@@ -71,7 +69,7 @@ export default function App() {
             <div className={`grid content-end bg-gray-900 border-2 border-sky-400 ${mobileMenuOpen && 'h-more'}`}>
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}
-                {mobileTerminalOpen && <Terminal/>}
+                {mobileTerminalOpen && <Terminal focusOnInput={focusOnInput}/>}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">

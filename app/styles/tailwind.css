@@ -563,6 +563,34 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  
 }
+.container {
+  width: 100%
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px
+  }
+}
 .absolute {
   position: absolute
 }
@@ -577,6 +605,10 @@ video {
 }
 .row-span-4 {
   grid-row: span 4 / span 4
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
 }
 .block {
   display: block
@@ -610,6 +642,9 @@ video {
 }
 .w-6\/12 {
   width: 50%
+}
+.flex-auto {
+  flex: 1 1 auto
 }
 .rotate-45 {
   --tw-rotate: 45deg;
@@ -652,6 +687,12 @@ video {
 }
 .gap-4 {
   gap: 1rem
+}
+.gap-2 {
+  gap: 0.5rem
+}
+.overflow-y-scroll {
+  overflow-y: scroll
 }
 .border-2 {
   border-width: 2px
@@ -705,6 +746,14 @@ video {
 .pl-1 {
   padding-left: 0.25rem
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px
+}
 @media (min-width: 640px) {
   .sm\:col-span-3 {
     grid-column: span 3 / span 3
@@ -717,5 +766,9 @@ video {
   }
   .sm\:hidden {
     display: none
+  }
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
   }
 }
