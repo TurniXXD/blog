@@ -11,10 +11,12 @@ import {
 import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
 
+import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "~/styles/tailwind.css"
 
 export function links() {
   return [
+    { rel: "stylesheet", href: remixImageStyles },
     { rel: "stylesheet", href: tailwindcss },
   ]
 }
@@ -36,15 +38,13 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <script src="xterm.js"></script>
       </head>
       <body className="h-screen">
-        <div className="absolute t-01 l-01 bg-gray-900 border-r-2 border-r-sky-400 h-8 w-8 rotate-45"></div>
         <div className="absolute t-01 r-01 bg-gray-900 border-b-2 border-b-sky-400 h-8 w-8 rotate-45"></div>
         <div className="absolute b-01 l-01 bg-gray-900 border-t-2 border-t-sky-400 h-8 w-8 rotate-45"></div>
         <div className="absolute b-01 r-01 bg-gray-900 border-l-2 border-l-sky-400 h-8 w-8 rotate-45"></div>
         <div className="grid grid-cols-4 grid-rows-4 gap-4 h-screen p-4">
-          <div className="col-span-4 row-span-4 sm:col-span-3 sm:row-span-3 border-2 border-sky-400">
+          <div className="col-span-4 row-span-4 sm:col-span-3 sm:row-span-3 gap-4 overflow-y-scroll scrollbar-hide">
             <Outlet />
           </div>
           <div className="hidden sm:grid row-span-4 border-2 border-sky-400 p-4">
@@ -55,7 +55,7 @@ export default function App() {
               kek
             </div>
           </div>
-          <div className="hidden sm:grid col-span-3 border-2 border-sky-400 p-4 overflow-y-scroll" onClick={() => setFocusOnInput(true)}>
+          <div className="hidden sm:grid col-span-3 border-2 border-sky-400 p-4 overflow-y-scroll scrollbar-hide" onClick={() => setFocusOnInput(true)}>
             <Terminal focusOnInput={focusOnInput}/>
           </div>
         </div>

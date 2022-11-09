@@ -21,6 +21,20 @@
   transition: all .3s ease-in-out;
 }
 
+.work-card-cover {
+  transition: all .3s ease-in-out;
+  background-color: #070e1da6;
+}
+
+.work-card:hover .work-card-cover {
+  display: block;
+}
+
+.work-card,
+.work-card * {
+  transition: all 0.3s ease-in-out;
+}
+
 .t-01 {
   top: 0.1rem;
 }
@@ -92,7 +106,7 @@
 }
 
 /*
-! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.2 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -119,6 +133,7 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
 */
 
 html {
@@ -128,6 +143,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
 }
 
 /*
@@ -594,8 +610,23 @@ video {
 .absolute {
   position: absolute
 }
+.relative {
+  position: relative
+}
 .bottom-0 {
   bottom: 0px
+}
+.top-0 {
+  top: 0px
+}
+.bottom-8 {
+  bottom: 2rem
+}
+.left-8 {
+  left: 2rem
+}
+.right-0 {
+  right: 0px
 }
 .col-span-4 {
   grid-column: span 4 / span 4
@@ -603,8 +634,14 @@ video {
 .col-span-3 {
   grid-column: span 3 / span 3
 }
+.col-span-1 {
+  grid-column: span 1 / span 1
+}
 .row-span-4 {
   grid-row: span 4 / span 4
+}
+.row-span-1 {
+  grid-row: span 1 / span 1
 }
 .my-2 {
   margin-top: 0.5rem;
@@ -612,6 +649,9 @@ video {
 }
 .block {
   display: block
+}
+.flex {
+  display: flex
 }
 .grid {
   display: grid
@@ -631,6 +671,15 @@ video {
 .h-20 {
   height: 5rem
 }
+.h-48 {
+  height: 12rem
+}
+.h-16 {
+  height: 4rem
+}
+.h-10 {
+  height: 2.5rem
+}
 .w-8 {
   width: 2rem
 }
@@ -642,6 +691,12 @@ video {
 }
 .w-6\/12 {
   width: 50%
+}
+.w-16 {
+  width: 4rem
+}
+.w-10 {
+  width: 2.5rem
 }
 .flex-auto {
   flex: 1 1 auto
@@ -657,6 +712,9 @@ video {
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr))
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
 }
 .grid-rows-4 {
   grid-template-rows: repeat(4, minmax(0, 1fr))
@@ -697,9 +755,6 @@ video {
 .border-2 {
   border-width: 2px
 }
-.border-r-2 {
-  border-right-width: 2px
-}
 .border-b-2 {
   border-bottom-width: 2px
 }
@@ -709,13 +764,12 @@ video {
 .border-l-2 {
   border-left-width: 2px
 }
+.border-r-2 {
+  border-right-width: 2px
+}
 .border-sky-400 {
   --tw-border-opacity: 1;
   border-color: rgb(56 189 248 / var(--tw-border-opacity))
-}
-.border-r-sky-400 {
-  --tw-border-opacity: 1;
-  border-right-color: rgb(56 189 248 / var(--tw-border-opacity))
 }
 .border-b-sky-400 {
   --tw-border-opacity: 1;
@@ -729,6 +783,10 @@ video {
   --tw-border-opacity: 1;
   border-left-color: rgb(56 189 248 / var(--tw-border-opacity))
 }
+.border-r-sky-400 {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(56 189 248 / var(--tw-border-opacity))
+}
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity))
@@ -736,6 +794,10 @@ video {
 .bg-sky-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(56 189 248 / var(--tw-bg-opacity))
+}
+.bg-\[\#1e1a49\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 26 73 / var(--tw-bg-opacity))
 }
 .p-4 {
   padding: 1rem
@@ -746,13 +808,27 @@ video {
 .pl-1 {
   padding-left: 0.25rem
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
 }
+.font-semibold {
+  font-weight: 600
+}
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none
 }
 @media (min-width: 640px) {
   .sm\:col-span-3 {

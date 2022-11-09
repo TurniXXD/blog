@@ -21,6 +21,20 @@
   transition: all .3s ease-in-out;
 }
 
+.work-card-cover {
+  transition: all .3s ease-in-out;
+  background-color: #070e1da6;
+}
+
+.work-card:hover .work-card-cover {
+  display: block;
+}
+
+.work-card,
+.work-card * {
+  transition: all 0.3s ease-in-out;
+}
+
 .t-01 {
   top: 0.1rem;
 }
