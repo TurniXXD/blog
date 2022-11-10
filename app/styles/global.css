@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 @media (prefers-color-scheme:dark) {
   html {
     color-scheme: dark
@@ -5,6 +7,7 @@
 
   html,
   body {
+    font-family: 'Michroma', sans-serif;
     color: #7dd8ff;
     overflow: hidden;
     background: #0f172a;
@@ -15,6 +18,10 @@
 
 .h-more {
   height: 37.75rem;
+}
+
+.skills-card:hover .skills-card-logo {
+  transform: scale(1.15);
 }
 
 .kek * {

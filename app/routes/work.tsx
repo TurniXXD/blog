@@ -1,4 +1,4 @@
-import { projects } from "~/data/projects";
+import { projects } from "~/data/models";
 import { Image } from "remix-image";
 
 export default function Work() {
@@ -13,7 +13,7 @@ export default function Work() {
           rel="noreferrer noopener nofollow"
           className="work-card h-48 grid col-span-1 row-span-1 border-2 border-sky-400"
         >
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <Image
               loaderUrl="/api/image"
               src={project.imgUrl}

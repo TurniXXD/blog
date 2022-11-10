@@ -6,6 +6,6 @@ export type Projects = {
 }
 
 export type Skills = {
-  name: string,
+  skillUrl: string,
   imgUrl: string
 }

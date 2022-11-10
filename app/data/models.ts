@@ -23,27 +23,27 @@ export const projects: Projects[] = [
 
 export const skills: Skills[] = [
   {
-    name: 'Next.js',
-    imgUrl: 'img/skills/nextjs.png',
+    skillUrl: 'https://nextjs.org/',
+    imgUrl: 'img/skills/nextjs.svg',
   },
   {
-    name: 'React.js',
-    imgUrl: 'img/skills/reactjs.png',
+    skillUrl: 'https://remix.run/',
+    imgUrl: 'img/skills/remix.svg',
   },
   {
-    name: 'Typescript',
-    imgUrl: 'img/skills/typescript.png',
+    skillUrl: 'https://www.typescriptlang.org/',
+    imgUrl: 'img/skills/typescript.svg',
   },
   {
-    name: 'Go',
-    imgUrl: 'img/skills/go.png',
+    skillUrl: 'https://go.dev/',
+    imgUrl: 'img/skills/golang.svg',
   },
   {
-    name: 'PostgreSQL',
-    imgUrl: 'img/skills/postgresql.png',
+    skillUrl: 'https://www.postgresql.org/',
+    imgUrl: 'img/skills/postgresql.svg',
   },
   {
-    name: 'Linux',
-    imgUrl: 'img/skills/linux.png',
+    skillUrl: 'https://archlinux.org/',
+    imgUrl: 'img/skills/linux.svg',
   },
 ]

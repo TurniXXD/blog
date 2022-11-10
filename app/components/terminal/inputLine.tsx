@@ -55,16 +55,15 @@ export default function InputLine({
   return (
     <div className="flex-row gap-2">
       <div className="flex-col">
-        <span className="text-sm sm:text-base">
-          [ vantuch@dev ~ ]$
-        </span>
+        <span className="text-sm">[ vantuch@dev ~ ] $</span>
       </div>
       <div className="flex-col flex-auto">
         <input
           type="text"
           disabled={disableInput}
           autoFocus={focusOnInput}
-          className="bg-gray-900 outline-none text-sm sm:text-base w-full"
+          spellCheck="false"
+          className="bg-gray-900 outline-none text-sm w-full"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)} />

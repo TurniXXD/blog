@@ -27,7 +27,6 @@ export default function Terminal({
   }, [])
 
   useEffect(() => {
-    console.log("zdar chuju")
     if (output !== '') {
       setLines((data) => {
         const dataLines = data && [...data];
