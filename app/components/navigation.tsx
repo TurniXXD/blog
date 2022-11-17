@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 export default function Navigation() {
   return (
-    <nav className="flex-col justify-around items-end p-4">
+    <nav className="flex-col items-end justify-around p-4">
       <div className="flex-row">
         <Link to="/">About</Link>
       </div>

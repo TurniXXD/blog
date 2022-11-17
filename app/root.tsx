@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import type { MetaFunction } from "@remix-run/node";
 import {
   Links,
@@ -12,13 +12,15 @@ import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
 
 import remixImageStyles from "remix-image/remix-image.css";
-import tailwindcss from "~/styles/tailwind.css"
+import tailwindcss from "./styles/tailwind.css";
+import globalcss from "./styles/global.css";
 
 export function links() {
   return [
     { rel: "stylesheet", href: remixImageStyles },
     { rel: "stylesheet", href: tailwindcss },
-  ]
+    { rel: "stylesheet", href: globalcss },
+  ];
 }
 
 export const meta: MetaFunction = () => ({
@@ -28,10 +30,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false)
-  const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false)
-  const [focusOnInput, setFocusOnInput] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
+  const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false);
+  const [focusOnInput, setFocusOnInput] = useState(false);
 
   return (
     <html lang="en">
@@ -40,60 +42,74 @@ export default function App() {
         <Links />
       </head>
       <body className="h-screen">
-        <div className="absolute t-01 r-01 bg-gray-900 border-b-2 border-b-sky-400 h-8 w-8 rotate-45"></div>
-        <div className="absolute b-01 l-01 bg-gray-900 border-t-2 border-t-sky-400 h-8 w-8 rotate-45"></div>
-        <div className="absolute b-01 r-01 bg-gray-900 border-l-2 border-l-sky-400 h-8 w-8 rotate-45"></div>
-        <div className="grid grid-cols-4 grid-rows-4 gap-4 h-screen p-4">
-          <div className="col-span-4 row-span-4 sm:col-span-3 sm:row-span-3 gap-4 overflow-y-scroll scrollbar-hide">
+        <div className="t-01 r-01 absolute h-8 w-8 rotate-45 border-b-2 border-b-sky-400 bg-gray-900"></div>
+        <div className="b-01 l-01 absolute h-8 w-8 rotate-45 border-t-2 border-t-sky-400 bg-gray-900"></div>
+        <div className="b-01 r-01 absolute h-8 w-8 rotate-45 border-l-2 border-l-sky-400 bg-gray-900"></div>
+        <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-4">
+          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3">
             <Outlet />
           </div>
-          <div className="hidden sm:grid row-span-4 border-2 border-sky-400 p-4">
-            <div className="flex-row h-full">
+          <div className="row-span-4 hidden border-2 border-sky-400 p-4 sm:grid">
+            <div className="h-full flex-row">
               <Navigation />
             </div>
-            <div className="flex-row justify-around h-full">
-              kek
-            </div>
+            <div className="h-full flex-row justify-around">kek</div>
           </div>
-          <div className="hidden sm:grid col-span-3 border-2 border-sky-400 p-4 overflow-y-scroll scrollbar-hide" onClick={() => setFocusOnInput(true)}>
-            <Terminal focusOnInput={focusOnInput}/>
+          <div
+            className="col-span-3 hidden overflow-y-scroll border-2 border-sky-400 p-4 scrollbar-hide sm:grid"
+            onClick={() => setFocusOnInput(true)}
+          >
+            <Terminal focusOnInput={focusOnInput} />
           </div>
         </div>
-        <div className={`kek block absolute bottom-0 sm:hidden w-full p-4`}>
-          <div className="absolute mobile-menu-corner-tl bg-gray-900 border-r-2 border-r-sky-400"></div>
-          <div className="absolute mobile-menu-corner-tr bg-gray-900 border-r-2 border-r-sky-400"></div>
-          <div className="absolute mobile-menu-corner-br bg-gray-900 border-r-2 border-r-sky-400"></div>
-          <div className="absolute mobile-menu-corner-bl bg-gray-900 border-r-2 border-r-sky-400"></div>
+        <div className={`kek absolute bottom-0 block w-full p-4 sm:hidden`}>
+          <div className="mobile-menu-corner-tl absolute border-r-2 border-r-sky-400 bg-gray-900"></div>
+          <div className="mobile-menu-corner-tr absolute border-r-2 border-r-sky-400 bg-gray-900"></div>
+          <div className="mobile-menu-corner-br absolute border-r-2 border-r-sky-400 bg-gray-900"></div>
+          <div className="mobile-menu-corner-bl absolute border-r-2 border-r-sky-400 bg-gray-900"></div>
           <div className="p-4">
             {/* //Need to fix this to h-full somehow */}
-            <div className={`grid content-end bg-gray-900 border-2 border-sky-400 ${mobileMenuOpen && 'h-more'}`}>
+            <div
+              className={`grid content-end border-2 border-sky-400 bg-gray-900 ${
+                mobileMenuOpen && "h-more"
+              }`}
+            >
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}
-                {mobileTerminalOpen && <Terminal focusOnInput={focusOnInput}/>}
+                {mobileTerminalOpen && <Terminal focusOnInput={focusOnInput} />}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">
-                  <div className="flex-col w-3/12 h-20 bg-sky-400 justify-center items-center pr-1" onClick={() => {
-                    setMobileMenuOpen(true)
-                    mobileNavigationOpen && setMobileNavigationOpen(false)
-                    setMobileTerminalOpen(true)
-                  }}>
+                  <div
+                    className="h-20 w-3/12 flex-col items-center justify-center bg-sky-400 pr-1"
+                    onClick={() => {
+                      setMobileMenuOpen(true);
+                      mobileNavigationOpen && setMobileNavigationOpen(false);
+                      setMobileTerminalOpen(true);
+                    }}
+                  >
                     <img src="/svg/nav-terminal.svg" className="scale-75" />
                   </div>
                   {mobileMenuOpen && (
-                    <div className="flex-col w-6/12 h-20 bg-sky-400 justify-center items-center" onClick={() => {
-                      setMobileMenuOpen(false)
-                      mobileNavigationOpen && setMobileNavigationOpen(false)
-                      mobileTerminalOpen && setMobileTerminalOpen(false)
-                    }}>
+                    <div
+                      className="h-20 w-6/12 flex-col items-center justify-center bg-sky-400"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        mobileNavigationOpen && setMobileNavigationOpen(false);
+                        mobileTerminalOpen && setMobileTerminalOpen(false);
+                      }}
+                    >
                       <img src="/svg/nav-cross.svg" className="scale-75" />
                     </div>
                   )}
-                  <div className="flex-col w-3/12 h-20 bg-sky-400 justify-center items-center pl-1" onClick={() => {
-                    setMobileMenuOpen(true)
-                    mobileTerminalOpen && setMobileTerminalOpen(false)
-                    setMobileNavigationOpen(true)
-                  }}>
+                  <div
+                    className="h-20 w-3/12 flex-col items-center justify-center bg-sky-400 pl-1"
+                    onClick={() => {
+                      setMobileMenuOpen(true);
+                      mobileTerminalOpen && setMobileTerminalOpen(false);
+                      setMobileNavigationOpen(true);
+                    }}
+                  >
                     <img src="/svg/nav-menu.svg" className="scale-75" />
                   </div>
                 </div>

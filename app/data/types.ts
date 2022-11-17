@@ -1,11 +1,11 @@
 export type Projects = {
-  name: string,
-  url: string,
-  imgUrl: string,
-  isRocket: boolean
-}
+  name: string;
+  url: string;
+  imgUrl: string;
+  isRocket: boolean;
+};
 
 export type Skills = {
-  skillUrl: string,
-  imgUrl: string
-}
+  skillUrl: string;
+  imgUrl: string;
+};
