@@ -13,12 +13,12 @@ export default function Work() {
           className="work-card col-span-1 row-span-1 grid h-48 border-2 border-sky-400"
         >
           <div className="relative overflow-hidden">
-            {/* <Image
+            <Image
               loaderUrl="/api/image"
               src={project.imgUrl}
               dprVariants={[1, 3]}
               className="w-full"
-            /> */}
+            />
             <div className="work-card-cover absolute top-0 hidden h-48 w-full">
               <span className="absolute bottom-8 left-8 text-lg font-semibold">
                 {project.name}
@@ -31,12 +31,12 @@ export default function Work() {
                 target="_blank"
                 rel="noreferrer noopener nofollow"
               >
-                {/* <Image
+                <Image
                   loaderUrl="/api/image"
                   src="img/rocket-logo.png"
                   dprVariants={[1, 3]}
                   className="h-10 w-10"
-                /> */}
+                />
               </a>
             )}
           </div>

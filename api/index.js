@@ -661,7 +661,7 @@ var projects = [
 ];
 
 // app/routes/skills.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_remix_image2 = require("remix-image"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Skills() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
     className: "grid grid-cols-2 gap-20 sm:grid-cols-3 xl:grid-cols-4",
@@ -669,7 +669,17 @@ function Skills() {
       href: skill.skillUrl,
       target: "_blank",
       rel: "noreferrer noopener nofollow",
-      className: "skills-card col-span-1 row-span-1 grid"
+      className: "skills-card col-span-1 row-span-1 grid",
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_remix_image2.Image, {
+        loaderUrl: "/api/image",
+        src: skill.imgUrl,
+        dprVariants: [1, 3],
+        className: "h-full w-full"
+      }, void 0, !1, {
+        fileName: "app/routes/skills.tsx",
+        lineNumber: 15,
+        columnNumber: 11
+      }, this)
     }, i, !1, {
       fileName: "app/routes/skills.tsx",
       lineNumber: 8,
@@ -710,7 +720,7 @@ var work_exports = {};
 __export(work_exports, {
   default: () => Work
 });
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_remix_image3 = require("remix-image"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Work() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
     className: "grid grid-cols-3 gap-4",
@@ -723,6 +733,16 @@ function Work() {
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
           className: "relative overflow-hidden",
           children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_remix_image3.Image, {
+              loaderUrl: "/api/image",
+              src: project.imgUrl,
+              dprVariants: [1, 3],
+              className: "w-full"
+            }, void 0, !1, {
+              fileName: "app/routes/work.tsx",
+              lineNumber: 16,
+              columnNumber: 13
+            }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
               className: "work-card-cover absolute top-0 hidden h-48 w-full",
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -742,7 +762,17 @@ function Work() {
               className: "absolute bottom-0 right-0 flex h-16 w-16 items-center justify-center bg-[#1e1a49]",
               href: "https://www.prorocketeers.com/",
               target: "_blank",
-              rel: "noreferrer noopener nofollow"
+              rel: "noreferrer noopener nofollow",
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_remix_image3.Image, {
+                loaderUrl: "/api/image",
+                src: "img/rocket-logo.png",
+                dprVariants: [1, 3],
+                className: "h-10 w-10"
+              }, void 0, !1, {
+                fileName: "app/routes/work.tsx",
+                lineNumber: 34,
+                columnNumber: 17
+              }, this)
             }, void 0, !1, {
               fileName: "app/routes/work.tsx",
               lineNumber: 28,
@@ -775,7 +805,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "aa187372", entry: { module: "/build/entry.client-5URMFCPQ.js", imports: ["/build/_shared/chunk-KV4EBUZQ.js", "/build/_shared/chunk-3CPB4T5C.js", "/build/_shared/chunk-42Z7WWMI.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-Q6CE6GS2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-SPOYC2TE.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-7LF5FQVX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-LKWNMIK5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-3DT23N4J.js", imports: ["/build/_shared/chunk-J5GBIGUK.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-JKWJJXW7.js", imports: ["/build/_shared/chunk-J5GBIGUK.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-AA187372.js" };
+var assets_manifest_default = { version: "c972c5bf", entry: { module: "/build/entry.client-5URMFCPQ.js", imports: ["/build/_shared/chunk-KV4EBUZQ.js", "/build/_shared/chunk-3CPB4T5C.js", "/build/_shared/chunk-42Z7WWMI.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-Q6CE6GS2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-SPOYC2TE.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-7LF5FQVX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-LKWNMIK5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-XDIEZJYQ.js", imports: ["/build/_shared/chunk-U72AHZ3B.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-V5TIOPJZ.js", imports: ["/build/_shared/chunk-U72AHZ3B.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-C972C5BF.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
