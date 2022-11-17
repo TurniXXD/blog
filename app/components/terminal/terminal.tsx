@@ -6,6 +6,7 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
   const [output, setOutput] = useState("");
   const [lines, setLines] = useState<JSX.Element[]>([]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
+  const [lineKey, setLineKey] = useState(0)
 
   useEffect(() => {
     setLines((data) => {
@@ -13,12 +14,15 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
       dataLines.length < 1 &&
         dataLines.push(
           <InputLine
+            key={lineKey}
             focusOnInput={focusOnInput}
+            output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}
             setCommandHistory={setCommandHistory}
           />
         );
+      setLineKey(lineKey => lineKey + 1)
       return dataLines || [];
     });
     console.log(lines);
@@ -27,16 +31,21 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
   useEffect(() => {
     if (output !== "") {
       setLines((data) => {
+        console.log(output)
         const dataLines = data && [...data];
-        dataLines.push(<OutputLine output={output} />);
+        const isNotOutputLine = output === "no_output_line" || output === "no_output_line "
+        !isNotOutputLine && dataLines.push(<OutputLine key={lineKey} output={output} />);
         dataLines.push(
           <InputLine
+            key={isNotOutputLine ? lineKey : lineKey + 1}
             focusOnInput={focusOnInput}
+            output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}
             setCommandHistory={setCommandHistory}
           />
         );
+        setLineKey(lineKey => lineKey + 2)
         return dataLines || [];
       });
     }

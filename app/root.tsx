@@ -49,11 +49,11 @@ export default function App() {
           <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3">
             <Outlet />
           </div>
-          <div className="row-span-4 hidden border-2 border-sky-400 p-4 sm:grid">
+          <div className="row-span-4 hidden border-2 border-sky-400 sm:grid">
             <div className="h-full flex-row">
               <Navigation />
             </div>
-            <div className="h-full flex-row justify-around">kek</div>
+            <div className="h-full flex-row justify-around"></div>
           </div>
           <div
             className="col-span-3 hidden overflow-y-scroll border-2 border-sky-400 p-4 scrollbar-hide sm:grid"

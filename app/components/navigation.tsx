@@ -2,19 +2,19 @@ import { Link } from "@remix-run/react";
 
 export default function Navigation() {
   return (
-    <nav className="flex-col items-end justify-around p-4">
-      <div className="flex-row">
-        <Link to="/">About</Link>
-      </div>
-      <div className="flex-row">
-        <Link to="/work">Work</Link>
-      </div>
-      <div className="flex-row">
-        <Link to="/skills">Skills</Link>
-      </div>
-      <div className="flex-row">
-        <Link to="/contact">Contact</Link>
-      </div>
+    <nav className="flex-col items-end justify-around w-full">
+      <Link className="flex-row h-full w-full px-8 items-center" to="/">
+        <span className="text-2xl">About</span>
+      </Link>
+      <Link className="flex-row h-full w-full px-8 items-center" to="/work">
+        <span className="text-2xl">Work</span>
+      </Link>
+      <Link className="flex-row h-full w-full px-8 items-center" to="/skills">
+        <span className="text-2xl">Skills</span>
+      </Link>
+      <Link className="flex-row h-full w-full px-8 items-center" to="/contact">
+        <span className="text-2xl">Contact</span>
+      </Link>
     </nav>
   );
 }

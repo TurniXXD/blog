@@ -68,33 +68,37 @@ var import_react5 = require("react"), import_react6 = require("@remix-run/react"
 var import_react2 = require("@remix-run/react"), import_jsx_runtime = require("react/jsx-runtime");
 function Navigation() {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-    className: "flex-col items-end justify-around p-4",
+    className: "flex-col items-end justify-around w-full",
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-        className: "flex-row",
-        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
-          to: "/",
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
+        className: "flex-row h-full w-full px-8 items-center",
+        to: "/",
+        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+          className: "text-2xl",
           children: "About"
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-        className: "flex-row",
-        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
-          to: "/work",
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
+        className: "flex-row h-full w-full px-8 items-center",
+        to: "/work",
+        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+          className: "text-2xl",
           children: "Work"
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-        className: "flex-row",
-        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
-          to: "/skills",
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
+        className: "flex-row h-full w-full px-8 items-center",
+        to: "/skills",
+        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+          className: "text-2xl",
           children: "Skills"
         })
       }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-        className: "flex-row",
-        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
-          to: "/contact",
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react2.Link, {
+        className: "flex-row h-full w-full px-8 items-center",
+        to: "/contact",
+        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+          className: "text-2xl",
           children: "Contact"
         })
       })
@@ -106,18 +110,30 @@ function Navigation() {
 var import_react4 = require("react");
 
 // app/components/terminal/inputLine.tsx
-var import_react3 = require("react"), import_jsx_runtime = require("react/jsx-runtime");
+var import_react3 = require("react"), import_react_router_dom = require("react-router-dom"), import_jsx_runtime = require("react/jsx-runtime");
 function InputLine({
   focusOnInput,
+  output,
   setOutput,
   commandHistory,
   setCommandHistory
 }) {
-  let [historyLookback, setHistoryLookback] = (0, import_react3.useState)(0), [disableInput, setDisableInput] = (0, import_react3.useState)(!1), [command, setCommand] = (0, import_react3.useState)(""), handleKeyEvent = (e) => {
-    e.key === "ArrowUp" && (console.log(commandHistory), commandHistory.length !== historyLookback && (setCommand(commandHistory[historyLookback]), console.log(command), setHistoryLookback((value) => value + 1))), e.key === "ArrowDown" && (historyLookback !== 0 ? (setCommand(commandHistory[historyLookback - 1]), console.log(command), setHistoryLookback((value) => value - 1)) : setCommand("")), e.key === "Enter" && (console.log("kek"), command !== "" && (setCommandHistory((data) => {
-      let dataCommandHistory = data && [...data];
-      return dataCommandHistory.push(command), dataCommandHistory || [];
-    }), setOutput(command), setDisableInput(!0)));
+  let navigate = (0, import_react_router_dom.useNavigate)(), [historyLookback, setHistoryLookback] = (0, import_react3.useState)(0), [disableInput, setDisableInput] = (0, import_react3.useState)(!1), [command, setCommand] = (0, import_react3.useState)(""), handleOutput = (newOutput) => {
+    output === newOutput ? (console.log(output), console.log("kekek"), setOutput("x"), console.log(output), setOutput(newOutput + " "), console.log(output)) : setOutput(newOutput);
+  }, handleKeyEvent = (e) => {
+    if (e.key === "ArrowUp" && (console.log(commandHistory), commandHistory.length !== historyLookback && (setCommand(commandHistory[historyLookback]), console.log(command), setHistoryLookback((value) => value + 1))), e.key === "ArrowDown" && (historyLookback !== 0 ? (setCommand(commandHistory[historyLookback - 1]), console.log(command), setHistoryLookback((value) => value - 1)) : setCommand("")), e.key === "Enter" && (console.log("kek"), command !== "")) {
+      let commandProcessed = command.split(" ");
+      console.log(commandProcessed), setCommandHistory((data) => {
+        let dataCommandHistory = data && [...data];
+        return dataCommandHistory.push(command), dataCommandHistory || [];
+      }), commandProcessed[0] === "cd" ? commandProcessed[1] ? /.txt/g.test(commandProcessed[1]) ? commandProcessed[1] === "me.txt" ? handleOutput("me.txt is a file") : handleOutput(`Cannot find ${commandProcessed[1]}`) : commandProcessed[1] === "about" || commandProcessed[1] === "work" || commandProcessed[1] === "skills" || commandProcessed[1] === "contact" ? (navigate(commandProcessed[1] === "about" ? "/" : commandProcessed[1]), handleOutput("no_output_line")) : handleOutput(`Cannot find ${commandProcessed[1]}`) : handleOutput("No directory specified") : commandProcessed[0] === "ls" ? handleOutput(`
+          <strong>about</strong> <br/>
+          <strong>work</strong> <br/>
+          <strong>skills</strong> <br/>
+          <strong>contact</strong> <br/>
+          me.txt
+        `) : commandProcessed[0] === "cat" ? commandProcessed[1] === "me.txt" ? handleOutput("It's me") : commandProcessed[1] ? commandProcessed[1] === "about" || commandProcessed[1] === "work" || commandProcessed[1] === "skills" || commandProcessed[1] === "contact" ? handleOutput(`${commandProcessed[1]} is a directory`) : handleOutput(`Cannot find ${commandProcessed[1]}`) : handleOutput("No file specified") : handleOutput("available commands are cd, ls, cat"), setDisableInput(!0);
+    }
   };
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
     className: "flex-row gap-2",
@@ -153,7 +169,7 @@ function OutputLine({ output }) {
     className: "container my-2",
     children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
       className: "text-sm",
-      children: output
+      dangerouslySetInnerHTML: { __html: output }
     })
   });
 }
@@ -161,32 +177,35 @@ function OutputLine({ output }) {
 // app/components/terminal/terminal.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
 function Terminal({ focusOnInput }) {
-  let [output, setOutput] = (0, import_react4.useState)(""), [lines, setLines] = (0, import_react4.useState)([]), [commandHistory, setCommandHistory] = (0, import_react4.useState)([]);
+  let [output, setOutput] = (0, import_react4.useState)(""), [lines, setLines] = (0, import_react4.useState)([]), [commandHistory, setCommandHistory] = (0, import_react4.useState)([]), [lineKey, setLineKey] = (0, import_react4.useState)(0);
   return (0, import_react4.useEffect)(() => {
     setLines((data) => {
       let dataLines = data && [...data];
       return dataLines.length < 1 && dataLines.push(
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InputLine, {
           focusOnInput,
+          output,
           setOutput,
           commandHistory,
           setCommandHistory
-        })
-      ), dataLines || [];
+        }, lineKey)
+      ), setLineKey((lineKey2) => lineKey2 + 1), dataLines || [];
     }), console.log(lines);
   }, []), (0, import_react4.useEffect)(() => {
     output !== "" && setLines((data) => {
-      let dataLines = data && [...data];
-      return dataLines.push(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OutputLine, {
+      console.log(output);
+      let dataLines = data && [...data], isNotOutputLine = output === "no_output_line" || output === "no_output_line ";
+      return !isNotOutputLine && dataLines.push(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OutputLine, {
         output
-      })), dataLines.push(
+      }, lineKey)), dataLines.push(
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(InputLine, {
           focusOnInput,
+          output,
           setOutput,
           commandHistory,
           setCommandHistory
-        })
-      ), dataLines || [];
+        }, isNotOutputLine ? lineKey : lineKey + 1)
+      ), setLineKey((lineKey2) => lineKey2 + 2), dataLines || [];
     }), console.log(lines);
   }, [output]), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
     className: "p-4",
@@ -198,10 +217,10 @@ function Terminal({ focusOnInput }) {
 var remix_image_default = "/build/_assets/remix-image-WUAL5MSX.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-TOH3DJ5Y.css";
+var tailwind_default = "/build/_assets/tailwind-UDEVFV6W.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-KL3K4DJU.css";
+var global_default = "/build/_assets/global-GDUBFSJA.css";
 
 // app/root.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
@@ -248,15 +267,14 @@ function App() {
                 children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react6.Outlet, {})
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                className: "row-span-4 hidden border-2 border-sky-400 p-4 sm:grid",
+                className: "row-span-4 hidden border-2 border-sky-400 sm:grid",
                 children: [
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
                     className: "h-full flex-row",
                     children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navigation, {})
                   }),
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                    className: "h-full flex-row justify-around",
-                    children: "kek"
+                    className: "h-full flex-row justify-around"
                   })
                 ]
               }),
@@ -478,44 +496,49 @@ var import_remix_image3 = require("remix-image"), import_jsx_runtime = require("
 function Work() {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
     className: "grid grid-cols-3 gap-4",
-    children: projects.map((project, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-      href: project.url,
-      target: "_blank",
-      rel: "noreferrer noopener nofollow",
-      className: "work-card col-span-1 row-span-1 grid h-48 border-2 border-sky-400",
+    children: projects.map((project, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+      className: "relative work-card col-span-1 row-span-1 grid h-48 border-2 border-sky-400",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-          className: "relative overflow-hidden",
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+          href: project.url,
+          target: "_blank",
+          rel: "noreferrer noopener nofollow",
+          className: "overflow-hidden",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_remix_image3.Image, {
-              loaderUrl: "/api/image",
-              src: project.imgUrl,
-              dprVariants: [1, 3],
-              className: "w-full"
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+              className: "relative",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_remix_image3.Image, {
+                  loaderUrl: "/api/image",
+                  src: project.imgUrl,
+                  dprVariants: [1, 3],
+                  className: "w-full"
+                }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                  className: "work-card-cover absolute top-0 hidden h-48 w-full",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+                    className: "absolute bottom-8 left-8 text-lg font-semibold",
+                    children: project.name
+                  })
+                })
+              ]
             }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-              className: "work-card-cover absolute top-0 hidden h-48 w-full",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                className: "absolute bottom-8 left-8 text-lg font-semibold",
-                children: project.name
-              })
-            }),
-            project.isRocket && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-              className: "absolute bottom-0 right-0 flex h-16 w-16 items-center justify-center bg-[#1e1a49]",
-              href: "https://www.prorocketeers.com/",
-              target: "_blank",
-              rel: "noreferrer noopener nofollow",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_remix_image3.Image, {
-                loaderUrl: "/api/image",
-                src: "img/rocket-logo.png",
-                dprVariants: [1, 3],
-                className: "h-10 w-10"
-              })
+            i === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+              className: "-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-gray-900"
             })
           ]
         }),
-        i === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-          className: "t-01 l-01 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-gray-900"
+        project.isRocket && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+          className: "absolute bottom-0 right-0 flex h-16 w-16 items-center justify-center bg-[#1e1a49]",
+          href: "https://www.prorocketeers.com/",
+          target: "_blank",
+          rel: "noreferrer noopener nofollow",
+          children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_remix_image3.Image, {
+            loaderUrl: "/api/image",
+            src: "img/rocket-logo.png",
+            dprVariants: [1, 3],
+            className: "h-10 w-10"
+          })
         })
       ]
     }, i))
@@ -523,7 +546,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "49399d29", entry: { module: "/build/entry.client-XQGXKNWU.js", imports: ["/build/_shared/chunk-7EY3YK7A.js", "/build/_shared/chunk-YE6MABSZ.js", "/build/_shared/chunk-TFY3KWOG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-ZC57OWEJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-ZVGR6KIU.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-4NX6M6YM.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HTOXZUU6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-JRXN3B6G.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-NN6CH7PM.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-49399D29.js" };
+var assets_manifest_default = { version: "601494b6", entry: { module: "/build/entry.client-PSU6ICS3.js", imports: ["/build/_shared/chunk-VPNDLZRF.js", "/build/_shared/chunk-YE6MABSZ.js", "/build/_shared/chunk-TFY3KWOG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NP74AXKF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-ZVGR6KIU.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-4NX6M6YM.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HTOXZUU6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-JRXN3B6G.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-6VLSTVU5.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-601494B6.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
