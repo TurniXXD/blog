@@ -12,12 +12,12 @@ export default function Skills() {
           rel="noreferrer noopener nofollow"
           className="skills-card col-span-1 row-span-1 grid"
         >
-          <Image
+          {/* <Image
             loaderUrl="/api/image"
             src={skill.imgUrl}
             dprVariants={[1, 3]}
             className="h-full w-full"
-          />
+          /> */}
         </a>
       ))}
     </div>
