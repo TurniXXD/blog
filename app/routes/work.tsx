@@ -5,7 +5,7 @@ export default function Work() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {projects.map((project, i) => (
-        <div key={i} className="relative work-card col-span-1 row-span-1 grid h-48 border-2 border-sky-400">
+        <div key={i} className="relative work-card col-span-1 row-span-1 grid h-48 2xl:h-56 border-2 border-sky-400">
           <a
             href={project.url}
             target="_blank"
@@ -19,7 +19,7 @@ export default function Work() {
                 dprVariants={[1, 3]}
                 className="w-full"
               />
-              <div className="work-card-cover absolute top-0 hidden h-48 w-full">
+              <div className="work-card-cover absolute top-0 hidden h-48 2xl:h-56 w-full">
                 <span className="absolute bottom-8 left-8 text-lg font-semibold">
                   {project.name}
                 </span>

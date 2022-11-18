@@ -1,6 +1,3 @@
-// import {
-//   router
-// } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,32 +21,23 @@ export default function InputLine({
 
   const handleOutput = (newOutput: string) => {
     if (output === newOutput) {
-      console.log(output)
-      console.log("kekek")
-      setOutput("x")
-      console.log(output)
+      setOutput(commandHistory[historyLookback])
       setOutput(newOutput + " ")
-      console.log(output)
-
     } else setOutput(newOutput)
-    //setOutput(output => { if (output === newOutput) return " "; else return newOutput })
   }
 
   //on enter press add to command History and set output based on input
 
   const handleKeyEvent = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowUp") {
-      console.log(commandHistory);
       if (commandHistory.length !== historyLookback) {
         setCommand(commandHistory[historyLookback]);
-        console.log(command);
         setHistoryLookback((value) => value + 1);
       }
     }
     if (e.key === "ArrowDown") {
       if (historyLookback !== 0) {
         setCommand(commandHistory[historyLookback - 1]);
-        console.log(command);
         setHistoryLookback((value) => value - 1);
       } else {
         setCommand("");
@@ -59,7 +47,6 @@ export default function InputLine({
       console.log("kek");
       if (command !== "") {
         const commandProcessed = command.split(" ")
-        console.log(commandProcessed)
         setCommandHistory((data) => {
           const dataCommandHistory = data && [...data];
           dataCommandHistory.push(command);
@@ -82,10 +69,10 @@ export default function InputLine({
           else handleOutput(`Cannot find ${commandProcessed[1]}`);
         } else if (commandProcessed[0] === "ls") {
           const dirs = `
-          <strong>about</strong> <br/>
-          <strong>work</strong> <br/>
-          <strong>skills</strong> <br/>
-          <strong>contact</strong> <br/>
+          <a href="/"><strong>about</strong></a> <br/>
+          <a href="/work"><strong>work</strong></a> <br/>
+          <a href="/skills"><strong>skills</strong></a> <br/>
+          <a href="/contact"><strong>contact</strong></a> <br/>
           me.txt
         `
           handleOutput(dirs);
@@ -97,8 +84,10 @@ export default function InputLine({
             commandProcessed[1] === "skills" ||
             commandProcessed[1] === "contact") handleOutput(`${commandProcessed[1]} is a directory`)
           else handleOutput(`Cannot find ${commandProcessed[1]}`);
-        } else {
-          handleOutput("available commands are cd, ls, cat")
+        }
+        else if (commandProcessed[0] === "help") handleOutput("available commands are help, cd, ls, cat")
+        else {
+          handleOutput("available commands are help, cd, ls, cat")
         }
         setDisableInput(true);
       }
@@ -108,7 +97,7 @@ export default function InputLine({
   return (
     <div className="flex-row gap-2">
       <div className="flex-col">
-        <span className="text-sm">[ vantuch@dev ~ ] $</span>
+        <span className="text-xs sm:text-sm">[ vantuch@dev ~ ] $</span>
       </div>
       <div className="flex-auto flex-col">
         <input
@@ -116,7 +105,7 @@ export default function InputLine({
           disabled={disableInput}
           autoFocus={focusOnInput}
           spellCheck="false"
-          className="w-full bg-gray-900 text-sm outline-none"
+          className="w-full bg-gray-900 text-xs sm:text-sm word-spacing-lg outline-none"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)}

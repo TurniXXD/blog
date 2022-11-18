@@ -3,7 +3,8 @@ import InputLine from "./inputLine";
 import OutputLine from "./outputLine";
 
 export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
-  const [output, setOutput] = useState("");
+  const defaultOutput = "Start by typing commands. To see available commands type 'help'."
+  const [output, setOutput] = useState(defaultOutput);
   const [lines, setLines] = useState<JSX.Element[]>([]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [lineKey, setLineKey] = useState(0)
@@ -11,10 +12,11 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
   useEffect(() => {
     setLines((data) => {
       const dataLines = data && [...data];
-      dataLines.length < 1 &&
+      if (dataLines.length < 1 ) {
+        dataLines.push(<OutputLine key={lineKey} output={output} />);
         dataLines.push(
           <InputLine
-            key={lineKey}
+            key={lineKey + 1}
             focusOnInput={focusOnInput}
             output={output}
             setOutput={setOutput}
@@ -22,14 +24,15 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
             setCommandHistory={setCommandHistory}
           />
         );
-      setLineKey(lineKey => lineKey + 1)
+        setLineKey(lineKey => lineKey + 1)
+      }
       return dataLines || [];
     });
     console.log(lines);
   }, []);
 
   useEffect(() => {
-    if (output !== "") {
+    if (output !== defaultOutput) {
       setLines((data) => {
         console.log(output)
         const dataLines = data && [...data];
