@@ -39,12 +39,12 @@
 } */
 
 
-nav a span {
+.nav-link {
   transition: .3s;
   text-shadow: none;
 }
 
-nav a:hover span {
+.nav-link-hover {
   transform: scale(1.1);
   -webkit-animation: glow s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
@@ -62,6 +62,13 @@ nav a:hover span {
 
 .h-more {
   height: 37.75rem;
+}
+
+@media (max-width: 640px) {
+  .text-2xs {
+    font-size: 0.55rem;
+    line-height: 1rem;
+  }
 }
 
 .word-spacing-lg {

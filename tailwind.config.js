@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      text: {
+        '2xs': '0.55rem',
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };

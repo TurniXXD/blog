@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function InputLine({
-  focusOnInput,
   output,
   setOutput,
   commandHistory,
   setCommandHistory,
 }: {
-  focusOnInput: boolean;
   commandHistory: string[];
   setCommandHistory: React.Dispatch<React.SetStateAction<string[]>>;
   output: string;
@@ -19,6 +17,12 @@ export default function InputLine({
   const [disableInput, setDisableInput] = useState(false);
   const [command, setCommand] = useState("");
 
+  useEffect(() => document.getElementById("terminal-input")?.focus(), [])
+  useEffect(() => {
+    const terminalInput = document.getElementById("terminal-input")
+    disableInput && terminalInput?.removeAttribute('id')
+  }, [disableInput])
+
   const handleOutput = (newOutput: string) => {
     if (output === newOutput) {
       setOutput(commandHistory[historyLookback])
@@ -27,7 +31,6 @@ export default function InputLine({
   }
 
   //on enter press add to command History and set output based on input
-
   const handleKeyEvent = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowUp") {
       if (commandHistory.length !== historyLookback) {
@@ -44,7 +47,6 @@ export default function InputLine({
       }
     }
     if (e.key === "Enter") {
-      console.log("kek");
       if (command !== "") {
         const commandProcessed = command.split(" ")
         setCommandHistory((data) => {
@@ -97,15 +99,15 @@ export default function InputLine({
   return (
     <div className="flex-row gap-2">
       <div className="flex-col">
-        <span className="text-xs sm:text-sm">[ vantuch@dev ~ ] $</span>
+        <span className="text-2xs sm:text-sm">[ vantuch@dev ~ ] $</span>
       </div>
       <div className="flex-auto flex-col">
         <input
           type="text"
           disabled={disableInput}
-          autoFocus={focusOnInput}
           spellCheck="false"
-          className="w-full bg-gray-900 text-xs sm:text-sm word-spacing-lg outline-none"
+          id="terminal-input"
+          className="w-full bg-gray-900 text-2xs sm:text-sm word-spacing-lg outline-none"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)}

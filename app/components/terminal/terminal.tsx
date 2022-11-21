@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import InputLine from "./inputLine";
 import OutputLine from "./outputLine";
 
-export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
+export default function Terminal() {
   const defaultOutput = "Start by typing commands. To see available commands type 'help'."
   const [output, setOutput] = useState(defaultOutput);
   const [lines, setLines] = useState<JSX.Element[]>([]);
@@ -12,12 +12,11 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
   useEffect(() => {
     setLines((data) => {
       const dataLines = data && [...data];
-      if (dataLines.length < 1 ) {
+      if (dataLines.length < 1) {
         dataLines.push(<OutputLine key={lineKey} output={output} />);
         dataLines.push(
           <InputLine
             key={lineKey + 1}
-            focusOnInput={focusOnInput}
             output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}
@@ -41,7 +40,6 @@ export default function Terminal({ focusOnInput }: { focusOnInput: boolean }) {
         dataLines.push(
           <InputLine
             key={isNotOutputLine ? lineKey : lineKey + 1}
-            focusOnInput={focusOnInput}
             output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}

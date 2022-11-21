@@ -150,7 +150,7 @@ export default function App() {
       } y < 0.5 ? (y = 0) : (y = 1)
 
       if (y === 0) {
-        cpuStatusBarIndex !== 0 && cpuStatusBarIndex--
+        cpuStatusBarIndex > 0 && cpuStatusBarIndex--
         for (let i = cpuStatusBarIndex; i < cpuStatusBar.length; i++) {
           cpuStatusBar[i]?.classList.remove("block")
           cpuStatusBar[i]?.classList.add("hidden")
@@ -172,7 +172,7 @@ export default function App() {
       } y < 0.5 ? (y = 0) : (y = 1)
 
       if (y === 0) {
-        memStatusBarIndex !== 0 && memStatusBarIndex--
+        memStatusBarIndex > 0 && memStatusBarIndex--
         for (let i = memStatusBarIndex; i < memStatusBar.length; i++) {
           memStatusBar[i]?.classList.remove("block")
           memStatusBar[i]?.classList.add("hidden")
@@ -194,7 +194,7 @@ export default function App() {
       } y < 0.5 ? (y = 0) : (y = 1)
 
       if (y === 0) {
-        netStatusBarIndex !== 0 && netStatusBarIndex--
+        netStatusBarIndex > 0 && netStatusBarIndex--
         for (let i = netStatusBarIndex; i < netStatusBar.length; i++) {
           netStatusBar[i]?.classList.remove("block")
           netStatusBar[i]?.classList.add("hidden")
@@ -216,7 +216,7 @@ export default function App() {
       } y < 0.5 ? (y = 0) : (y = 1)
 
       if (y === 0) {
-        diskStatusBarIndex !== 0 && diskStatusBarIndex--
+        diskStatusBarIndex > 0 && diskStatusBarIndex--
         for (let i = diskStatusBarIndex; i < diskStatusBar.length; i++) {
           diskStatusBar[i]?.classList.remove("block")
           diskStatusBar[i]?.classList.add("hidden")
@@ -229,9 +229,12 @@ export default function App() {
         }
       }
     }, 1000);
+
+    document.getElementById("terminal-container")?.addEventListener("click", () => {
+      document.getElementById("terminal-input")?.focus();
+      console.log("kek")
+    });
   }, [])
-
-
 
   return (
     <html lang="en">
@@ -271,11 +274,8 @@ export default function App() {
               <div className="w-full"><Matrix /></div>
             </div>
           </div>
-          <div
-            className="col-span-3 2xl:col-span-4 hidden overflow-y-scroll border-2 border-sky-400 p-4 scrollbar-hide sm:grid"
-            onClick={() => setFocusOnInput(true)}
-          >
-            <Terminal focusOnInput={focusOnInput} />
+          <div id="terminal-container" className="col-span-3 2xl:col-span-4 hidden overflow-y-scroll border-2 border-sky-400 p-4 scrollbar-hide sm:grid">
+            <Terminal />
           </div>
         </div>
         <div className={`kek absolute bottom-0 block w-full p-4 sm:hidden`}>
@@ -291,7 +291,7 @@ export default function App() {
             >
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}
-                {mobileTerminalOpen && <Terminal focusOnInput={focusOnInput} />}
+                {mobileTerminalOpen && <Terminal />}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">
