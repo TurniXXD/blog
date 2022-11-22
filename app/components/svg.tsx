@@ -12,7 +12,7 @@ export const StatusBar = ({ id }: { id: string }) => {
 }
 
 export const Matrix = () => (
-  <svg width="267" height="141" viewBox="0 0 267 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="100%" height="auto" viewBox="0 0 267 141" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect y="63" width="6" height="6" fill="#38BDF8" />
     <rect y="27" width="6" height="6" fill="#38BDF8" />
     <rect y="99" width="6" height="6" fill="#38BDF8" />

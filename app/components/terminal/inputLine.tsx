@@ -106,8 +106,10 @@ export default function InputLine({
           type="text"
           disabled={disableInput}
           spellCheck="false"
+          autoCorrect="off" 
+          autoCapitalize="none"
           id="terminal-input"
-          className="w-full bg-gray-900 text-2xs sm:text-sm word-spacing-lg outline-none"
+          className="w-full bg-grey text-2xs sm:text-sm word-spacing-lg outline-none"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)}

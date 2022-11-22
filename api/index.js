@@ -62,7 +62,7 @@ __export(root_exports, {
   links: () => links,
   meta: () => meta
 });
-var import_react6 = require("react"), import_react7 = require("@remix-run/react");
+var import_react7 = require("react"), import_react8 = require("@remix-run/react");
 
 // app/components/navigation.tsx
 var import_react2 = require("react"), import_react3 = require("@remix-run/react"), import_jsx_runtime = require("react/jsx-runtime");
@@ -179,8 +179,10 @@ function InputLine({
           type: "text",
           disabled: disableInput,
           spellCheck: "false",
+          autoCorrect: "off",
+          autoCapitalize: "none",
           id: "terminal-input",
-          className: "w-full bg-gray-900 text-2xs sm:text-sm word-spacing-lg outline-none",
+          className: "w-full bg-grey text-2xs sm:text-sm word-spacing-lg outline-none",
           onChange: (value) => setCommand(value.target.value),
           value: command,
           onKeyDown: (e) => handleKeyEvent(e)
@@ -241,6 +243,9 @@ function Terminal() {
   });
 }
 
+// app/components/stats.tsx
+var import_react6 = require("react");
+
 // app/components/svg.tsx
 var import_jsx_runtime = require("react/jsx-runtime"), StatusBar = ({ id }) => {
   let rect = [];
@@ -273,8 +278,8 @@ var import_jsx_runtime = require("react/jsx-runtime"), StatusBar = ({ id }) => {
     ]
   });
 }, Matrix = () => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
-  width: "267",
-  height: "141",
+  width: "100%",
+  height: "auto",
   viewBox: "0 0 267 141",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg",
@@ -3596,14 +3601,108 @@ var import_jsx_runtime = require("react/jsx-runtime"), StatusBar = ({ id }) => {
   ]
 });
 
+// app/components/stats.tsx
+var import_jsx_runtime = require("react/jsx-runtime");
+function Stats() {
+  return (0, import_react6.useEffect)(() => {
+    let cpuStatusBar = document.getElementsByClassName("cpu"), memStatusBar = document.getElementsByClassName("mem"), netStatusBar = document.getElementsByClassName("net"), diskStatusBar = document.getElementsByClassName("disk"), cpuStatusBarIndex = 0, memStatusBarIndex = 0, netStatusBarIndex = 0, cpuStatusBarOffset = 13, diskStatusBarIndex = 0, memStatusBarOffset = 15, netStatusBarOffset = 10, diskStatusBarOffset = 20, setStartingStatusBarPosition = (timer, statusBar, i, statusEnd) => {
+      statusBar[i].classList.remove("hidden"), statusBar[i].classList.add("block"), i === statusBar.length - statusEnd && (clearInterval(timer), i = statusBar.length - statusEnd - 2, statusEnd = 1);
+    }, cpuIntervalStart = setInterval(() => {
+      setStartingStatusBarPosition(cpuIntervalStart, cpuStatusBar, cpuStatusBarIndex, cpuStatusBarOffset), cpuStatusBarIndex++;
+    }, 50), memIntervalStart = setInterval(() => {
+      setStartingStatusBarPosition(memIntervalStart, memStatusBar, memStatusBarIndex, memStatusBarOffset), memStatusBarIndex++;
+    }, 50), netIntervalStart = setInterval(() => {
+      setStartingStatusBarPosition(netIntervalStart, netStatusBar, netStatusBarIndex, netStatusBarOffset), netStatusBarIndex++;
+    }, 50), diskIntervalStart = setInterval(() => {
+      setStartingStatusBarPosition(diskIntervalStart, diskStatusBar, diskStatusBarIndex, diskStatusBarOffset), diskStatusBarIndex++;
+    }, 50), randomStatusBarState = (statusBar, statusIndex, statusEnd) => {
+      var _a, _b, _c, _d;
+      let y = Math.random();
+      if (statusEnd === 1 && (y = 1, statusEnd = 0), y < 0.5 ? y = 0 : y = 1, y === 0) {
+        statusIndex > 0 && statusIndex--;
+        for (let i = statusIndex; i < statusBar.length; i++)
+          (_a = statusBar[i]) == null || _a.classList.remove("block"), (_b = statusBar[i]) == null || _b.classList.add("hidden");
+      } else if (y === 1) {
+        statusIndex !== statusBar.length && statusIndex++;
+        for (let i = statusIndex; i > 0; i--)
+          (_c = statusBar[i]) == null || _c.classList.remove("hidden"), (_d = statusBar[i]) == null || _d.classList.add("block");
+      }
+    };
+    setInterval(() => randomStatusBarState(cpuStatusBar, cpuStatusBarIndex, cpuStatusBarOffset), 1e3), setInterval(() => randomStatusBarState(memStatusBar, memStatusBarIndex, memStatusBarOffset), 1e3), setInterval(() => randomStatusBarState(netStatusBar, netStatusBarIndex, netStatusBarOffset), 1e3), setInterval(() => randomStatusBarState(diskStatusBar, diskStatusBarIndex, diskStatusBarOffset), 1e3);
+  }, []), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+        className: "flex-row justify-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+            className: "text-lg",
+            children: "CPU"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+            className: "pt-01",
+            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
+              id: "cpu"
+            })
+          })
+        ]
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+        className: "flex-row justify-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+            className: "text-lg",
+            children: "MEM"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+            className: "pt-01",
+            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
+              id: "mem"
+            })
+          })
+        ]
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+        className: "flex-row justify-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+            className: "text-lg",
+            children: "NET"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+            className: "pt-01",
+            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
+              id: "net"
+            })
+          })
+        ]
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+        className: "flex-row justify-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+            className: "text-lg",
+            children: "DISK"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+            className: "pt-01",
+            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
+              id: "disk"
+            })
+          })
+        ]
+      })
+    ]
+  });
+}
+
 // node_modules/remix-image/remix-image.css
 var remix_image_default = "/build/_assets/remix-image-WUAL5MSX.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-TXYJNSZD.css";
+var tailwind_default = "/build/_assets/tailwind-3BUBFNV3.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-MN2D3N2Q.css";
+var global_default = "/build/_assets/global-IZHJDLDO.css";
 
 // app/root.tsx
 var import_jsx_runtime = require("react/jsx-runtime");
@@ -3620,173 +3719,60 @@ var meta = () => ({
   viewport: "width=device-width,initial-scale=1"
 });
 function App() {
-  let [mobileMenuOpen, setMobileMenuOpen] = (0, import_react6.useState)(!1), [mobileNavigationOpen, setMobileNavigationOpen] = (0, import_react6.useState)(!1), [mobileTerminalOpen, setMobileTerminalOpen] = (0, import_react6.useState)(!1), [focusOnInput, setFocusOnInput] = (0, import_react6.useState)(!1);
-  return (0, import_react6.useEffect)(() => {
+  let [mobileMenuOpen, setMobileMenuOpen] = (0, import_react7.useState)(!1), [mobileNavigationOpen, setMobileNavigationOpen] = (0, import_react7.useState)(!1), [mobileTerminalOpen, setMobileTerminalOpen] = (0, import_react7.useState)(!1);
+  return (0, import_react7.useEffect)(() => {
     var _a;
-    let cpuStatusBar = document.getElementsByClassName("cpu"), memStatusBar = document.getElementsByClassName("mem"), netStatusBar = document.getElementsByClassName("net"), diskStatusBar = document.getElementsByClassName("disk"), cpuStatusBarIndex = 0, memStatusBarIndex = 0, netStatusBarIndex = 0, cpuStatusBarOffset = 7, diskStatusBarIndex = 0, memStatusBarOffset = 15, netStatusBarOffset = 10, diskStatusBarOffset = 20, cpuIntervalStart = setInterval(() => {
-      cpuStatusBar[cpuStatusBarIndex].classList.remove("hidden"), cpuStatusBar[cpuStatusBarIndex].classList.add("block"), cpuStatusBarIndex++, cpuStatusBarIndex === cpuStatusBar.length - cpuStatusBarOffset && (clearInterval(cpuIntervalStart), cpuStatusBarIndex = cpuStatusBar.length - cpuStatusBarOffset - 1, cpuStatusBarOffset = 1);
-    }, 25), memIntervalStart = setInterval(() => {
-      memStatusBar[memStatusBarIndex].classList.remove("hidden"), memStatusBar[memStatusBarIndex].classList.add("block"), memStatusBarIndex++, memStatusBarIndex === memStatusBar.length - memStatusBarOffset && (clearInterval(memIntervalStart), memStatusBarIndex = memStatusBar.length - memStatusBarOffset - 1, memStatusBarOffset = 1);
-    }, 50), netIntervalStart = setInterval(() => {
-      netStatusBar[netStatusBarIndex].classList.remove("hidden"), netStatusBar[netStatusBarIndex].classList.add("block"), netStatusBarIndex++, netStatusBarIndex === netStatusBar.length - netStatusBarOffset && (clearInterval(netIntervalStart), netStatusBarIndex = netStatusBar.length - netStatusBarOffset - 1, netStatusBarOffset = 1);
-    }, 25), diskIntervalStart = setInterval(() => {
-      diskStatusBar[diskStatusBarIndex].classList.remove("hidden"), diskStatusBar[diskStatusBarIndex].classList.add("block"), diskStatusBarIndex++, diskStatusBarIndex === diskStatusBar.length - diskStatusBarOffset && (clearInterval(diskIntervalStart), diskStatusBarIndex = diskStatusBar.length - diskStatusBarOffset - 1, diskStatusBarOffset = 1);
-    }, 75);
-    setInterval(() => {
-      var _a2, _b, _c, _d;
-      let y = Math.random();
-      if (cpuStatusBarOffset === 1 && (y = 1, cpuStatusBarOffset = 0), y < 0.5 ? y = 0 : y = 1, y === 0) {
-        cpuStatusBarIndex > 0 && cpuStatusBarIndex--;
-        for (let i = cpuStatusBarIndex; i < cpuStatusBar.length; i++)
-          (_a2 = cpuStatusBar[i]) == null || _a2.classList.remove("block"), (_b = cpuStatusBar[i]) == null || _b.classList.add("hidden");
-      } else if (y === 1) {
-        cpuStatusBarIndex !== cpuStatusBar.length && cpuStatusBarIndex++;
-        for (let i = cpuStatusBarIndex; i > 0; i--)
-          (_c = cpuStatusBar[i]) == null || _c.classList.remove("hidden"), (_d = cpuStatusBar[i]) == null || _d.classList.add("block");
-      }
-    }, 1e3), setInterval(() => {
-      var _a2, _b, _c, _d;
-      let y = Math.random();
-      if (memStatusBarOffset === 1 && (y = 1, memStatusBarOffset = 0), y < 0.5 ? y = 0 : y = 1, y === 0) {
-        memStatusBarIndex > 0 && memStatusBarIndex--;
-        for (let i = memStatusBarIndex; i < memStatusBar.length; i++)
-          (_a2 = memStatusBar[i]) == null || _a2.classList.remove("block"), (_b = memStatusBar[i]) == null || _b.classList.add("hidden");
-      } else if (y === 1) {
-        memStatusBarIndex !== memStatusBar.length && memStatusBarIndex++;
-        for (let i = memStatusBarIndex; i > 0; i--)
-          (_c = memStatusBar[i]) == null || _c.classList.remove("hidden"), (_d = memStatusBar[i]) == null || _d.classList.add("block");
-      }
-    }, 1e3), setInterval(() => {
-      var _a2, _b, _c, _d;
-      let y = Math.random();
-      if (netStatusBarOffset === 1 && (y = 1, netStatusBarOffset = 0), y < 0.5 ? y = 0 : y = 1, y === 0) {
-        netStatusBarIndex > 0 && netStatusBarIndex--;
-        for (let i = netStatusBarIndex; i < netStatusBar.length; i++)
-          (_a2 = netStatusBar[i]) == null || _a2.classList.remove("block"), (_b = netStatusBar[i]) == null || _b.classList.add("hidden");
-      } else if (y === 1) {
-        netStatusBarIndex !== netStatusBar.length && netStatusBarIndex++;
-        for (let i = netStatusBarIndex; i > 0; i--)
-          (_c = netStatusBar[i]) == null || _c.classList.remove("hidden"), (_d = netStatusBar[i]) == null || _d.classList.add("block");
-      }
-    }, 1e3), setInterval(() => {
-      var _a2, _b, _c, _d;
-      let y = Math.random();
-      if (diskStatusBarOffset === 1 && (y = 1, diskStatusBarOffset = 0), y < 0.5 ? y = 0 : y = 1, y === 0) {
-        diskStatusBarIndex > 0 && diskStatusBarIndex--;
-        for (let i = diskStatusBarIndex; i < diskStatusBar.length; i++)
-          (_a2 = diskStatusBar[i]) == null || _a2.classList.remove("block"), (_b = diskStatusBar[i]) == null || _b.classList.add("hidden");
-      } else if (y === 1) {
-        diskStatusBarIndex !== diskStatusBar.length && diskStatusBarIndex++;
-        for (let i = diskStatusBarIndex; i > 0; i--)
-          (_c = diskStatusBar[i]) == null || _c.classList.remove("hidden"), (_d = diskStatusBar[i]) == null || _d.classList.add("block");
-      }
-    }, 1e3), (_a = document.getElementById("terminal-container")) == null || _a.addEventListener("click", () => {
+    return (_a = document.getElementById("terminal-container")) == null ? void 0 : _a.addEventListener("click", () => {
       var _a2;
-      (_a2 = document.getElementById("terminal-input")) == null || _a2.focus(), console.log("kek");
+      return (_a2 = document.getElementById("terminal-input")) == null ? void 0 : _a2.focus();
     });
   }, []), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("html", {
     lang: "en",
     children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("head", {
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.Meta, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.Links, {})
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.Meta, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.Links, {})
         ]
       }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("body", {
         className: "h-screen",
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-            className: "hidden sm:block t-01 r-01 absolute h-8 w-8 rotate-45 border-b-2 border-b-sky-400 bg-gray-900"
+            className: "hidden sm:block t-01 r-01 absolute h-8 w-8 rotate-45 border-b-2 border-b-sky-400 bg-grey"
           }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-            className: "hidden sm:block b-01 l-01 absolute h-8 w-8 rotate-45 border-t-2 border-t-sky-400 bg-gray-900"
+            className: "hidden sm:block b-01 l-01 absolute h-8 w-8 rotate-45 border-t-2 border-t-sky-400 bg-grey"
           }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-            className: "hidden sm:block b-01 r-01 absolute h-8 w-8 rotate-45 border-l-2 border-l-sky-400 bg-gray-900"
+            className: "hidden sm:block b-01 r-01 absolute h-8 w-8 rotate-45 border-l-2 border-l-sky-400 bg-grey"
           }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
             className: "grid h-screen grid-cols-4 2xl:grid-cols-5 grid-rows-4 gap-4 p-8 sm:p-4",
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
                 className: "row-span-4 gap-4 overflow-y-scroll scrollbar-hide col-span-3 2xl:col-span-4 sm:row-span-3",
-                children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.Outlet, {})
+                children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.Outlet, {})
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                className: "row-span-4 grid-cols-1 grid-rows-5 hidden border-2 border-sky-400 sm:grid",
+                className: "row-span-4 grid-cols-1 grid-rows-4 hidden border-2 border-sky-400 sm:grid",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                    className: "h-full grid row-span-2",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navigation, {})
-                  }),
                   /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                    className: "h-full grid row-span-3 border-t-2 border-t-sky-400 p-8",
+                    className: "sm:grid row-span-3 grid-rows-2",
                     children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                        className: "flex-row justify-between",
-                        children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                            className: "text-lg",
-                            children: "CPU"
-                          }),
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                            className: "pt-01",
-                            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
-                              id: "cpu"
-                            })
-                          })
-                        ]
-                      }),
-                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                        className: "flex-row justify-between",
-                        children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                            className: "text-lg",
-                            children: "MEM"
-                          }),
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                            className: "pt-01",
-                            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
-                              id: "mem"
-                            })
-                          })
-                        ]
-                      }),
-                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                        className: "flex-row justify-between",
-                        children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                            className: "text-lg",
-                            children: "NET"
-                          }),
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                            className: "pt-01",
-                            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
-                              id: "net"
-                            })
-                          })
-                        ]
-                      }),
-                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                        className: "flex-row justify-between",
-                        children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                            className: "text-lg",
-                            children: "DISK"
-                          }),
-                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                            className: "pt-01",
-                            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBar, {
-                              id: "disk"
-                            })
-                          })
-                        ]
+                      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                        className: "h-full grid row-span-1",
+                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Navigation, {})
                       }),
                       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                        className: "w-full",
-                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Matrix, {})
+                        className: "h-full grid row-span-1 border-t-2 border-t-sky-400 p-8",
+                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stats, {})
                       })
                     ]
+                  }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                    className: "sm:grid row-span-1 w-full px-8 pt-0",
+                    children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Matrix, {})
                   })
                 ]
               }),
@@ -3801,21 +3787,21 @@ function App() {
             className: "kek absolute bottom-0 block w-full p-4 sm:hidden",
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                className: "mobile-menu-corner-tl absolute border-r-2 border-r-sky-400 bg-gray-900"
+                className: "mobile-menu-corner-tl absolute border-r-2 border-r-sky-400 bg-grey"
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                className: "mobile-menu-corner-tr absolute border-r-2 border-r-sky-400 bg-gray-900"
+                className: "mobile-menu-corner-tr absolute border-r-2 border-r-sky-400 bg-grey"
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                className: "mobile-menu-corner-br absolute border-r-2 border-r-sky-400 bg-gray-900"
+                className: "mobile-menu-corner-br absolute border-r-2 border-r-sky-400 bg-grey"
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                className: "mobile-menu-corner-bl absolute border-r-2 border-r-sky-400 bg-gray-900"
+                className: "mobile-menu-corner-bl absolute border-r-2 border-r-sky-400 bg-grey"
               }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
                 className: "p-4",
                 children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                  className: `grid content-end border-2 border-sky-400 bg-gray-900 ${mobileMenuOpen && "h-more"}`,
+                  className: `grid content-end border-2 border-sky-400 bg-grey ${mobileMenuOpen && "h-more"}`,
                   children: [
                     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
                       className: "grid",
@@ -3867,9 +3853,9 @@ function App() {
               })
             ]
           }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.ScrollRestoration, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.Scripts, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react7.LiveReload, {})
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.ScrollRestoration, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.Scripts, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react8.LiveReload, {})
         ]
       })
     ]
@@ -4031,7 +4017,7 @@ function Work() {
               ]
             }),
             i === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-              className: "-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-gray-900"
+              className: "-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-grey"
             })
           ]
         }),
@@ -4053,7 +4039,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "3b1b1056", entry: { module: "/build/entry.client-PSU6ICS3.js", imports: ["/build/_shared/chunk-VPNDLZRF.js", "/build/_shared/chunk-YE6MABSZ.js", "/build/_shared/chunk-TFY3KWOG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-LAV2Z2FU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-ZVGR6KIU.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-BNTANTMX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HTOXZUU6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-KBOWNCIQ.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-GXCBQZY4.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-3B1B1056.js" };
+var assets_manifest_default = { version: "442ad60f", entry: { module: "/build/entry.client-PSU6ICS3.js", imports: ["/build/_shared/chunk-VPNDLZRF.js", "/build/_shared/chunk-YE6MABSZ.js", "/build/_shared/chunk-TFY3KWOG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-LMP6VKEY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-ZVGR6KIU.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-BNTANTMX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HTOXZUU6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-KBOWNCIQ.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-K7NFXB3B.js", imports: ["/build/_shared/chunk-AL6GL34K.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-442AD60F.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

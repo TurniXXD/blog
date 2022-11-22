@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 :root {
-  --bg: #111827;
+  --grey: #0f1524;
   --blue: #7dd8ff;
   --blue-dark: #349dca;
 }
@@ -16,7 +16,7 @@
     font-family: 'Michroma', sans-serif;
     color: var(--blue);
     overflow: hidden;
-    background: var(--bg);
+    background: var(--grey);
     /*     background: linear-gradient(-45deg, #0b1327, #0f172a, #1b2335, #1a1f2c);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite; */

@@ -26,7 +26,7 @@ export default function Work() {
               </div>
             </div>
             {i === 0 && (
-              <div className="-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-gray-900" />
+              <div className="-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-grey" />
             )}
           </a>
           {project.isRocket && (
