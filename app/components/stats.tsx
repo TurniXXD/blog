@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { StatusBar } from './svg'
+import { bipolarRandomState } from './../utils'
 
 export default function Stats() {
   useEffect(() => {
@@ -48,19 +49,19 @@ export default function Stats() {
     }, 50);
 
     const randomStatusBarState = (statusBar: HTMLCollectionOf<Element>, statusIndex: number, statusEnd: number) => {
-      let y = Math.random()
+      let y = bipolarRandomState()
       if (statusEnd === 1) {
-        y = 1
+        y = true
         statusEnd = 0
-      } y < 0.5 ? (y = 0) : (y = 1)
+      }
 
-      if (y === 0) {
+      if (!y) {
         statusIndex > 0 && statusIndex--
         for (let i = statusIndex; i < statusBar.length; i++) {
           statusBar[i]?.classList.remove("block")
           statusBar[i]?.classList.add("hidden")
         }
-      } else if (y === 1) {
+      } else if (y) {
         statusIndex !== statusBar.length && statusIndex++
         for (let i = statusIndex; i > 0; i--) {
           statusBar[i]?.classList.remove("hidden")

@@ -64,6 +64,14 @@
   height: 37.75rem;
 }
 
+.grid-rows-15 {
+  grid-template-rows: repeat(15, minmax(0, 1fr));
+}
+
+.grid-cols-30 {
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+}
+
 @media (max-width: 640px) {
   .text-2xs {
     font-size: 0.55rem;

@@ -11,7 +11,7 @@ import {
 import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
 import Stats from "./components/stats"
-import { Matrix } from "./components/svg"
+import { Matrix } from "./components/matrix"
 
 import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "./styles/tailwind.css";
@@ -61,7 +61,7 @@ export default function App() {
                 <Stats />
               </div>
             </div>
-            <div className="sm:grid row-span-1 w-full px-8 pt-0">
+            <div className="sm:grid row-span-1 w-full px-8 pt-4">
               <Matrix />
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function App() {
               <div className="grid">
                 <div className="flex-row justify-between">
                   <div
-                    className="h-20 w-3/12 flex-col items-center justify-center bg-sky-400 pr-1"
+                    className="h-20 w-3/12 flex-col items-center justify-center bg-blue pr-1"
                     onClick={() => {
                       setMobileMenuOpen(true);
                       mobileNavigationOpen && setMobileNavigationOpen(false);
@@ -98,7 +98,7 @@ export default function App() {
                   </div>
                   {mobileMenuOpen && (
                     <div
-                      className="h-20 w-6/12 flex-col items-center justify-center bg-sky-400"
+                      className="h-20 w-6/12 flex-col items-center justify-center bg-blue"
                       onClick={() => {
                         setMobileMenuOpen(false);
                         mobileNavigationOpen && setMobileNavigationOpen(false);
@@ -109,7 +109,7 @@ export default function App() {
                     </div>
                   )}
                   <div
-                    className="h-20 w-3/12 flex-col items-center justify-center bg-sky-400 pl-1"
+                    className="h-20 w-3/12 flex-col items-center justify-center bg-blue pl-1"
                     onClick={() => {
                       setMobileMenuOpen(true);
                       mobileTerminalOpen && setMobileTerminalOpen(false);
