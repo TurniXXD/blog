@@ -17,12 +17,12 @@ export const StackedElements = ({ count, className }: { count: number; className
 export const Matrix = () => {
   const cols: JSX.Element[] = []
   const colsCount = 30
-  const rowsCount = 15
+  const rowsCount = 20
   useEffect(() => {
     const matrixCols: number[] = []
 
     let colIndex = 0
-    let level = 5
+    let level = 10
 
     setInterval(() => {
       if (matrixCols.length === colsCount) {
@@ -49,7 +49,7 @@ export const Matrix = () => {
 
       bipolarRandomState() ? level !== rowsCount && (level += 1) : level !== 0 && (level -= 1)
       colIndex < colsCount ? colIndex++ : (colIndex = 0)
-    }, 350);
+    }, 125);
   }, [])
 
   for (let i = 1; i <= colsCount; i++) {
