@@ -12,6 +12,7 @@ import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
 import Stats from "./components/stats"
 import { Matrix } from "./components/matrix"
+import Glow from './components/glow'
 
 import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "./styles/tailwind.css";
@@ -53,12 +54,14 @@ export default function App() {
             <Outlet />
           </div>
           <div className="row-span-4 grid-cols-1 grid-rows-4 hidden border-2 border-sky-400 sm:grid">
-            <div className="sm:grid row-span-3 grid-rows-2">
-              <div className="h-full grid row-span-1">
-                <Navigation />
-              </div>
-              <div className="h-full grid row-span-1 border-t-2 border-t-sky-400 p-8">
-                <Stats />
+            <div className="sm:grid row-span-3">
+              <div className="sm:grid grid-rows-2">
+                <div className="h-full grid row-span-1">
+                  <Navigation />
+                </div>
+                <div className="h-full grid row-span-1 border-t-2 border-t-sky-400 p-8">
+                  <Stats />
+                </div>
               </div>
             </div>
             <div className="sm:grid row-span-1 w-full px-8 pt-4">
