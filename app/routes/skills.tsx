@@ -3,7 +3,7 @@ import { Image } from "remix-image";
 
 export default function Skills() {
   return (
-    <div className="grid grid-cols-2 gap-20 2xl:gap-40 sm:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-20 sm:grid-cols-3 xl:grid-cols-4 2xl:gap-40">
       {skills.map((skill, i) => (
         <a
           key={i}

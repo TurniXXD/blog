@@ -17,18 +17,18 @@ export default function InputLine({
   const [disableInput, setDisableInput] = useState(false);
   const [command, setCommand] = useState("");
 
-  useEffect(() => document.getElementById("terminal-input")?.focus(), [])
+  useEffect(() => document.getElementById("terminal-input")?.focus(), []);
   useEffect(() => {
-    const terminalInput = document.getElementById("terminal-input")
-    disableInput && terminalInput?.removeAttribute('id')
-  }, [disableInput])
+    const terminalInput = document.getElementById("terminal-input");
+    disableInput && terminalInput?.removeAttribute("id");
+  }, [disableInput]);
 
   const handleOutput = (newOutput: string) => {
     if (output === newOutput) {
-      setOutput(commandHistory[historyLookback])
-      setOutput(newOutput + " ")
-    } else setOutput(newOutput)
-  }
+      setOutput(commandHistory[historyLookback]);
+      setOutput(newOutput + " ");
+    } else setOutput(newOutput);
+  };
 
   //on enter press add to command History and set output based on input
   const handleKeyEvent = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -48,7 +48,7 @@ export default function InputLine({
     }
     if (e.key === "Enter") {
       if (command !== "") {
-        const commandProcessed = command.split(" ")
+        const commandProcessed = command.split(" ");
         setCommandHistory((data) => {
           const dataCommandHistory = data && [...data];
           dataCommandHistory.push(command);
@@ -56,19 +56,22 @@ export default function InputLine({
         });
 
         if (commandProcessed[0] === "cd") {
-          if (!commandProcessed[1]) handleOutput("No directory specified")
+          if (!commandProcessed[1]) handleOutput("No directory specified");
           else if (/.txt/g.test(commandProcessed[1])) {
-            if (commandProcessed[1] === "me.txt") handleOutput('me.txt is a file')
-            else handleOutput(`Cannot find ${commandProcessed[1]}`)
-          }
-          else if (commandProcessed[1] === "about" ||
+            if (commandProcessed[1] === "me.txt")
+              handleOutput("me.txt is a file");
+            else handleOutput(`Cannot find ${commandProcessed[1]}`);
+          } else if (
+            commandProcessed[1] === "about" ||
             commandProcessed[1] === "work" ||
             commandProcessed[1] === "skills" ||
-            commandProcessed[1] === "contact") {
-            navigate(commandProcessed[1] === "about" ? "/" : commandProcessed[1]);
-            handleOutput("no_output_line")
-          }
-          else handleOutput(`Cannot find ${commandProcessed[1]}`);
+            commandProcessed[1] === "contact"
+          ) {
+            navigate(
+              commandProcessed[1] === "about" ? "/" : commandProcessed[1]
+            );
+            handleOutput("no_output_line");
+          } else handleOutput(`Cannot find ${commandProcessed[1]}`);
         } else if (commandProcessed[0] === "ls") {
           const dirs = `
           <a href="/"><strong>about</strong></a> <br/>
@@ -76,20 +79,23 @@ export default function InputLine({
           <a href="/skills"><strong>skills</strong></a> <br/>
           <a href="/contact"><strong>contact</strong></a> <br/>
           me.txt
-        `
+        `;
           handleOutput(dirs);
         } else if (commandProcessed[0] === "cat") {
-          if (commandProcessed[1] === "me.txt") handleOutput("It's me")
-          else if (!commandProcessed[1]) handleOutput("No file specified")
-          else if (commandProcessed[1] === "about" ||
+          if (commandProcessed[1] === "me.txt") handleOutput("It's me");
+          else if (!commandProcessed[1]) handleOutput("No file specified");
+          else if (
+            commandProcessed[1] === "about" ||
             commandProcessed[1] === "work" ||
             commandProcessed[1] === "skills" ||
-            commandProcessed[1] === "contact") handleOutput(`${commandProcessed[1]} is a directory`)
+            commandProcessed[1] === "contact"
+          )
+            handleOutput(`${commandProcessed[1]} is a directory`);
           else handleOutput(`Cannot find ${commandProcessed[1]}`);
-        }
-        else if (commandProcessed[0] === "help") handleOutput("available commands are help, cd, ls, cat")
+        } else if (commandProcessed[0] === "help")
+          handleOutput("available commands are help, cd, ls, cat");
         else {
-          handleOutput("available commands are help, cd, ls, cat")
+          handleOutput("available commands are help, cd, ls, cat");
         }
         setDisableInput(true);
       }
@@ -106,10 +112,10 @@ export default function InputLine({
           type="text"
           disabled={disableInput}
           spellCheck="false"
-          autoCorrect="off" 
+          autoCorrect="off"
           autoCapitalize="none"
           id="terminal-input"
-          className="w-full bg-grey text-2xs sm:text-sm word-spacing-lg outline-none"
+          className="text-2xs word-spacing-lg w-full bg-grey outline-none sm:text-sm"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)}

@@ -10,9 +10,9 @@ import {
 } from "@remix-run/react";
 import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
-import Stats from "./components/stats"
-import { Matrix } from "./components/matrix"
-import Glow from './components/glow'
+import Stats from "./components/stats";
+import { Matrix } from "./components/matrix";
+import Glow from "./components/glow";
 
 import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "./styles/tailwind.css";
@@ -37,7 +37,15 @@ export default function App() {
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false);
 
-  useEffect(() => document.getElementById("terminal-container")?.addEventListener("click", () => document.getElementById("terminal-input")?.focus()), [])
+  useEffect(
+    () =>
+      document
+        .getElementById("terminal-container")
+        ?.addEventListener("click", () =>
+          document.getElementById("terminal-input")?.focus()
+        ),
+    []
+  );
 
   return (
     <html lang="en">
@@ -46,42 +54,46 @@ export default function App() {
         <Links />
       </head>
       <body className="h-screen">
-        <div className="hidden sm:block t-01 r-01 absolute h-8 w-8 rotate-45 border-b-2 border-b-sky-400 bg-grey"></div>
-        <div className="hidden sm:block b-01 l-01 absolute h-8 w-8 rotate-45 border-t-2 border-t-sky-400 bg-grey"></div>
-        <div className="hidden sm:block b-01 r-01 absolute h-8 w-8 rotate-45 border-l-2 border-l-sky-400 bg-grey"></div>
-        <div className="grid h-screen grid-cols-4 2xl:grid-cols-5 grid-rows-4 gap-4 p-8 sm:p-4">
-          <div className="row-span-4 gap-4 overflow-y-scroll scrollbar-hide col-span-3 2xl:col-span-4 sm:row-span-3">
+        <div className="t-01 r-01 border-b-sky-400 absolute hidden h-8 w-8 rotate-45 border-b-2 bg-grey sm:block"></div>
+        <div className="b-01 l-01 border-t-sky-400 absolute hidden h-8 w-8 rotate-45 border-t-2 bg-grey sm:block"></div>
+        <div className="b-01 r-01 border-l-sky-400 absolute hidden h-8 w-8 rotate-45 border-l-2 bg-grey sm:block"></div>
+        <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5">
+          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 2xl:col-span-4">
             <Outlet />
           </div>
-          <div className="row-span-4 grid-cols-1 grid-rows-4 hidden border-2 border-sky-400 sm:grid">
-            <div className="sm:grid row-span-3">
-              <div className="sm:grid grid-rows-2">
-                <div className="h-full grid row-span-1">
+          <div className="border-sky-400 row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4">
+            <div className="row-span-3 sm:grid">
+              <div className="grid-rows-2 sm:grid">
+                <div className="row-span-1 grid h-full">
                   <Navigation />
                 </div>
-                <div className="h-full grid row-span-1 border-t-2 border-t-sky-400 p-8">
+                <div className="border-t-sky-400 row-span-1 grid h-full border-t-2 p-8">
                   <Stats />
                 </div>
               </div>
             </div>
-            <div className="sm:grid row-span-1 w-full px-8 pt-4">
+            <div className="row-span-1 w-full px-8 pt-4 sm:grid">
               <Matrix />
             </div>
           </div>
-          <div id="terminal-container" className="col-span-3 2xl:col-span-4 hidden overflow-y-scroll border-2 border-sky-400 p-4 scrollbar-hide sm:grid">
+          <div
+            id="terminal-container"
+            className="border-sky-400 col-span-3 hidden overflow-y-scroll border-2 p-4 scrollbar-hide sm:grid 2xl:col-span-4"
+          >
             <Terminal />
           </div>
         </div>
         <div className={`kek absolute bottom-0 block w-full p-4 sm:hidden`}>
-          <div className="mobile-menu-corner-tl absolute border-r-2 border-r-sky-400 bg-grey"></div>
-          <div className="mobile-menu-corner-tr absolute border-r-2 border-r-sky-400 bg-grey"></div>
-          <div className="mobile-menu-corner-br absolute border-r-2 border-r-sky-400 bg-grey"></div>
-          <div className="mobile-menu-corner-bl absolute border-r-2 border-r-sky-400 bg-grey"></div>
+          <div className="mobile-menu-corner-tl border-r-sky-400 absolute border-r-2 bg-grey"></div>
+          <div className="mobile-menu-corner-tr border-r-sky-400 absolute border-r-2 bg-grey"></div>
+          <div className="mobile-menu-corner-br border-r-sky-400 absolute border-r-2 bg-grey"></div>
+          <div className="mobile-menu-corner-bl border-r-sky-400 absolute border-r-2 bg-grey"></div>
           <div className="p-4">
             {/* //Need to fix this to h-full somehow */}
             <div
-              className={`grid content-end border-2 border-sky-400 bg-grey ${mobileMenuOpen && "h-more"
-                }`}
+              className={`border-sky-400 grid content-end border-2 bg-grey ${
+                mobileMenuOpen && "h-more"
+              }`}
             >
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}

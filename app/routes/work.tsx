@@ -5,7 +5,10 @@ export default function Work() {
   return (
     <div className="grid grid-cols-3 gap-4">
       {projects.map((project, i) => (
-        <div key={i} className="relative work-card col-span-1 row-span-1 grid h-48 2xl:h-56 border-2 border-sky-400">
+        <div
+          key={i}
+          className="work-card border-sky-400 relative col-span-1 row-span-1 grid h-48 border-2 2xl:h-56"
+        >
           <a
             href={project.url}
             target="_blank"
@@ -19,14 +22,14 @@ export default function Work() {
                 dprVariants={[1, 3]}
                 className="w-full"
               />
-              <div className="work-card-cover absolute top-0 hidden h-48 2xl:h-56 w-full">
+              <div className="work-card-cover absolute top-0 hidden h-48 w-full 2xl:h-56">
                 <span className="absolute bottom-8 left-8 text-lg font-semibold">
                   {project.name}
                 </span>
               </div>
             </div>
             {i === 0 && (
-              <div className="-top-4 -left-4 absolute h-8 w-8 rotate-45 border-r-2 border-r-sky-400 bg-grey" />
+              <div className="border-r-sky-400 absolute -top-4 -left-4 h-8 w-8 rotate-45 border-r-2 bg-grey" />
             )}
           </a>
           {project.isRocket && (

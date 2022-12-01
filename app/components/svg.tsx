@@ -1,17 +1,35 @@
 export const StatusBar = ({ id }: { id: string }) => {
-  const rect = []
-  for (let i = 5; i < 179; i += 6) rect.push(i)
+  const rect = [];
+  for (let i = 5; i < 179; i += 6) rect.push(i);
 
   return (
-    <svg id={id} width="181" height="25" viewBox="0 0 181 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      id={id}
+      width="181"
+      height="25"
+      viewBox="0 0 181 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path d="M0 0H11V2H2V23H11V25H0V0Z" fill="#38BDF8" />
       <path d="M181 0H170V2H179V23H170V25H181V0Z" fill="#38BDF8" />
-      {rect.map(r => <rect key={r} className={`${id} hidden`} x={r} y="5" width="3" height="15" fill="#38BDF8" />)}
+      {rect.map((r) => (
+        <rect
+          key={r}
+          className={`${id} hidden`}
+          x={r}
+          y="5"
+          width="3"
+          height="15"
+          fill="#38BDF8"
+        />
+      ))}
     </svg>
-  )
-}
+  );
+};
 
-{/* <svg width="100%" height="auto" viewBox="0 0 267 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+{
+  /* <svg width="100%" height="auto" viewBox="0 0 267 141" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="63" width="6" height="6" fill="#38BDF8" />
 <rect y="27" width="6" height="6" fill="#38BDF8" />
 <rect y="99" width="6" height="6" fill="#38BDF8" />
@@ -492,4 +510,5 @@ export const StatusBar = ({ id }: { id: string }) => {
 <rect x="261" y="18" width="6" height="6" fill="#38BDF8" />
 <rect x="261" y="90" width="6" height="6" fill="#38BDF8" />
 <rect x="261" y="126" width="6" height="6" fill="#38BDF8" />
-</svg> */}
+</svg> */
+}

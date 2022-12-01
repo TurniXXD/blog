@@ -40,13 +40,15 @@
 
 
 .nav-link,
-.contact-links {
+.contact-link,
+.contact-button span{
   transition: .3s;
   text-shadow: none;
 }
 
 .nav-link-hover,
-.contact-links:hover {
+.contact-link-hover,
+.contact-button:hover span {
   transform: scale(1.1);
   -webkit-animation: glow s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
@@ -187,10 +189,6 @@
 
 [class*=flex-] {
   display: flex
-}
-
-[class*=grid-] {
-  display: grid
 }
 
 @tailwind base;
