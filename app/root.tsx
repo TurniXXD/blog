@@ -12,7 +12,6 @@ import Navigation from "./components/navigation";
 import Terminal from "./components/terminal/terminal";
 import Stats from "./components/stats";
 import { Matrix } from "./components/matrix";
-import Glow from "./components/glow";
 
 import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "./styles/tailwind.css";
@@ -83,7 +82,7 @@ export default function App() {
             <Terminal />
           </div>
         </div>
-        <div className={`kek absolute bottom-0 block w-full p-4 sm:hidden`}>
+        <div className="absolute bottom-0 block w-full p-4 sm:hidden">
           <div className="mobile-menu-corner-tl border-r-sky-400 absolute border-r-2 bg-grey"></div>
           <div className="mobile-menu-corner-tr border-r-sky-400 absolute border-r-2 bg-grey"></div>
           <div className="mobile-menu-corner-br border-r-sky-400 absolute border-r-2 bg-grey"></div>

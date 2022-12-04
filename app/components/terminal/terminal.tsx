@@ -28,13 +28,11 @@ export default function Terminal() {
       }
       return dataLines || [];
     });
-    console.log(lines);
   }, []);
 
   useEffect(() => {
     if (output !== defaultOutput) {
       setLines((data) => {
-        console.log(output);
         const dataLines = data && [...data];
         const isNotOutputLine =
           output === "no_output_line" || output === "no_output_line ";
@@ -53,7 +51,6 @@ export default function Terminal() {
         return dataLines || [];
       });
     }
-    console.log(lines);
   }, [output]);
 
   return <div className="p-4">{lines && lines.map((line) => line)}</div>;

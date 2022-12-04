@@ -4,6 +4,7 @@
   --grey: #0f1524;
   --blue: #7dd8ff;
   --blue-dark: #349dca;
+  --error: rgb(239 68 68);
 }
 
 @media (prefers-color-scheme:dark) {
@@ -44,6 +45,14 @@
 .contact-button span{
   transition: .3s;
   text-shadow: none;
+}
+
+.border-error {
+  border: 2px solid var(--error);
+}
+
+.text-error {
+  color: var(--error);
 }
 
 .nav-link-hover,
@@ -97,10 +106,6 @@
 
 .skills-card:hover .skills-card-logo {
   transform: scale(1.15);
-}
-
-.kek * {
-  transition: all .3s ease-in-out;
 }
 
 .work-card-cover {
