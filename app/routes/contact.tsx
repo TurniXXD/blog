@@ -1,7 +1,7 @@
 import type { ActionFunction } from "@remix-run/node";
 import { Form, useActionData } from "@remix-run/react";
 import { useEffect } from "react";
-import { mailer } from "../utils/config";
+import sendgrid from '@sendgrid/mail';
 
 enum Icons {
   github = "github",
@@ -19,6 +19,7 @@ interface Socials {
 export const action: ActionFunction = async ({ request }) => {
   const formData = Object.fromEntries(await request.formData());
   const { name, email, phone, message } = formData;
+  //sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '')
 
   if (
     typeof name === "string" &&
@@ -31,24 +32,29 @@ export const action: ActionFunction = async ({ request }) => {
       ...(!email
         ? { email: "This field is required" }
         : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && {
-            email: "Invalid email address",
-          }),
+          email: "Invalid email address",
+        }),
       ...(phone && !/^\d+$/.test(phone) && { phone: "Invalid phone number" }),
       ...(!message && { message: "This field is required" }),
     };
 
     if (Object.values(formErrors).some(Boolean)) return { formErrors };
 
-    mailer
-      .send(
-        "ContactEmailResponse",
-        { name, email, ...(phone && { phone }), message },
-        {
-          to: "my@email.com",
-        }
-      )
-      .catch((err) => console.log(err))
-      .then((res) => console.log(res));
+    await sendgrid.send({
+      to: 'contact@vantuch.dev',
+      from: 'contact@vantuch.dev',
+      subject: 'New contact from blog',
+      html: `
+      <div>
+        <ul>
+          <li><strong>Name: </strong> ${name}</li>
+          <li><strong>Email: </strong> ${email}</li>
+          ${phone && `<li><strong>Tel: </strong> ${phone}</li>`}
+        </ul>
+        <p>${message}</p>
+      </div>
+      `,
+    }).then(() => {}).catch((err) => console.error(err))
 
     return "success";
   }
@@ -129,9 +135,8 @@ export default function Contact() {
       </div>
       <div className="col-span-2 row-span-2 grid h-full grid-rows-3 gap-4">
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.name ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.name ? "border-error" : "border-sky-400"
+            }`}
         >
           {actionData?.formErrors?.name && (
             <div className="text-error absolute left-4 -top-2 h-10 bg-grey px-2 text-sm">
@@ -149,9 +154,8 @@ export default function Contact() {
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.email ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.email ? "border-error" : "border-sky-400"
+            }`}
         >
           {actionData?.formErrors?.email && (
             <div className="text-error absolute left-4 -top-3 h-10 bg-grey px-2 text-sm">
@@ -169,9 +173,8 @@ export default function Contact() {
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
+            }`}
         >
           {actionData?.formErrors?.phone && (
             <div className="text-error absolute left-4 -top-3 h-10 bg-grey px-2 text-sm">
@@ -190,9 +193,8 @@ export default function Contact() {
         </div>
       </div>
       <div
-        className={`border-red relative col-span-3 row-span-2 grid grid-rows-3 border-2 ${
-          actionData?.formErrors?.message ? "border-error" : "border-sky-400"
-        }`}
+        className={`border-red relative col-span-3 row-span-2 grid grid-rows-3 border-2 ${actionData?.formErrors?.message ? "border-error" : "border-sky-400"
+          }`}
       >
         <textarea
           name="message"

@@ -56,6 +56,7 @@ var root_exports = {};
 __export(root_exports, {
   default: () => App,
   links: () => links,
+  loader: () => loader,
   meta: () => meta
 });
 var import_react8 = require("react"), import_react9 = require("@remix-run/react");
@@ -926,13 +927,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-HQXPKP2K.css";
+var tailwind_default = "/build/_assets/tailwind-IWHGY7CO.css";
 
 // app/styles/global.css
 var global_default = "/build/_assets/global-M5NHAAUH.css";
 
 // app/root.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_mail = __toESM(require("@sendgrid/mail")), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function links() {
   return [
     { rel: "stylesheet", href: remix_image_default },
@@ -945,39 +946,36 @@ var meta = () => ({
   title: "Jakub Vantuch",
   viewport: "width=device-width,initial-scale=1"
 });
+async function loader() {
+  return import_mail.default.setApiKey(process.env.SENDGRID_API_KEY || ""), null;
+}
 function App() {
   let [mobileMenuOpen, setMobileMenuOpen] = (0, import_react8.useState)(!1), [mobileNavigationOpen, setMobileNavigationOpen] = (0, import_react8.useState)(!1), [mobileTerminalOpen, setMobileTerminalOpen] = (0, import_react8.useState)(!1);
-  return (0, import_react8.useEffect)(
-    () => {
-      var _a;
-      return (_a = document.getElementById("terminal-container")) == null ? void 0 : _a.addEventListener(
-        "click",
-        () => {
-          var _a2;
-          return (_a2 = document.getElementById("terminal-input")) == null ? void 0 : _a2.focus();
-        }
-      );
-    },
-    []
-  ), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("html", {
+  return (0, import_react8.useEffect)(() => {
+    var _a;
+    (_a = document.getElementById("terminal-container")) == null || _a.addEventListener("click", () => {
+      var _a2;
+      return (_a2 = document.getElementById("terminal-input")) == null ? void 0 : _a2.focus();
+    });
+  }, []), /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("html", {
     lang: "en",
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("head", {
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Meta, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 52,
+            lineNumber: 55,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Links, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 53,
+            lineNumber: 56,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/root.tsx",
-        lineNumber: 51,
+        lineNumber: 54,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("body", {
@@ -987,21 +985,21 @@ function App() {
             className: "t-01 r-01 border-b-sky-400 absolute hidden h-8 w-8 rotate-45 border-b-2 bg-grey sm:block"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 56,
+            lineNumber: 59,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: "b-01 l-01 border-t-sky-400 absolute hidden h-8 w-8 rotate-45 border-t-2 bg-grey sm:block"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 57,
+            lineNumber: 60,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: "b-01 r-01 border-l-sky-400 absolute hidden h-8 w-8 rotate-45 border-l-2 bg-grey sm:block"
           }, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 58,
+            lineNumber: 61,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1011,12 +1009,12 @@ function App() {
                 className: "col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 2xl:col-span-4",
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Outlet, {}, void 0, !1, {
                   fileName: "app/root.tsx",
-                  lineNumber: 61,
+                  lineNumber: 64,
                   columnNumber: 13
                 }, this)
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 60,
+                lineNumber: 63,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1031,18 +1029,6 @@ function App() {
                           className: "row-span-1 grid h-full",
                           children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Navigation, {}, void 0, !1, {
                             fileName: "app/root.tsx",
-                            lineNumber: 67,
-                            columnNumber: 19
-                          }, this)
-                        }, void 0, !1, {
-                          fileName: "app/root.tsx",
-                          lineNumber: 66,
-                          columnNumber: 17
-                        }, this),
-                        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                          className: "border-t-sky-400 row-span-1 grid h-full border-t-2 p-8",
-                          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Stats, {}, void 0, !1, {
-                            fileName: "app/root.tsx",
                             lineNumber: 70,
                             columnNumber: 19
                           }, this)
@@ -1050,34 +1036,46 @@ function App() {
                           fileName: "app/root.tsx",
                           lineNumber: 69,
                           columnNumber: 17
+                        }, this),
+                        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                          className: "border-t-sky-400 row-span-1 grid h-full border-t-2 p-8",
+                          children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Stats, {}, void 0, !1, {
+                            fileName: "app/root.tsx",
+                            lineNumber: 73,
+                            columnNumber: 19
+                          }, this)
+                        }, void 0, !1, {
+                          fileName: "app/root.tsx",
+                          lineNumber: 72,
+                          columnNumber: 17
                         }, this)
                       ]
                     }, void 0, !0, {
                       fileName: "app/root.tsx",
-                      lineNumber: 65,
+                      lineNumber: 68,
                       columnNumber: 15
                     }, this)
                   }, void 0, !1, {
                     fileName: "app/root.tsx",
-                    lineNumber: 64,
+                    lineNumber: 67,
                     columnNumber: 13
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                     className: "row-span-1 w-full px-8 pt-4 sm:grid",
                     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Matrix, {}, void 0, !1, {
                       fileName: "app/root.tsx",
-                      lineNumber: 75,
+                      lineNumber: 78,
                       columnNumber: 15
                     }, this)
                   }, void 0, !1, {
                     fileName: "app/root.tsx",
-                    lineNumber: 74,
+                    lineNumber: 77,
                     columnNumber: 13
                   }, this)
                 ]
               }, void 0, !0, {
                 fileName: "app/root.tsx",
-                lineNumber: 63,
+                lineNumber: 66,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1085,18 +1083,18 @@ function App() {
                 className: "border-sky-400 col-span-3 hidden overflow-y-scroll border-2 p-4 scrollbar-hide sm:grid 2xl:col-span-4",
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Terminal, {}, void 0, !1, {
                   fileName: "app/root.tsx",
-                  lineNumber: 82,
+                  lineNumber: 85,
                   columnNumber: 13
                 }, this)
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 78,
+                lineNumber: 81,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/root.tsx",
-            lineNumber: 59,
+            lineNumber: 62,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1106,28 +1104,28 @@ function App() {
                 className: "mobile-menu-corner-tl border-r-sky-400 absolute border-r-2 bg-grey"
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 86,
+                lineNumber: 89,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                 className: "mobile-menu-corner-tr border-r-sky-400 absolute border-r-2 bg-grey"
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 87,
+                lineNumber: 90,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                 className: "mobile-menu-corner-br border-r-sky-400 absolute border-r-2 bg-grey"
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 88,
+                lineNumber: 91,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                 className: "mobile-menu-corner-bl border-r-sky-400 absolute border-r-2 bg-grey"
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 89,
+                lineNumber: 92,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1140,18 +1138,18 @@ function App() {
                       children: [
                         mobileNavigationOpen && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Navigation, {}, void 0, !1, {
                           fileName: "app/root.tsx",
-                          lineNumber: 98,
+                          lineNumber: 100,
                           columnNumber: 42
                         }, this),
                         mobileTerminalOpen && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Terminal, {}, void 0, !1, {
                           fileName: "app/root.tsx",
-                          lineNumber: 99,
+                          lineNumber: 101,
                           columnNumber: 40
                         }, this)
                       ]
                     }, void 0, !0, {
                       fileName: "app/root.tsx",
-                      lineNumber: 97,
+                      lineNumber: 99,
                       columnNumber: 15
                     }, this),
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1169,12 +1167,12 @@ function App() {
                               className: "scale-75"
                             }, void 0, !1, {
                               fileName: "app/root.tsx",
-                              lineNumber: 111,
+                              lineNumber: 113,
                               columnNumber: 21
                             }, this)
                           }, void 0, !1, {
                             fileName: "app/root.tsx",
-                            lineNumber: 103,
+                            lineNumber: 105,
                             columnNumber: 19
                           }, this),
                           mobileMenuOpen && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1187,12 +1185,12 @@ function App() {
                               className: "scale-75"
                             }, void 0, !1, {
                               fileName: "app/root.tsx",
-                              lineNumber: 122,
+                              lineNumber: 124,
                               columnNumber: 23
                             }, this)
                           }, void 0, !1, {
                             fileName: "app/root.tsx",
-                            lineNumber: 114,
+                            lineNumber: 116,
                             columnNumber: 21
                           }, this),
                           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1205,67 +1203,67 @@ function App() {
                               className: "scale-75"
                             }, void 0, !1, {
                               fileName: "app/root.tsx",
-                              lineNumber: 133,
+                              lineNumber: 135,
                               columnNumber: 21
                             }, this)
                           }, void 0, !1, {
                             fileName: "app/root.tsx",
-                            lineNumber: 125,
+                            lineNumber: 127,
                             columnNumber: 19
                           }, this)
                         ]
                       }, void 0, !0, {
                         fileName: "app/root.tsx",
-                        lineNumber: 102,
+                        lineNumber: 104,
                         columnNumber: 17
                       }, this)
                     }, void 0, !1, {
                       fileName: "app/root.tsx",
-                      lineNumber: 101,
+                      lineNumber: 103,
                       columnNumber: 15
                     }, this)
                   ]
                 }, void 0, !0, {
                   fileName: "app/root.tsx",
-                  lineNumber: 92,
+                  lineNumber: 95,
                   columnNumber: 13
                 }, this)
               }, void 0, !1, {
                 fileName: "app/root.tsx",
-                lineNumber: 90,
+                lineNumber: 93,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/root.tsx",
-            lineNumber: 85,
+            lineNumber: 88,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.ScrollRestoration, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 140,
+            lineNumber: 142,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.Scripts, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 141,
+            lineNumber: 143,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react9.LiveReload, {}, void 0, !1, {
             fileName: "app/root.tsx",
-            lineNumber: 142,
+            lineNumber: 144,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/root.tsx",
-        lineNumber: 55,
+        lineNumber: 58,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/root.tsx",
-    lineNumber: 50,
+    lineNumber: 53,
     columnNumber: 5
   }, this);
 }
@@ -1274,7 +1272,7 @@ function App() {
 var image_exports = {};
 __export(image_exports, {
   fetchImage: () => fetchImage,
-  loader: () => loader
+  loader: () => loader2
 });
 var import_os = __toESM(require("os")), import_path = __toESM(require("path")), import_server2 = require("remix-image/server"), import_remix_image_sharp = require("remix-image-sharp"), fetchImage = async (asset, url, options, basePath) => url.startsWith("/") && (url.length === 1 || url[1] !== "/") ? (0, import_server2.fsResolver)(asset, url, options, basePath) : (0, import_server2.fetchResolver)(asset, url, options, basePath), vercelUrl = process.env.VERCEL_URL || "", fixedVercelUrl = vercelUrl.startsWith("https") ? vercelUrl : `https://${vercelUrl}`, config = {
   selfUrl: "http://localhost:3000",
@@ -1284,7 +1282,7 @@ var import_os = __toESM(require("os")), import_path = __toESM(require("path")), 
   resolver: fetchImage,
   transformer: import_remix_image_sharp.sharpTransformer,
   basePath: "public"
-}, loader = ({ request }) => (0, import_server2.imageLoader)(config, request);
+}, loader2 = ({ request }) => (0, import_server2.imageLoader)(config, request);
 
 // app/routes/contact.tsx
 var contact_exports = {};
@@ -1292,71 +1290,7 @@ __export(contact_exports, {
   action: () => action,
   default: () => Contact
 });
-var import_react10 = require("@remix-run/react"), import_react11 = require("react");
-
-// app/utils/config.tsx
-var import_nodemailer_react = require("nodemailer-react"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), transport = {
-  host: "smtp.example.com",
-  secure: !0,
-  auth: { user: "username", pass: "password" }
-}, defaults = {
-  from: "sender@server.com"
-}, ContactEmailResponse = ({
-  name,
-  email,
-  phone,
-  message
-}) => ({
-  subject: `\u2709\uFE0F ${name}`,
-  body: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-        children: [
-          "From: ",
-          name
-        ]
-      }, void 0, !0, {
-        fileName: "app/utils/config.tsx",
-        lineNumber: 29,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-        children: [
-          "Email: ",
-          email
-        ]
-      }, void 0, !0, {
-        fileName: "app/utils/config.tsx",
-        lineNumber: 30,
-        columnNumber: 7
-      }, this),
-      phone && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-        children: [
-          "Phone: ",
-          phone
-        ]
-      }, void 0, !0, {
-        fileName: "app/utils/config.tsx",
-        lineNumber: 31,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
-        children: message
-      }, void 0, !1, {
-        fileName: "app/utils/config.tsx",
-        lineNumber: 32,
-        columnNumber: 7
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/utils/config.tsx",
-    lineNumber: 28,
-    columnNumber: 5
-  }, this)
-}), mailer = (0, import_nodemailer_react.Mailer)({ transport, defaults }, { ContactEmailResponse });
-
-// app/routes/contact.tsx
-var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react10 = require("@remix-run/react"), import_react11 = require("react"), import_mail2 = __toESM(require("@sendgrid/mail")), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 var action = async ({ request }) => {
   let formData = Object.fromEntries(await request.formData()), { name, email, phone, message } = formData;
   if (typeof name == "string" && typeof email == "string" && typeof message == "string" && typeof phone == "string") {
@@ -1368,13 +1302,22 @@ var action = async ({ request }) => {
       ...phone && !/^\d+$/.test(phone) && { phone: "Invalid phone number" },
       ...!message && { message: "This field is required" }
     };
-    return Object.values(formErrors).some(Boolean) ? { formErrors } : (mailer.send(
-      "ContactEmailResponse",
-      { name, email, ...phone && { phone }, message },
-      {
-        to: "my@email.com"
-      }
-    ).catch((err) => console.log(err)).then((res) => console.log(res)), "success");
+    return Object.values(formErrors).some(Boolean) ? { formErrors } : (await import_mail2.default.send({
+      to: "contact@vantuch.dev",
+      from: "contact@vantuch.dev",
+      subject: "New contact from blog",
+      html: `
+      <div>
+        <ul>
+          <li><strong>Name: </strong> ${name}</li>
+          <li><strong>Email: </strong> ${email}</li>
+          ${phone && `<li><strong>Tel: </strong> ${phone}</li>`}
+        </ul>
+        <p>${message}</p>
+      </div>
+      `
+    }).then(() => {
+    }).catch((err) => console.error(err)), "success");
   }
 };
 function Contact() {
@@ -1421,7 +1364,7 @@ function Contact() {
         className: "t-01 l-01 border-r-sky-400 absolute hidden h-8 w-8 rotate-45 border-r-2 bg-grey sm:block"
       }, void 0, !1, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 103,
+        lineNumber: 109,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1437,7 +1380,7 @@ function Contact() {
                   className: "h-10 scale-75"
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 111,
+                  lineNumber: 117,
                   columnNumber: 15
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -1445,13 +1388,13 @@ function Contact() {
                   children: s.name
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 112,
+                  lineNumber: 118,
                   columnNumber: 15
                 }, this)
               ]
             }, i, !0, {
               fileName: "app/routes/contact.tsx",
-              lineNumber: 107,
+              lineNumber: 113,
               columnNumber: 13
             }, this)),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1463,23 +1406,23 @@ function Contact() {
                 className: "contact-link-container h-full w-full flex-row px-8"
               }, i, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 119,
+                lineNumber: 125,
                 columnNumber: 15
               }, this))
             }, void 0, !1, {
               fileName: "app/routes/contact.tsx",
-              lineNumber: 117,
+              lineNumber: 123,
               columnNumber: 11
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/routes/contact.tsx",
-          lineNumber: 105,
+          lineNumber: 111,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 104,
+        lineNumber: 110,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1493,7 +1436,7 @@ function Contact() {
                 children: actionData.formErrors.name
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 137,
+                lineNumber: 142,
                 columnNumber: 13
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -1506,13 +1449,13 @@ function Contact() {
                 className: "h-full w-full bg-grey px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 141,
+                lineNumber: 146,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 131,
+            lineNumber: 137,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1523,7 +1466,7 @@ function Contact() {
                 children: actionData.formErrors.email
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 157,
+                lineNumber: 161,
                 columnNumber: 13
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -1536,13 +1479,13 @@ function Contact() {
                 className: "h-full w-full bg-grey px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 161,
+                lineNumber: 165,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 151,
+            lineNumber: 156,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1553,7 +1496,7 @@ function Contact() {
                 children: actionData.formErrors.phone
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 177,
+                lineNumber: 180,
                 columnNumber: 13
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -1566,19 +1509,19 @@ function Contact() {
                 className: "h-full w-full bg-grey px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 181,
+                lineNumber: 184,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 171,
+            lineNumber: 175,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 130,
+        lineNumber: 136,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1595,7 +1538,7 @@ function Contact() {
             className: "row-span-2 mb-6 grid resize-none bg-grey p-10 text-xl outline-none"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 197,
+            lineNumber: 199,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1608,7 +1551,7 @@ function Contact() {
                   className: "border-r-sky-400 absolute -top-4 -left-4 hidden h-8 w-8 rotate-45 border-r-2 bg-grey sm:block"
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 212,
+                  lineNumber: 214,
                   columnNumber: 13
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -1616,18 +1559,18 @@ function Contact() {
                   children: "Send"
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 213,
+                  lineNumber: 215,
                   columnNumber: 13
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/contact.tsx",
-              lineNumber: 208,
+              lineNumber: 210,
               columnNumber: 11
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 207,
+            lineNumber: 209,
             columnNumber: 9
           }, this),
           ((_h = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _h.phone) && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1635,19 +1578,19 @@ function Contact() {
             children: actionData.formErrors.message
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 217,
+            lineNumber: 219,
             columnNumber: 11
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 192,
+        lineNumber: 195,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/routes/contact.tsx",
-    lineNumber: 99,
+    lineNumber: 105,
     columnNumber: 5
   }, this);
 }
@@ -1871,7 +1814,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "d36fe766", entry: { module: "/build/entry.client-6QOPJ36K.js", imports: ["/build/_shared/chunk-5GBMPF77.js", "/build/_shared/chunk-3CPB4T5C.js", "/build/_shared/chunk-42Z7WWMI.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-3DBAXVAU.js", imports: ["/build/_shared/chunk-C62QY4KY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-SPOYC2TE.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-5OYX6CMV.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2AHVPD3B.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-2DBLPPSH.js", imports: ["/build/_shared/chunk-U72AHZ3B.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-AG75GMGK.js", imports: ["/build/_shared/chunk-U72AHZ3B.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-D36FE766.js" };
+var assets_manifest_default = { version: "9b3b408b", entry: { module: "/build/entry.client-RTAFWM6F.js", imports: ["/build/_shared/chunk-VW276GB2.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-PN5NBXUG.js", imports: ["/build/_shared/chunk-S6HVJCT4.js", "/build/_shared/chunk-ZBD647UJ.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-XZZ7S3RU.js", imports: void 0, hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-DGO7JDVT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-H3X3ZDYM.js", imports: ["/build/_shared/chunk-EB6XIBDV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-2VU7NL5V.js", imports: ["/build/_shared/chunk-EB6XIBDV.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-9B3B408B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

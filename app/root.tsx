@@ -16,6 +16,7 @@ import { Matrix } from "./components/matrix";
 import remixImageStyles from "remix-image/remix-image.css";
 import tailwindcss from "./styles/tailwind.css";
 import globalcss from "./styles/global.css";
+import sendgrid from '@sendgrid/mail';
 
 export function links() {
   return [
@@ -31,20 +32,22 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
+export async function loader() {
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '')
+  return null
+}
+
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileNavigationOpen, setMobileNavigationOpen] = useState(false);
   const [mobileTerminalOpen, setMobileTerminalOpen] = useState(false);
 
-  useEffect(
-    () =>
-      document
-        .getElementById("terminal-container")
-        ?.addEventListener("click", () =>
-          document.getElementById("terminal-input")?.focus()
-        ),
-    []
-  );
+  useEffect(() => {
+    document
+      .getElementById("terminal-container")
+      ?.addEventListener("click", () =>
+        document.getElementById("terminal-input")?.focus())
+  }, []);
 
   return (
     <html lang="en">
@@ -90,9 +93,8 @@ export default function App() {
           <div className="p-4">
             {/* //Need to fix this to h-full somehow */}
             <div
-              className={`border-sky-400 grid content-end border-2 bg-grey ${
-                mobileMenuOpen && "h-more"
-              }`}
+              className={`border-sky-400 grid content-end border-2 bg-grey ${mobileMenuOpen && "h-more"
+                }`}
             >
               <div className="grid">
                 {mobileNavigationOpen && <Navigation />}
