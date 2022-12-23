@@ -85,7 +85,9 @@ export default function App() {
         <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5">
           <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 2xl:col-span-4">
             {transition.state === "loading" ? (
-              <Loader />
+              <div className="grid h-full place-items-center">
+                <Loader />
+              </div>
             ) : (
               <Outlet context={{ locale }} />
             )}
