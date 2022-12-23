@@ -1,5 +1,5 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "i18n.server.js", "i18n.js"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,
@@ -11,7 +11,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "@locales/*": ["./app/data/locales/*"],
+      "@components/*": ["./app/components/*"],
+      "@data/*": ["./app/data/*"]
     },
     "noEmit": true,
     "allowJs": true,

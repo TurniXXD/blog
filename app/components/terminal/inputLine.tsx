@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import type ICommon from "@locales/common/types";
+import { fieldWithValue } from "@locales/fields";
 
 export default function InputLine({
+  t,
   output,
   setOutput,
   commandHistory,
   setCommandHistory,
 }: {
+  t: ICommon;
   commandHistory: string[];
   setCommandHistory: React.Dispatch<React.SetStateAction<string[]>>;
   output: string;
@@ -56,46 +60,77 @@ export default function InputLine({
         });
 
         if (commandProcessed[0] === "cd") {
-          if (!commandProcessed[1]) handleOutput("No directory specified");
+          if (!commandProcessed[1]) handleOutput(t.terminal.messages.noDir);
           else if (/.txt/g.test(commandProcessed[1])) {
-            if (commandProcessed[1] === "me.txt")
-              handleOutput("me.txt is a file");
-            else handleOutput(`Cannot find ${commandProcessed[1]}`);
+            if (commandProcessed[1] === t.terminal.commands.ls.meTxt)
+              handleOutput(
+                fieldWithValue(t.terminal.messages.isFile, {
+                  file: commandProcessed[1],
+                })
+              );
+            else
+              handleOutput(
+                fieldWithValue(t.terminal.messages.cannotFind, {
+                  dir: commandProcessed[1],
+                })
+              );
           } else if (
-            commandProcessed[1] === "about" ||
-            commandProcessed[1] === "work" ||
-            commandProcessed[1] === "skills" ||
-            commandProcessed[1] === "contact"
+            commandProcessed[1] === t.terminal.commands.ls.about ||
+            commandProcessed[1] === t.terminal.commands.ls.work ||
+            commandProcessed[1] === t.terminal.commands.ls.skills ||
+            commandProcessed[1] === t.terminal.commands.ls.contact
           ) {
             navigate(
-              commandProcessed[1] === "about" ? "/" : commandProcessed[1]
+              commandProcessed[1] === t.terminal.commands.ls.about
+                ? "/"
+                : commandProcessed[1]
             );
             handleOutput("no_output_line");
-          } else handleOutput(`Cannot find ${commandProcessed[1]}`);
+          } else
+            handleOutput(
+              fieldWithValue(t.terminal.messages.cannotFind, {
+                dir: commandProcessed[1],
+              })
+            );
         } else if (commandProcessed[0] === "ls") {
-          const dirs = `
-          <a href="/"><strong>about</strong></a> <br/>
-          <a href="/work"><strong>work</strong></a> <br/>
-          <a href="/skills"><strong>skills</strong></a> <br/>
-          <a href="/contact"><strong>contact</strong></a> <br/>
-          me.txt
-        `;
-          handleOutput(dirs);
+          if (commandProcessed[1]) {
+            handleOutput(t.terminal.messages.lsNoParam);
+          } else {
+            const dirs = `
+              <a href="/"><strong>${t.terminal.commands.ls.about}</strong></a> <br/>
+              <a href="/work"><strong>${t.terminal.commands.ls.work}</strong></a> <br/>
+              <a href="/skills"><strong>${t.terminal.commands.ls.skills}</strong></a> <br/>
+              <a href="/contact"><strong>${t.terminal.commands.ls.contact}</strong></a> <br/>
+              ${t.terminal.commands.ls.meTxt}
+            `;
+            handleOutput(dirs);
+          }
         } else if (commandProcessed[0] === "cat") {
-          if (commandProcessed[1] === "me.txt") handleOutput("It's me");
-          else if (!commandProcessed[1]) handleOutput("No file specified");
+          if (commandProcessed[1] === t.terminal.commands.ls.meTxt)
+            handleOutput(t.terminal.commands.cat.meTxt);
+          else if (!commandProcessed[1])
+            handleOutput(t.terminal.messages.noFile);
           else if (
-            commandProcessed[1] === "about" ||
-            commandProcessed[1] === "work" ||
-            commandProcessed[1] === "skills" ||
-            commandProcessed[1] === "contact"
+            commandProcessed[1] === t.terminal.commands.ls.about ||
+            commandProcessed[1] === t.terminal.commands.ls.work ||
+            commandProcessed[1] === t.terminal.commands.ls.skills ||
+            commandProcessed[1] === t.terminal.commands.ls.contact
           )
-            handleOutput(`${commandProcessed[1]} is a directory`);
-          else handleOutput(`Cannot find ${commandProcessed[1]}`);
+            handleOutput(
+              fieldWithValue(t.terminal.messages.isDir, {
+                dir: commandProcessed[1],
+              })
+            );
+          else
+            handleOutput(
+              fieldWithValue(t.terminal.messages.cannotFind, {
+                dir: commandProcessed[1],
+              })
+            );
         } else if (commandProcessed[0] === "help")
-          handleOutput("available commands are help, cd, ls, cat");
+          handleOutput(t.terminal.commands.help);
         else {
-          handleOutput("available commands are help, cd, ls, cat");
+          handleOutput(t.terminal.commands.help);
         }
         setDisableInput(true);
       }
@@ -105,7 +140,7 @@ export default function InputLine({
   return (
     <div className="flex-row gap-2">
       <div className="flex-col">
-        <span className="text-2xs sm:text-sm">[ vantuch@dev ~ ] $</span>
+        <span className="text-2xs sm:text-sm">[ {t.terminal.user} ~ ] $</span>
       </div>
       <div className="flex-auto flex-col">
         <input
@@ -115,7 +150,7 @@ export default function InputLine({
           autoCorrect="off"
           autoCapitalize="none"
           id="terminal-input"
-          className="text-2xs word-spacing-lg w-full bg-grey outline-none sm:text-sm"
+          className="text-2xs word-spacing-lg bg-main w-full outline-none sm:text-sm"
           onChange={(value) => setCommand(value.target.value)}
           value={command}
           onKeyDown={(e) => handleKeyEvent(e)}

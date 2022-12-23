@@ -1,4 +1,5 @@
-import type { Projects, Skills } from "./types";
+import type { Projects, Skills, Socials } from "./types";
+import { Icons } from "./types";
 
 export const projects: Projects[] = [
   {
@@ -45,5 +46,24 @@ export const skills: Skills[] = [
   {
     skillUrl: "https://archlinux.org/",
     imgUrl: "img/skills/linux.svg",
+  },
+];
+
+export const socials: Socials[] = [
+  {
+    url: "https://github.com/TurniXXD",
+    icon: Icons.github,
+  },
+  {
+    url: "https://www.linkedin.com/in/jakub-vantuch-552514197/",
+    icon: Icons.linkedin,
+  },
+  {
+    url: "https://t.me/turnix",
+    icon: Icons.telegram,
+  },
+  {
+    url: "mailto:contact@vantuch.dev",
+    icon: Icons.email,
   },
 ];

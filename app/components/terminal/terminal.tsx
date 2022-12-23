@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import InputLine from "./inputLine";
 import OutputLine from "./outputLine";
+import type ICommon from "@locales/common/types";
 
-export default function Terminal() {
-  const defaultOutput =
-    "Start by typing commands. To see available commands type 'help'.";
+export default function Terminal({ t }: { t: ICommon }) {
+  const defaultOutput = t.terminal.tooltip;
   const [output, setOutput] = useState(defaultOutput);
   const [lines, setLines] = useState<JSX.Element[]>([]);
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
@@ -18,6 +18,7 @@ export default function Terminal() {
         dataLines.push(
           <InputLine
             key={lineKey + 1}
+            t={t}
             output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}
@@ -34,13 +35,13 @@ export default function Terminal() {
     if (output !== defaultOutput) {
       setLines((data) => {
         const dataLines = data && [...data];
-        const isNotOutputLine =
-          output === "no_output_line" || output === "no_output_line ";
+        const isNotOutputLine = output === "no_output_line";
         !isNotOutputLine &&
           dataLines.push(<OutputLine key={lineKey} output={output} />);
         dataLines.push(
           <InputLine
             key={isNotOutputLine ? lineKey : lineKey + 1}
+            t={t}
             output={output}
             setOutput={setOutput}
             commandHistory={commandHistory}

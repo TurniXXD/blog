@@ -4,6 +4,7 @@
   --grey: #0f1524;
   --blue: #7dd8ff;
   --blue-dark: #349dca;
+  --blue-darker: #305666;
   --error: rgb(239 68 68);
 }
 
@@ -18,13 +19,23 @@
     color: var(--blue);
     overflow: hidden;
     background: var(--grey);
-    /*     background: linear-gradient(-45deg, #0b1327, #0f172a, #1b2335, #1a1f2c);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite; */
     margin: 0;
     height: 100%;
     word-spacing: 3px;
   }
+
+  *::selection {
+    background-color: var(--blue);
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--blue-darker)
+}
+
+.bg-main {
+  background-color: var(--grey);
 }
 
 [class*=loader-sec] {
@@ -47,29 +58,10 @@
   animation: blink .8s .6s infinite;
 }
 
-/* .loader-sec-a {
-  animation: blink .4s infinite;
-}
-
-.loader-sec-b {
-  animation: blink .4s .1s infinite;
-}
-
-.loader-sec-c {
-  animation: blink .4s .2s infinite;
-}
-
-.loader-sec-d {
-  animation: blink .4s .3s infinite;
-} */
-
 @keyframes blink {
   0% {
     opacity: 1;
   }
-  /* 5% {
-    opacity: 0;
-  } */
 
   33% {
     opacity: 0;
@@ -85,19 +77,6 @@
 
   }
 }
-
-/* @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-} */
-
 
 .nav-link,
 .contact-link,
@@ -123,6 +102,12 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.flag-hover {
+  -webkit-animation: glowBg s ease-in-out infinite alternate;
+  -moz-animation: glowBg 2s ease-in-out infinite alternate;
+  animation: glowBg 1s ease-in-out infinite alternate;
+}
+
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue-dark), 0 0 40px var(--blue-dark);
@@ -132,6 +117,16 @@
     text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue-dark);
   }
 }
+
+/* @-webkit-keyframes glowBg {
+  from {
+    box-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue-dark), 0 0 40px var(--blue-dark);
+  }
+
+  to {
+    box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue-dark);
+  }
+} */
 
 .glow {
   box-shadow: 0px 0px 6px 1px var(--blue-dark);
@@ -184,6 +179,14 @@
 
 .t-01 {
   top: 0.1rem;
+}
+
+.-t-01 {
+  top: -0.1rem;
+}
+
+.-r-01 {
+  right: -0.1rem;
 }
 
 .pt-01 {

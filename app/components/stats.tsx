@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { StatusBar } from "./svg";
 import { bipolarRandomState } from "./../utils";
+import { StatusBar } from "./svg";
+import type ICommon from "@locales/common/types";
 
-export default function Stats() {
+export default function Stats({ t }: { t: ICommon }) {
   useEffect(() => {
     const cpuStatusBar = document.getElementsByClassName("cpu");
     const memStatusBar = document.getElementsByClassName("mem");
@@ -140,25 +141,27 @@ export default function Stats() {
   return (
     <>
       <div className="flex-row justify-center min-[1370px]:justify-between">
-        <span className="hidden text-lg min-[1370px]:block">CPU</span>
+        <span className="hidden text-lg min-[1370px]:block">{t.stats.cpu}</span>
         <div className="pt-01">
           <StatusBar id="cpu" />
         </div>
       </div>
       <div className="flex-row justify-center min-[1370px]:justify-between">
-        <span className="hidden text-lg min-[1370px]:block">MEM</span>
+        <span className="hidden text-lg min-[1370px]:block">{t.stats.mem}</span>
         <div className="pt-01">
           <StatusBar id="mem" />
         </div>
       </div>
       <div className="flex-row justify-center min-[1370px]:justify-between">
-        <span className="hidden text-lg min-[1370px]:block">NET</span>
+        <span className="hidden text-lg min-[1370px]:block">{t.stats.net}</span>
         <div className="pt-01">
           <StatusBar id="net" />
         </div>
       </div>
       <div className="flex-row justify-center min-[1370px]:justify-between">
-        <span className="hidden text-lg min-[1370px]:block">DISK</span>
+        <span className="hidden text-lg min-[1370px]:block">
+          {t.stats.disk}
+        </span>
         <div className="pt-01">
           <StatusBar id="disk" />
         </div>

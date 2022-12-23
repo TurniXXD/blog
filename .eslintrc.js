@@ -6,5 +6,9 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "prettier/prettier": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "no-console": "warn",
+    "@next/next/no-document-import-in-page": "off",
+    "@next/next/no-img-element": "off",
   },
 };

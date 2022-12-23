@@ -1,25 +1,15 @@
-import type { ActionFunction } from "@remix-run/node";
+import type { ActionFunction, ActionArgs } from "@remix-run/node";
 import { Form, useActionData } from "@remix-run/react";
-import { useEffect } from "react";
-import sendgrid from '@sendgrid/mail';
+import { useEffect, useMemo } from "react";
+import sendgrid from "@sendgrid/mail";
+import { en, cz } from "@locales/contact";
+import { Langs } from "@locales/config";
+import { useLocale } from "../root";
+import { socials } from "@data/models";
 
-enum Icons {
-  github = "github",
-  linkedin = "linkedin",
-  telegram = "telegram",
-  email = "email",
-}
-
-interface Socials {
-  url: string;
-  name: string;
-  icon: Icons;
-}
-
-export const action: ActionFunction = async ({ request }) => {
+export const action: ActionFunction = async ({ request }: ActionArgs) => {
   const formData = Object.fromEntries(await request.formData());
   const { name, email, phone, message } = formData;
-  //sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '')
 
   if (
     typeof name === "string" &&
@@ -32,19 +22,20 @@ export const action: ActionFunction = async ({ request }) => {
       ...(!email
         ? { email: "This field is required" }
         : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && {
-          email: "Invalid email address",
-        }),
+            email: "Invalid email address",
+          }),
       ...(phone && !/^\d+$/.test(phone) && { phone: "Invalid phone number" }),
       ...(!message && { message: "This field is required" }),
     };
 
     if (Object.values(formErrors).some(Boolean)) return { formErrors };
 
-    await sendgrid.send({
-      to: 'contact@vantuch.dev',
-      from: 'contact@vantuch.dev',
-      subject: 'New contact from blog',
-      html: `
+    await sendgrid
+      .send({
+        to: "contact@vantuch.dev",
+        from: "contact@vantuch.dev",
+        subject: "New contact from blog",
+        html: `
       <div>
         <ul>
           <li><strong>Name: </strong> ${name}</li>
@@ -54,7 +45,9 @@ export const action: ActionFunction = async ({ request }) => {
         <p>${message}</p>
       </div>
       `,
-    }).then(() => {}).catch((err) => console.error(err))
+      })
+      .then(() => {})
+      .catch((err) => console.error(err)); // eslint-disable-line no-console
 
     return "success";
   }
@@ -62,29 +55,12 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function Contact() {
   const actionData = useActionData();
+  const { locale } = useLocale();
 
-  const socials: Socials[] = [
-    {
-      url: "https://github.com/TurniXXD",
-      name: "GitHub",
-      icon: Icons.github,
-    },
-    {
-      url: "https://www.linkedin.com/in/jakub-vantuch-552514197/",
-      name: "LinkedIn",
-      icon: Icons.linkedin,
-    },
-    {
-      url: "https://t.me/turnix",
-      name: "Telegram",
-      icon: Icons.telegram,
-    },
-    {
-      url: "mailto:contact@vantuch.dev",
-      name: "Email",
-      icon: Icons.email,
-    },
-  ];
+  const t = useMemo(() => {
+    const t = locale === Langs.en ? en : cz;
+    return t;
+  }, [locale]);
 
   useEffect(() => {
     const contactLinks = document.getElementsByClassName("contact-link");
@@ -106,7 +82,7 @@ export default function Contact() {
       method="post"
       className="gap-4 sm:grid sm:h-full sm:grid-cols-3 sm:grid-rows-4"
     >
-      <div className="t-01 l-01 border-r-sky-400 absolute hidden h-8 w-8 rotate-45 border-r-2 bg-grey sm:block"></div>
+      <div className="t-01 l-01 border-r-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-r-2 sm:block"></div>
       <div className="border-sky-400 col-span-1 row-span-2 grid border-2">
         <div className="relative w-full flex-col justify-evenly">
           {socials.map((s, i) => (
@@ -114,9 +90,13 @@ export default function Contact() {
               key={i}
               className="w-full flex-row items-center justify-start gap-6 px-8 sm:justify-center lg:justify-start"
             >
-              <img src={`/svg/${s.icon}.svg`} className="h-10 scale-75" />
+              <img
+                src={`/svg/${s.icon}.svg`}
+                className="h-10 scale-75"
+                alt={s.icon}
+              />
               <span className="contact-link block text-base sm:hidden sm:text-lg lg:block">
-                {s.name}
+                {t.links[s.icon]}
               </span>
             </div>
           ))}
@@ -128,95 +108,113 @@ export default function Contact() {
                 target="__blank"
                 rel="noreferrer noopener nofollow"
                 className="contact-link-container h-full w-full flex-row px-8"
-              />
+              >
+                {" "}
+              </a>
             ))}
           </div>
         </div>
       </div>
       <div className="col-span-2 row-span-2 grid h-full grid-rows-3 gap-4">
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.name ? "border-error" : "border-sky-400"
-            }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${
+            actionData?.formErrors?.name ? "border-error" : "border-sky-400"
+          }`}
         >
-          {actionData?.formErrors?.name && (
-            <div className="text-error absolute left-4 -top-2 h-10 bg-grey px-2 text-sm">
-              {actionData.formErrors.name}
-            </div>
-          )}
+          <div
+            className={`bg-main absolute left-4 -top-2 h-10 px-2 text-sm ${
+              actionData?.formErrors?.name && "text-error"
+            }`}
+          >
+            {actionData?.formErrors?.name
+              ? actionData?.formErrors?.name
+              : t.fields.name.title}
+          </div>
           <input
             type="text"
             name="name"
             id=""
-            placeholder="Name"
+            placeholder={t.fields.name.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
-            className="h-full w-full bg-grey px-16 text-center text-xl outline-none"
+            className="bg-main h-full w-full px-16 text-center text-xl outline-none"
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.email ? "border-error" : "border-sky-400"
-            }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${
+            actionData?.formErrors?.email ? "border-error" : "border-sky-400"
+          }`}
         >
-          {actionData?.formErrors?.email && (
-            <div className="text-error absolute left-4 -top-3 h-10 bg-grey px-2 text-sm">
-              {actionData.formErrors.email}
-            </div>
-          )}
+          <div
+            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${
+              actionData?.formErrors?.email && "text-error"
+            }`}
+          >
+            {actionData?.formErrors?.email
+              ? actionData?.formErrors?.email
+              : t.fields.email.title}
+          </div>
           <input
             type="text"
             name="email"
             id=""
-            placeholder="Email"
+            placeholder={t.fields.email.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
-            className="h-full w-full bg-grey px-16 text-center text-xl outline-none"
+            className="bg-main h-full w-full px-16 text-center text-xl outline-none"
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
-            }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${
+            actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
+          }`}
         >
-          {actionData?.formErrors?.phone && (
-            <div className="text-error absolute left-4 -top-3 h-10 bg-grey px-2 text-sm">
-              {actionData.formErrors.phone}
-            </div>
-          )}
+          <div
+            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${
+              actionData?.formErrors?.phone && "text-error"
+            }`}
+          >
+            {actionData?.formErrors?.phone
+              ? actionData?.formErrors?.phone
+              : t.fields.phone.title}
+          </div>
           <input
             type="text"
             name="phone"
             id=""
-            placeholder="Phone"
+            placeholder={t.fields.phone.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
-            className="h-full w-full bg-grey px-16 text-center text-xl outline-none"
+            className="bg-main h-full w-full px-16 text-center text-xl outline-none"
           />
         </div>
       </div>
       <div
-        className={`border-red relative col-span-3 row-span-2 grid grid-rows-3 border-2 ${actionData?.formErrors?.message ? "border-error" : "border-sky-400"
-          }`}
+        className={`border-red relative col-span-3 row-span-2 grid grid-rows-3 border-2 ${
+          actionData?.formErrors?.message ? "border-error" : "border-sky-400"
+        }`}
       >
         <textarea
           name="message"
           id=""
           spellCheck="false"
           autoCorrect="off"
-          placeholder="Let me make your dream come true..."
+          placeholder={t.fields.messagePlaceholder || ""}
           cols={30}
           rows={10}
-          className="row-span-2 mb-6 grid resize-none bg-grey p-10 text-xl outline-none"
+          className="bg-main row-span-2 mb-6 grid resize-none p-10 text-xl outline-none"
         />
         <div className="absolute bottom-0 right-0 row-span-1 grid h-28 w-full grid-cols-3 grid-rows-1">
           <button
             type="submit"
             className="contact-button border-sky-400 relative col-span-2 col-start-2 row-span-1 grid content-center justify-items-center border-2 border-r-0 border-b-0"
           >
-            <div className="border-r-sky-400 absolute -top-4 -left-4 hidden h-8 w-8 rotate-45 border-r-2 bg-grey sm:block"></div>
-            <span className="text-2xl">Send</span>
+            <div className="border-r-sky-400 bg-main absolute -top-4 -left-4 hidden h-8 w-8 rotate-45 border-r-2 sm:block"></div>
+            <span className="text-2xl">{t.fields.send}</span>
           </button>
         </div>
         {actionData?.formErrors?.phone && (
-          <div className="text-error absolute left-4 -top-3 h-10 bg-grey px-2 text-sm">
+          <div className="text-error bg-main absolute left-4 -top-3 h-10 px-2 text-sm">
             {actionData.formErrors.message}
           </div>
         )}

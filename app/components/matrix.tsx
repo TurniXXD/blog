@@ -33,7 +33,7 @@ export const Matrix = () => {
             `div#matrix-col-${i} > div.matrix-row`
           );
           matrixColRowsShift[matrixCols[i]]?.classList.remove("bg-blue");
-          matrixColRowsShift[matrixCols[i]]?.classList.add("bg-grey");
+          matrixColRowsShift[matrixCols[i]]?.classList.add("bg-main");
         }
 
         matrixCols.shift();
@@ -43,7 +43,7 @@ export const Matrix = () => {
           const matrixColRowsShift = document.querySelectorAll(
             `div#matrix-col-${i} > div.matrix-row`
           );
-          matrixColRowsShift[matrixCols[i]]?.classList.remove("bg-grey");
+          matrixColRowsShift[matrixCols[i]]?.classList.remove("bg-main");
           matrixColRowsShift[matrixCols[i]]?.classList.add("bg-blue");
         }
       } else {
@@ -51,7 +51,7 @@ export const Matrix = () => {
           `div#matrix-col-${colIndex} > div.matrix-row`
         );
         matrixCols.push(level);
-        matrixColRows[matrixCols[colIndex]]?.classList.remove("bg-grey");
+        matrixColRows[matrixCols[colIndex]]?.classList.remove("bg-main");
         matrixColRows[matrixCols[colIndex]]?.classList.add("bg-blue");
       }
 
@@ -71,7 +71,7 @@ export const Matrix = () => {
       >
         <StackedElements
           count={15}
-          className="matrix-row row-span-1 grid h-1 w-1 justify-items-center bg-grey"
+          className="matrix-row bg-main row-span-1 grid h-1 w-1 justify-items-center"
         />
       </div>
     );
