@@ -148,7 +148,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 45,
-        columnNumber: 3
+        columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
         d: "M23.0002 179V170H25.0002V181H0V170H2V179H23.0002Z",
@@ -156,7 +156,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 46,
-        columnNumber: 3
+        columnNumber: 7
       }, this),
       rect.map((r) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("rect", {
         className: `${id} hidden`,
@@ -167,7 +167,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#38BDF8"
       }, r, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 48,
+        lineNumber: 51,
         columnNumber: 9
       }, this))
     ]
@@ -190,7 +190,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#182139"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 72,
+        lineNumber: 75,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -198,7 +198,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#0f1524"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 73,
+        lineNumber: 76,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -207,7 +207,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 77,
+        lineNumber: 80,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -216,7 +216,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 82,
+        lineNumber: 85,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -225,7 +225,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 87,
+        lineNumber: 90,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -234,7 +234,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 92,
+        lineNumber: 95,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -243,7 +243,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 97,
+        lineNumber: 100,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -252,7 +252,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 102,
+        lineNumber: 105,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -261,7 +261,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 107,
+        lineNumber: 110,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -270,7 +270,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         fill: "#7DD8FF"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 112,
+        lineNumber: 115,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("g", {
@@ -281,7 +281,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#182139"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 118,
+            lineNumber: 121,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -291,7 +291,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#182139"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 122,
+            lineNumber: 125,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -300,7 +300,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 128,
+            lineNumber: 131,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -309,7 +309,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 133,
+            lineNumber: 136,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -318,7 +318,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 138,
+            lineNumber: 141,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -327,7 +327,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 143,
+            lineNumber: 146,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -336,7 +336,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 148,
+            lineNumber: 151,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -345,7 +345,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 153,
+            lineNumber: 156,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -354,7 +354,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 158,
+            lineNumber: 161,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -363,7 +363,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#7DD8FF"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 163,
+            lineNumber: 166,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -371,7 +371,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#121929"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 168,
+            lineNumber: 171,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -379,24 +379,24 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
             fill: "#182139"
           }, void 0, !1, {
             fileName: "app/components/svg.tsx",
-            lineNumber: 172,
+            lineNumber: 175,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/components/svg.tsx",
-        lineNumber: 117,
+        lineNumber: 120,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/components/svg.tsx",
-    lineNumber: 71,
+    lineNumber: 74,
     columnNumber: 5
   }, this)
 }, void 0, !1, {
   fileName: "app/components/svg.tsx",
-  lineNumber: 63,
+  lineNumber: 66,
   columnNumber: 3
 }, this), FlagCz = () => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("svg", {
   width: "71",
@@ -410,7 +410,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 189,
+      lineNumber: 192,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -420,7 +420,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#71D4FF"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 190,
+      lineNumber: 193,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -428,7 +428,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#71D4FF"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 196,
+      lineNumber: 199,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -436,7 +436,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2089B7"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 197,
+      lineNumber: 200,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -446,13 +446,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#71D4FF"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 201,
+      lineNumber: 204,
       columnNumber: 5
     }, this)
   ]
 }, void 0, !0, {
   fileName: "app/components/svg.tsx",
-  lineNumber: 182,
+  lineNumber: 185,
   columnNumber: 3
 }, this), FlagEn = () => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("svg", {
   width: "71",
@@ -468,7 +468,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       strokeWidth: "2"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 218,
+      lineNumber: 221,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -476,7 +476,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 224,
+      lineNumber: 227,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -484,7 +484,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 225,
+      lineNumber: 228,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -492,7 +492,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 226,
+      lineNumber: 229,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -500,7 +500,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 227,
+      lineNumber: 230,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -508,7 +508,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 228,
+      lineNumber: 231,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -516,7 +516,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 229,
+      lineNumber: 232,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -524,7 +524,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 230,
+      lineNumber: 233,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -532,7 +532,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 231,
+      lineNumber: 234,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -540,7 +540,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 232,
+      lineNumber: 235,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -548,7 +548,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 233,
+      lineNumber: 236,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -556,7 +556,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 237,
+      lineNumber: 240,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -564,7 +564,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 238,
+      lineNumber: 241,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -572,7 +572,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#2C7B9E"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 239,
+      lineNumber: 242,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -580,7 +580,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       fill: "#344F96"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 240,
+      lineNumber: 243,
       columnNumber: 5
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
@@ -589,13 +589,13 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       strokeWidth: "2"
     }, void 0, !1, {
       fileName: "app/components/svg.tsx",
-      lineNumber: 244,
+      lineNumber: 247,
       columnNumber: 5
     }, this)
   ]
 }, void 0, !0, {
   fileName: "app/components/svg.tsx",
-  lineNumber: 211,
+  lineNumber: 214,
   columnNumber: 3
 }, this);
 
@@ -669,12 +669,12 @@ function Navigation({
           children: t.menu.work
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
-          lineNumber: 37,
+          lineNumber: 39,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/navigation.tsx",
-        lineNumber: 36,
+        lineNumber: 38,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -684,12 +684,12 @@ function Navigation({
           children: t.menu.skills
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
-          lineNumber: 40,
+          lineNumber: 44,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/navigation.tsx",
-        lineNumber: 39,
+        lineNumber: 43,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -699,12 +699,12 @@ function Navigation({
           children: t.menu.contact
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
-          lineNumber: 43,
+          lineNumber: 49,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/navigation.tsx",
-        lineNumber: 42,
+        lineNumber: 48,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -716,7 +716,7 @@ function Navigation({
             children: " "
           }, void 0, !1, {
             fileName: "app/components/navigation.tsx",
-            lineNumber: 46,
+            lineNumber: 54,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react3.Link, {
@@ -725,7 +725,7 @@ function Navigation({
             children: " "
           }, void 0, !1, {
             fileName: "app/components/navigation.tsx",
-            lineNumber: 49,
+            lineNumber: 57,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react3.Link, {
@@ -734,7 +734,7 @@ function Navigation({
             children: " "
           }, void 0, !1, {
             fileName: "app/components/navigation.tsx",
-            lineNumber: 55,
+            lineNumber: 63,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react3.Link, {
@@ -743,13 +743,13 @@ function Navigation({
             children: " "
           }, void 0, !1, {
             fileName: "app/components/navigation.tsx",
-            lineNumber: 61,
+            lineNumber: 69,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/components/navigation.tsx",
-        lineNumber: 45,
+        lineNumber: 53,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Flag, {
@@ -757,7 +757,7 @@ function Navigation({
         setLocale
       }, void 0, !1, {
         fileName: "app/components/navigation.tsx",
-        lineNumber: 68,
+        lineNumber: 76,
         columnNumber: 7
       }, this)
     ]
@@ -989,7 +989,7 @@ var bipolarRandomState = () => {
 // app/components/stats.tsx
 var import_react_use = require("react-use"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Stats({ t }) {
-  let isPC = (0, import_react_use.useMedia)("(min-width: 1050px)"), isTablet = (0, import_react_use.useMedia)("(min-width: 640px)");
+  let isPC = (0, import_react_use.useMedia)("(min-width: 1050px)", !1), isTablet = (0, import_react_use.useMedia)("(min-width: 640px)", !1);
   return (0, import_react6.useEffect)(() => {
     let setStartingStatusBarPosition = (timer, statusBar, i, statusEnd) => {
       var _a, _b;
@@ -1018,11 +1018,7 @@ function Stats({ t }) {
         ), statusBarIndex++;
       }, 50);
       setInterval(
-        () => randomStatusBarState(
-          statusBar,
-          statusBarIndex,
-          delay
-        ),
+        () => randomStatusBarState(statusBar, statusBarIndex, delay),
         1e3
       );
     };
@@ -1035,14 +1031,14 @@ function Stats({ t }) {
     children: isPC ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, {
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-          className: "flex-row justify-center min-[1370px]:justify-between gap-5",
+          className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
               className: "hidden text-lg min-[1370px]:block",
               children: t.stats.cpu
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
-              lineNumber: 99,
+              lineNumber: 93,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1051,29 +1047,29 @@ function Stats({ t }) {
                 id: "cpu"
               }, void 0, !1, {
                 fileName: "app/components/stats.tsx",
-                lineNumber: 101,
+                lineNumber: 97,
                 columnNumber: 15
               }, this)
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
-              lineNumber: 100,
+              lineNumber: 96,
               columnNumber: 13
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/components/stats.tsx",
-          lineNumber: 98,
+          lineNumber: 92,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-          className: "flex-row justify-center min-[1370px]:justify-between gap-5",
+          className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
               className: "hidden text-lg min-[1370px]:block",
               children: t.stats.mem
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
-              lineNumber: 105,
+              lineNumber: 101,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1082,29 +1078,29 @@ function Stats({ t }) {
                 id: "mem"
               }, void 0, !1, {
                 fileName: "app/components/stats.tsx",
-                lineNumber: 107,
+                lineNumber: 105,
                 columnNumber: 15
               }, this)
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
-              lineNumber: 106,
+              lineNumber: 104,
               columnNumber: 13
             }, this)
           ]
         }, void 0, !0, {
           fileName: "app/components/stats.tsx",
-          lineNumber: 104,
+          lineNumber: 100,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-          className: "flex-row justify-center min-[1370px]:justify-between gap-5",
+          className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
               className: "hidden text-lg min-[1370px]:block",
               children: t.stats.net
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
-              lineNumber: 111,
+              lineNumber: 109,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1124,11 +1120,11 @@ function Stats({ t }) {
           ]
         }, void 0, !0, {
           fileName: "app/components/stats.tsx",
-          lineNumber: 110,
+          lineNumber: 108,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-          className: "flex-row justify-center min-[1370px]:justify-between gap-5",
+          className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
               className: "hidden text-lg min-[1370px]:block",
@@ -1161,7 +1157,7 @@ function Stats({ t }) {
       ]
     }, void 0, !0, {
       fileName: "app/components/stats.tsx",
-      lineNumber: 97,
+      lineNumber: 91,
       columnNumber: 9
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
       className: "status-bar-cols flex-row justify-center gap-10",
@@ -1195,7 +1191,7 @@ function Stats({ t }) {
     }, this)
   }, void 0, !1, {
     fileName: "app/components/stats.tsx",
-    lineNumber: 95,
+    lineNumber: 89,
     columnNumber: 5
   }, this);
 }
@@ -1284,7 +1280,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-IQG7S4EQ.css";
+var tailwind_default = "/build/_assets/tailwind-27SJUHVU.css";
 
 // app/styles/global.css
 var global_default = "/build/_assets/global-OHYTPU47.css";
@@ -1495,7 +1491,7 @@ function App() {
                           columnNumber: 17
                         }, this),
                         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                          className: "border-t-sky-400 row-span-1 grid h-full border-t-2 p-8",
+                          className: "border-t-sky-400 row-span-1 grid h-full border-t-2 p-8 2xl:px-3 2xl:py-8 3xl:p-8",
                           children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Stats, {
                             t
                           }, void 0, !1, {
@@ -1941,7 +1937,7 @@ function Contact() {
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-        className: "relative sm:static border-sky-400 col-span-1 row-span-2 grid border-2 py-4 sm:p-0",
+        className: "border-sky-400 relative col-span-1 row-span-2 grid border-2 py-4 sm:static sm:p-0",
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: "relative w-full flex-col justify-evenly",
@@ -1997,14 +1993,14 @@ function Contact() {
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-            className: "contact-socials-corner-tr sm:hidden border-r-sky-400 bg-main absolute border-r-2"
+            className: "contact-socials-corner-tr border-r-sky-400 bg-main absolute border-r-2 sm:hidden"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
             lineNumber: 117,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-            className: "contact-socials-corner-tl sm:hidden border-r-sky-400 bg-main absolute border-r-2"
+            className: "contact-socials-corner-tl border-r-sky-400 bg-main absolute border-r-2 sm:hidden"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
             lineNumber: 118,
@@ -2017,17 +2013,17 @@ function Contact() {
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-        className: "col-span-2 row-span-2 grid h-full grid-rows-3 gap-4 my-4 sm:m-0",
+        className: "col-span-2 row-span-2 my-4 grid h-full grid-rows-3 gap-4 sm:m-0",
         children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: `relative h-20 w-full border-2 sm:h-full ${(_a = actionData == null ? void 0 : actionData.formErrors) != null && _a.name ? "border-error" : "border-sky-400"}`,
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                className: `bg-main absolute left-4 -top-3 sm:-top-2 h-10 px-2 text-sm ${((_b = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _b.name) && "text-error"}`,
+                className: `bg-main absolute left-4 -top-3 h-10 px-2 text-sm sm:-top-2 ${((_b = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _b.name) && "text-error"}`,
                 children: (_c = actionData == null ? void 0 : actionData.formErrors) != null && _c.name ? (_d = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _d.name : t.fields.name.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 125,
+                lineNumber: 126,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2040,7 +2036,7 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 133,
+                lineNumber: 135,
                 columnNumber: 11
               }, this)
             ]
@@ -2057,7 +2053,7 @@ function Contact() {
                 children: (_g = actionData == null ? void 0 : actionData.formErrors) != null && _g.email ? (_h = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _h.email : t.fields.email.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 147,
+                lineNumber: 150,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2070,13 +2066,13 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 155,
+                lineNumber: 159,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 143,
+            lineNumber: 145,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2087,7 +2083,7 @@ function Contact() {
                 children: (_k = actionData == null ? void 0 : actionData.formErrors) != null && _k.phone ? (_l = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _l.phone : t.fields.phone.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 169,
+                lineNumber: 174,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2100,13 +2096,13 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 177,
+                lineNumber: 183,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 165,
+            lineNumber: 169,
             columnNumber: 9
           }, this)
         ]
@@ -2129,11 +2125,11 @@ function Contact() {
             className: "bg-main row-span-3 mb-6 grid resize-none p-10 text-xl outline-none"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 192,
+            lineNumber: 199,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-            className: "absolute bottom-0 right-0 row-span-1 grid h-16 lg:h-20 w-full grid-cols-3 grid-rows-1",
+            className: "absolute bottom-0 right-0 row-span-1 grid h-16 w-full grid-cols-3 grid-rows-1 lg:h-20",
             children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", {
               type: "submit",
               className: "contact-button border-sky-400 relative col-span-2 col-start-2 row-span-1 grid content-center justify-items-center border-2 border-r-0 border-b-0",
@@ -2142,7 +2138,7 @@ function Contact() {
                   className: "border-r-sky-400 bg-main absolute -top-4 -left-4 hidden h-8 w-8 rotate-45 border-r-2 sm:block"
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 207,
+                  lineNumber: 214,
                   columnNumber: 13
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -2150,18 +2146,18 @@ function Contact() {
                   children: t.fields.send
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 208,
+                  lineNumber: 215,
                   columnNumber: 13
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/contact.tsx",
-              lineNumber: 203,
+              lineNumber: 210,
               columnNumber: 11
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 202,
+            lineNumber: 209,
             columnNumber: 9
           }, this),
           ((_n = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _n.phone) && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2169,13 +2165,13 @@ function Contact() {
             children: actionData.formErrors.message
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 212,
+            lineNumber: 219,
             columnNumber: 11
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 188,
+        lineNumber: 194,
         columnNumber: 7
       }, this)
     ]
@@ -2258,9 +2254,9 @@ __export(work_exports, {
 var import_remix_image3 = require("remix-image"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Work() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-    className: "flex-row flex-wrap lg:flex-nowrap gap-4",
+    className: "flex-row flex-wrap gap-4 lg:flex-nowrap",
     children: projects.map((project, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-      className: "work-card border-sky-400 flex-col border-2 overflow-hidden max-h-full w-work-card",
+      className: "work-card border-sky-400 w-work-card max-h-full flex-col overflow-hidden border-2",
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
           className: "relative",
@@ -2336,7 +2332,7 @@ function Work() {
           columnNumber: 11
         }, this),
         i === 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-          className: "hidden sm:block border-r-sky-400 bg-main absolute t-01 l-01 h-8 w-8 rotate-45 border-r-2"
+          className: "border-r-sky-400 bg-main t-01 l-01 absolute hidden h-8 w-8 rotate-45 border-r-2 sm:block"
         }, void 0, !1, {
           fileName: "app/routes/work.tsx",
           lineNumber: 50,
@@ -2356,7 +2352,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "0373f361", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-UWFKUNU3.js", imports: ["/build/_shared/chunk-7TFKBVRM.js", "/build/_shared/chunk-7CVVGJ7N.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-OR4NVGV3.js", imports: ["/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-5PKS7P5K.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-L2TR734H.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-OMK5IPL4.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-0373F361.js" };
+var assets_manifest_default = { version: "a1811aa2", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KU3V4QO2.js", imports: ["/build/_shared/chunk-N2INDCMC.js", "/build/_shared/chunk-7BWQAFJL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-WVOXZMVU.js", imports: ["/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-XJFZG46T.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-L2TR734H.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-7RAUXPEW.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-M4AVGPZZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-A1811AA2.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

@@ -98,7 +98,7 @@ export default function App() {
                 <div className="row-span-1 grid h-full">
                   <Navigation t={t} locale={locale} setLocale={setLocale} />
                 </div>
-                <div className="border-t-sky-400 row-span-1 grid h-full border-t-2 p-8">
+                <div className="border-t-sky-400 row-span-1 grid h-full border-t-2 p-8 2xl:px-3 2xl:py-8 3xl:p-8">
                   <Stats t={t} />
                 </div>
               </div>

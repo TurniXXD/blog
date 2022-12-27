@@ -5,8 +5,8 @@ import type ICommon from "@locales/common/types";
 import { useMedia } from "react-use";
 
 export default function Stats({ t }: { t: ICommon }) {
-  const isPC = useMedia("(min-width: 1050px)");
-  const isTablet = useMedia("(min-width: 640px)");
+  const isPC = useMedia("(min-width: 1050px)", false);
+  const isTablet = useMedia("(min-width: 640px)", false);
 
   useEffect(() => {
     const setStartingStatusBarPosition = (
