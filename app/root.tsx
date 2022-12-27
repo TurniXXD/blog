@@ -83,7 +83,7 @@ export default function App() {
         <div className="b-01 l-01 border-t-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-t-2 sm:block"></div>
         <div className="b-01 r-01 border-l-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-l-2 sm:block"></div>
         <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5">
-          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 2xl:col-span-4">
+          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll pb-24 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:pb-0 2xl:col-span-4">
             {transition.state === "loading" ? (
               <div className="grid h-full place-items-center">
                 <Loader />
@@ -93,17 +93,17 @@ export default function App() {
             )}
           </div>
           <div className="border-sky-400 row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4">
-            <div className="row-span-3 sm:grid">
+            <div className="row-span-4 sm:grid lg:row-span-3">
               <div className="relative grid-rows-2 sm:grid">
                 <div className="row-span-1 grid h-full">
                   <Navigation t={t} locale={locale} setLocale={setLocale} />
                 </div>
-                <div className="border-t-sky-400 row-span-1 grid h-full border-t-2 p-8 2xl:px-3 2xl:py-8 3xl:p-8">
+                <div className="border-t-sky-400 row-span-1 grid h-full place-items-center border-t-2 p-6 lg:place-items-stretch 2xl:px-3 2xl:py-8 3xl:p-8">
                   <Stats t={t} />
                 </div>
               </div>
             </div>
-            <div className="row-span-1 w-full px-8 pt-4 sm:grid">
+            <div className="row-span-1 hidden w-full px-8 pt-4 lg:grid">
               <Matrix />
             </div>
           </div>
@@ -115,18 +115,30 @@ export default function App() {
           </div>
         </div>
         <div className="absolute bottom-0 block w-full p-4 sm:hidden">
-          <div className="mobile-menu-corner-tl border-r-sky-400 bg-main absolute border-r-2"></div>
-          <div className="mobile-menu-corner-tr border-r-sky-400 bg-main absolute border-r-2"></div>
-          <div className="mobile-menu-corner-br border-r-sky-400 bg-main absolute border-r-2"></div>
-          <div className="mobile-menu-corner-bl border-r-sky-400 bg-main absolute border-r-2"></div>
-          <div className="p-4">
+          {mobileMenuOpen && (
+            <>
+              <div
+                className={`mobile-menu-corner-tl border-r-sky-400 bg-main top-26 absolute border-r-2`}
+              ></div>
+              <div
+                className={`mobile-menu-corner-tr border-r-sky-400 bg-main top-26 absolute border-r-2`}
+              ></div>
+            </>
+          )}
+          <div
+            className={`mobile-menu-corner-br border-r-sky-400 bg-main absolute border-r-2`}
+          ></div>
+          <div
+            className={`mobile-menu-corner-bl border-r-sky-400 bg-main absolute border-r-2`}
+          ></div>
+          <div className={`p-4 ${mobileMenuOpen && "pt-24"}`}>
             {/* //Need to fix this to h-full somehow */}
             <div
               className={`border-sky-400 bg-main grid content-end border-2 ${
-                mobileMenuOpen && "h-more"
+                mobileMenuOpen && "h-mobile-menu"
               }`}
             >
-              <div className="grid">
+              <div className="flex-row justify-center">
                 {mobileNavigationOpen && (
                   <Navigation t={t} locale={locale} setLocale={setLocale} />
                 )}

@@ -211,7 +211,7 @@ export default function Contact() {
             type="submit"
             className="contact-button border-sky-400 relative col-span-2 col-start-2 row-span-1 grid content-center justify-items-center border-2 border-r-0 border-b-0"
           >
-            <div className="border-r-sky-400 bg-main absolute -top-4 -left-4 hidden h-8 w-8 rotate-45 border-r-2 sm:block"></div>
+            <div className="border-r-sky-400 bg-main absolute -top-4 -left-4 h-8 w-8 rotate-45 border-r-2"></div>
             <span className="text-2xl">{t.fields.send}</span>
           </button>
         </div>
