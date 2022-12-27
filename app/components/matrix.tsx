@@ -77,6 +77,8 @@ export const Matrix = () => {
     );
   }
   return (
-    <div className="grid-cols-30 grid-rows-15 grid h-full w-full">{cols}</div>
+    <div className="nav-matrix grid-cols-30 grid-rows-15 grid h-full w-full">
+      {cols}
+    </div>
   );
 };

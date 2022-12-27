@@ -83,7 +83,7 @@ export default function Contact() {
       className="gap-4 sm:grid sm:h-full sm:grid-cols-3 sm:grid-rows-4"
     >
       <div className="t-01 l-01 border-r-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-r-2 sm:block"></div>
-      <div className="border-sky-400 col-span-1 row-span-2 grid border-2">
+      <div className="border-sky-400 relative col-span-1 row-span-2 grid border-2 py-4 sm:static sm:p-0">
         <div className="relative w-full flex-col justify-evenly">
           {socials.map((s, i) => (
             <div
@@ -114,15 +114,17 @@ export default function Contact() {
             ))}
           </div>
         </div>
+        <div className="contact-socials-corner-tr border-r-sky-400 bg-main absolute border-r-2 sm:hidden"></div>
+        <div className="contact-socials-corner-tl border-r-sky-400 bg-main absolute border-r-2 sm:hidden"></div>
       </div>
-      <div className="col-span-2 row-span-2 grid h-full grid-rows-3 gap-4">
+      <div className="col-span-2 row-span-2 my-4 grid h-full grid-rows-3 gap-4 sm:m-0">
         <div
           className={`relative h-20 w-full border-2 sm:h-full ${
             actionData?.formErrors?.name ? "border-error" : "border-sky-400"
           }`}
         >
           <div
-            className={`bg-main absolute left-4 -top-2 h-10 px-2 text-sm ${
+            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm sm:-top-2 ${
               actionData?.formErrors?.name && "text-error"
             }`}
           >
@@ -190,7 +192,7 @@ export default function Contact() {
         </div>
       </div>
       <div
-        className={`border-red relative col-span-3 row-span-2 grid grid-rows-3 border-2 ${
+        className={`border-red relative col-span-3 row-span-2 grid grid-rows-4 border-2 ${
           actionData?.formErrors?.message ? "border-error" : "border-sky-400"
         }`}
       >
@@ -202,9 +204,9 @@ export default function Contact() {
           placeholder={t.fields.messagePlaceholder || ""}
           cols={30}
           rows={10}
-          className="bg-main row-span-2 mb-6 grid resize-none p-10 text-xl outline-none"
+          className="bg-main row-span-3 mb-6 grid resize-none p-10 text-xl outline-none"
         />
-        <div className="absolute bottom-0 right-0 row-span-1 grid h-28 w-full grid-cols-3 grid-rows-1">
+        <div className="absolute bottom-0 right-0 row-span-1 grid h-16 w-full grid-cols-3 grid-rows-1 lg:h-20">
           <button
             type="submit"
             className="contact-button border-sky-400 relative col-span-2 col-start-2 row-span-1 grid content-center justify-items-center border-2 border-r-0 border-b-0"

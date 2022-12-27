@@ -28,6 +28,40 @@ export const StatusBar = ({ id }: { id: string }) => {
   );
 };
 
+export const StatusBarCol = ({ id }: { id: string }) => {
+  const rect = [];
+  for (let i = 5; i < 179; i += 6) rect.push(i);
+
+  return (
+    <svg
+      id={id}
+      width="25"
+      height="181"
+      viewBox="0 0 25 181"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="-rotate-180"
+    >
+      <path d="M0 0H2H25V11H23V2H2V11H0V0Z" fill="#38BDF8" />
+      <path
+        d="M23.0002 179V170H25.0002V181H0V170H2V179H23.0002Z"
+        fill="#38BDF8"
+      />
+      {rect.map((r) => (
+        <rect
+          key={r}
+          className={`${id} hidden`}
+          x="5"
+          y={r}
+          width="15"
+          height="3"
+          fill="#38BDF8"
+        />
+      ))}
+    </svg>
+  );
+};
+
 export const Loader = () => (
   <svg
     className="h-36 w-full"

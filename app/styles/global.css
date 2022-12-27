@@ -93,6 +93,38 @@ textarea::placeholder {
   color: var(--error);
 }
 
+.w-work-card {
+  width: 100%;
+}
+
+@media (min-width: 705px) {
+  .w-work-card {
+    width: 48.4%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .w-work-card {
+    width: 32.4%;
+  }
+}
+
+.contact-socials-corner-tr {
+  width: 1rem;
+  height: 1.6rem;
+  right: -0.5rem;
+  top: -0.6rem;
+  rotate: 135deg;
+}
+
+.contact-socials-corner-tl {
+  width: 1rem;
+  height: 1.6rem;
+  left: -0.5rem;
+  top: -0.6rem;
+  rotate: 45deg;
+}
+
 .nav-link-hover,
 .contact-link-hover,
 .contact-button:hover span {
@@ -100,6 +132,32 @@ textarea::placeholder {
   -webkit-animation: glow s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.hidden-i {
+  display: none !important;
+}
+
+.nav-matrix {
+  display: none;
+}
+
+@media (min-width: 1050px) {
+  .nav-matrix {
+    display: grid;
+  }
+}
+
+@media (max-width: 950px) {
+  .status-bar-cols > svg:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .status-bar-cols > svg:nth-child(2) {
+    display: none;
+  }
 }
 
 .flag-hover {
@@ -117,16 +175,6 @@ textarea::placeholder {
     text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue-dark);
   }
 }
-
-/* @-webkit-keyframes glowBg {
-  from {
-    box-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue-dark), 0 0 40px var(--blue-dark);
-  }
-
-  to {
-    box-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue-dark);
-  }
-} */
 
 .glow {
   box-shadow: 0px 0px 6px 1px var(--blue-dark);

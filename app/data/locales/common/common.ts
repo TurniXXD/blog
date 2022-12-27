@@ -69,7 +69,7 @@ export const en: ICommon = {
       },
       cat: {
         meTxt:
-          "It's me! I am a full-stack web developer from the Czech Republic focusing primarily on technologies built on top of the React.js framework, and Go or Node.js backend solutions to power my projects.",
+          "It's me! I am a full-stack web developer from Czech Republic. My main focus are technologies built on top of the React.js framework, and Go or Node.js backend solutions to power my projects.",
       },
     },
     messages: {

@@ -31,16 +31,24 @@ export default function Navigation({
   return (
     <nav className="relative w-full flex-col items-end justify-evenly">
       <div className="w-full flex-row px-8">
-        <span className="nav-link text-2xl">{t.menu.about}</span>
+        <span className="nav-link text-2xl sm:text-xl md:text-2xl">
+          {t.menu.about}
+        </span>
       </div>
       <div className="w-full flex-row px-8">
-        <span className="nav-link text-2xl">{t.menu.work}</span>
+        <span className="nav-link text-2xl sm:text-xl md:text-2xl">
+          {t.menu.work}
+        </span>
       </div>
       <div className="w-full flex-row px-8">
-        <span className="nav-link text-2xl">{t.menu.skills}</span>
+        <span className="nav-link text-2xl sm:text-xl md:text-2xl">
+          {t.menu.skills}
+        </span>
       </div>
       <div className="w-full flex-row px-8">
-        <span className="nav-link text-2xl">{t.menu.contact}</span>
+        <span className="nav-link text-2xl sm:text-xl md:text-2xl">
+          {t.menu.contact}
+        </span>
       </div>
       <div className="absolute h-full w-full flex-col justify-evenly">
         <Link className="nav-link-container h-full w-full flex-row px-8" to="/">
