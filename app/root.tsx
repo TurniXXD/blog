@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState, useEffect, useMemo } from "react";
 import type {
   MetaFunction,
@@ -138,16 +139,16 @@ export default function App() {
                 mobileMenuOpen && "h-mobile-menu"
               }`}
             >
-              <div className="flex-row justify-center">
-                {mobileNavigationOpen && (
-                  <Navigation t={t} locale={locale} setLocale={setLocale} />
+              <div className="flex-row">
+                {mobileMenuOpen && mobileNavigationOpen && (
+                  <Navigation t={t} locale={locale} setLocale={setLocale} setMobileMenuOpen={setMobileMenuOpen} />
                 )}
-                {mobileTerminalOpen && <Terminal t={t} />}
+                {mobileMenuOpen && mobileTerminalOpen && <Terminal t={t} />}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">
                   <div
-                    className="h-20 w-3/12 flex-col items-center justify-center bg-blue pr-1"
+                    className="h-20 w-3/12 flex-col items-center justify-center pr-1 bg-blue"
                     onClick={() => {
                       setMobileMenuOpen(true);
                       mobileNavigationOpen && setMobileNavigationOpen(false);

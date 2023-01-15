@@ -14,12 +14,6 @@ export const projects: Projects[] = [
     imgUrl: "img/projects/mezikozy.png",
     isRocket: false,
   },
-  {
-    name: "Ondrášek",
-    url: "https://www.ondrasek.cz/",
-    imgUrl: "img/projects/ondrasek.png",
-    isRocket: true,
-  },
 ];
 
 export const skills: Skills[] = [

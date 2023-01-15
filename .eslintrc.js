@@ -5,7 +5,6 @@ module.exports = {
   extends: ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
   plugins: ["prettier"],
   rules: {
-    "prettier/prettier": "error",
     "react-hooks/exhaustive-deps": "off",
     "no-console": "warn",
     "@next/next/no-document-import-in-page": "off",

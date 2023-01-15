@@ -206,6 +206,7 @@ textarea::placeholder {
 }
 
 .work-card-cover {
+  height: 105%;
   transition: all .3s ease-in-out;
   background-color: #070e1da6;
 }
