@@ -607,10 +607,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.ml-20 {
-  margin-left: 5rem;
-}
-
 .block {
   display: block;
 }
@@ -1082,10 +1078,6 @@ video {
 
   .sm\:grid-rows-4 {
     grid-template-rows: repeat(4, minmax(0, 1fr));
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
   }
 
   .sm\:items-end {

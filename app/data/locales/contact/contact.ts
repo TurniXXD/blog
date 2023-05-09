@@ -5,7 +5,7 @@ export const cz: IContact = {
     github: "GitHub",
     linkedin: "LinkedIn",
     telegram: "Telegram",
-    email: "Email",
+    email: "contact@vantuch.dev",
   },
   fields: {
     name: {
@@ -37,7 +37,7 @@ export const en: IContact = {
     github: "GitHub",
     linkedin: "LinkedIn",
     telegram: "Telegram",
-    email: "Email",
+    email: "contact@vantuch.dev",
   },
   fields: {
     name: {
