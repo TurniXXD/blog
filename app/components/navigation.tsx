@@ -33,22 +33,22 @@ export default function Navigation({
   return (
     <nav className="relative w-full flex-col justify-evenly gap-8 sm:items-end sm:gap-0">
       <div className="mx-auto flex-row px-4 sm:w-full lg:px-8 md:mt-8">
-        <span className="nav-link text-3xl sm:text-xl md:text-3xl">
+        <span className="nav-link text-3xl sm:text-xl md:text-2xl">
           {t.menu.about}
         </span>
       </div>
       <div className="mx-auto flex-row px-4 sm:w-full lg:px-8">
-        <span className="nav-link text-3xl sm:text-xl md:text-3xl">
+        <span className="nav-link text-3xl sm:text-xl md:text-2xl">
           {t.menu.work}
         </span>
       </div>
       <div className="mx-auto flex-row px-4 sm:w-full lg:px-8">
-        <span className="nav-link text-3xl sm:text-xl md:text-3xl">
+        <span className="nav-link text-3xl sm:text-xl md:text-2xl">
           {t.menu.skills}
         </span>
       </div>
       <div className="mx-auto flex-row px-4 pb-8 sm:w-full sm:pb-0 lg:px-8">
-        <span className="nav-link text-3xl sm:text-xl md:text-3xl">
+        <span className="nav-link text-3xl sm:text-xl md:text-2xl">
           {t.menu.contact}
         </span>
       </div>

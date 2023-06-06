@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 :root {
   --grey: #0f1524;
@@ -15,7 +15,7 @@
 
   html,
   body {
-    font-family: 'Play', sans-serif;
+    font-family: 'Bruno Ace', cursive;
     color: var(--blue);
     overflow: hidden;
     background: var(--grey);
@@ -97,6 +97,44 @@ textarea::placeholder {
   width: 100%;
 }
 
+.customer-field {
+  transition: all .3s ease-in-out;
+  width: 48%;
+}
+
+.customer-field-active {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+.customer-field-active span {
+  color: var(--grey);
+}
+
+.w-content-half {
+  width: 49.19%;
+}
+
+.t-contact-field-title {
+  top: -0.4rem;
+}
+
+.t-customer-field {
+  top: -0.55rem;
+}
+
+.l-customer-field {
+  left: -0.55rem;
+}
+
+.r-customer-field {
+  right: -0.55rem;
+}
+
+.b-customer-field {
+  bottom: -0.55rem;
+}
+
 @media (min-width: 705px) {
   .w-work-card {
     width: 48.4%;
@@ -139,13 +177,13 @@ textarea::placeholder {
 }
 
 @media (max-width: 950px) {
-  .status-bar-cols > svg:last-child {
+  .status-bar-cols>svg:last-child {
     display: none;
   }
 }
 
 @media (max-width: 850px) {
-  .status-bar-cols > svg:nth-child(2) {
+  .status-bar-cols>svg:nth-child(2) {
     display: none;
   }
 }

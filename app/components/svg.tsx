@@ -11,8 +11,8 @@ export const StatusBar = ({ id }: { id: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M0 0H11V2H2V23H11V25H0V0Z" fill="#38BDF8" />
-      <path d="M181 0H170V2H179V23H170V25H181V0Z" fill="#38BDF8" />
+      <path d="M0 0H11V2H2V23H11V25H0V0Z" fill="#7dd8ff" />
+      <path d="M181 0H170V2H179V23H170V25H181V0Z" fill="#7dd8ff" />
       {rect.map((r) => (
         <rect
           key={r}
@@ -21,7 +21,7 @@ export const StatusBar = ({ id }: { id: string }) => {
           y="5"
           width="3"
           height="15"
-          fill="#38BDF8"
+          fill="#7dd8ff"
         />
       ))}
     </svg>
@@ -42,10 +42,10 @@ export const StatusBarCol = ({ id }: { id: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       className="-rotate-180"
     >
-      <path d="M0 0H2H25V11H23V2H2V11H0V0Z" fill="#38BDF8" />
+      <path d="M0 0H2H25V11H23V2H2V11H0V0Z" fill="#7dd8ff" />
       <path
         d="M23.0002 179V170H25.0002V181H0V170H2V179H23.0002Z"
-        fill="#38BDF8"
+        fill="#7dd8ff"
       />
       {rect.map((r) => (
         <rect
@@ -55,7 +55,7 @@ export const StatusBarCol = ({ id }: { id: string }) => {
           y={r}
           width="15"
           height="3"
-          fill="#38BDF8"
+          fill="#7dd8ff"
         />
       ))}
     </svg>

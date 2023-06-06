@@ -127,7 +127,7 @@ export default function Contact() {
           }`}
         >
           <div
-            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm sm:-top-2 ${
+            className={`bg-main absolute left-4 h-10 px-2 text-sm t-contact-field-title ${
               actionData?.formErrors?.name && "text-error"
             }`}
           >
@@ -151,7 +151,7 @@ export default function Contact() {
           }`}
         >
           <div
-            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${
+            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${
               actionData?.formErrors?.email && "text-error"
             }`}
           >
@@ -175,7 +175,7 @@ export default function Contact() {
           }`}
         >
           <div
-            className={`bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${
+            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${
               actionData?.formErrors?.phone && "text-error"
             }`}
           >

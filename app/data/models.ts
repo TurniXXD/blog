@@ -1,4 +1,4 @@
-import type { Projects, Skills, Socials } from "./types";
+import type { Projects, Skills } from "./types";
 import { Icons } from "./types";
 
 export const projects: Projects[] = [
@@ -37,21 +37,33 @@ export const skills: Skills[] = [
   },
 ];
 
+export interface Socials {
+	url: string;
+	icon: SocialsIcons;
+}
+
+enum SocialsIcons {
+  github = "github",
+	linkedin = "linkedin",
+	telegram = "telegram",
+	email = "email",
+}
+
 export const socials: Socials[] = [
   {
     url: "https://github.com/TurniXXD",
-    icon: Icons.github,
+    icon: SocialsIcons.github,
   },
   {
     url: "https://www.linkedin.com/in/jakub-vantuch-552514197/",
-    icon: Icons.linkedin,
+    icon: SocialsIcons.linkedin,
   },
   {
     url: "https://t.me/turnix",
-    icon: Icons.telegram,
+    icon: SocialsIcons.telegram,
   },
   {
     url: "mailto:contact@vantuch.dev",
-    icon: Icons.email,
+    icon: SocialsIcons.email,
   },
 ];

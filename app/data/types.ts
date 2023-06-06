@@ -1,24 +1,31 @@
 export interface Projects {
-  name: string;
-  url: string;
-  imgUrl: string;
-  isRocket: boolean;
+	name: string;
+	url: string;
+	imgUrl: string;
+	isRocket: boolean;
 }
 
 export interface Skills {
-  skillUrl: string;
-  imgUrl: string;
+	skillUrl: string;
+	imgUrl: string;
 }
 
 export enum Icons {
-  github = "github",
-  linkedin = "linkedin",
-  telegram = "telegram",
-  email = "email",
-}
-
-export interface Socials {
-  url: string;
-  //name: string;
-  icon: Icons;
+	Github = "github",
+	LinkedIn = "linkedin",
+	Telegram = "telegram",
+	Email = "email",
+	Cabin = "cabin",
+	Coffee = "coffee",
+  Tea = "tea",
+	Restaurant = "restaurant",
+  Hammer = "hammer",
+  Lock = "lock",
+  Cart = "cart",
+  Blog = "blog",
+  Plane = "plane",
+  Scissors = "scissors",
+  Guitar = "guitar",
+  Lightbulb = "lightbulb",
+  Other = "other",
 }

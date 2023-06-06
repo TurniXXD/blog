@@ -97,7 +97,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
         d: "M0 0H11V2H2V23H11V25H0V0Z",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 14,
@@ -105,7 +105,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
         d: "M181 0H170V2H179V23H170V25H181V0Z",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 15,
@@ -117,7 +117,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         y: "5",
         width: "3",
         height: "15",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, r, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 17,
@@ -144,7 +144,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
         d: "M0 0H2H25V11H23V2H2V11H0V0Z",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 45,
@@ -152,7 +152,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("path", {
         d: "M23.0002 179V170H25.0002V181H0V170H2V179H23.0002Z",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, void 0, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 46,
@@ -164,7 +164,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StatusBar = ({ id
         y: r,
         width: "15",
         height: "3",
-        fill: "#38BDF8"
+        fill: "#7dd8ff"
       }, r, !1, {
         fileName: "app/components/svg.tsx",
         lineNumber: 51,
@@ -651,7 +651,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8 md:mt-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-3xl",
+          className: "nav-link text-3xl sm:text-xl md:text-2xl",
           children: t.menu.about
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -666,7 +666,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-3xl",
+          className: "nav-link text-3xl sm:text-xl md:text-2xl",
           children: t.menu.work
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -681,7 +681,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-3xl",
+          className: "nav-link text-3xl sm:text-xl md:text-2xl",
           children: t.menu.skills
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -696,7 +696,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 pb-8 sm:w-full sm:pb-0 lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-3xl",
+          className: "nav-link text-3xl sm:text-xl md:text-2xl",
           children: t.menu.contact
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -1293,10 +1293,10 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-MSSM7K5A.css";
+var tailwind_default = "/build/_assets/tailwind-MCGSLHET.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-Y7ECPUJR.css";
+var global_default = "/build/_assets/global-T5OLQGNM.css";
 
 // app/root.tsx
 var import_mail = __toESM(require("@sendgrid/mail"));
@@ -1330,7 +1330,15 @@ var cz = {
       },
       cat: {
         meTxt: "Jsem full-stack web developer z \u010Cesk\xE9 republiky zam\u011B\u0159uj\xEDc\xED se p\u0159edev\u0161\xEDm na technologie postaven\xE9 na frameworku React.js, a backendov\xE9 \u0159e\u0161en\xED v Go nebo Node.js.",
-        meditationsTxt: ""
+        meditationsTxt: `Smrti bychom se nem\u011Bli b\xE1t, je tu naprost\xE1 nicota, kterou nebudete muset za\u017E\xEDt ve srovn\xE1n\xED s jak\xFDmkoli jin\xFDm strachem ov\u011B\u0159en\xFDm zku\u0161enostmi. Nen\xED to ani strach z nezn\xE1m\xE9ho, co vede ke smrti, ale strach, \u017Ee znalosti, kter\xE9 jste z\xEDskali, nebudou zachov\xE1ny. Na evolu\u010Dn\xED \xFArovni bylo sd\xEDlen\xED znalost\xED reprodukc\xED kl\xED\u010Dem k dne\u0161n\xEDmu \u017Eivotu. Na molekul\xE1rn\xED \xFArovni v\u0161e, co bu\u0148ky d\u011Blaj\xED, je sd\xEDlet informace nebo zem\u0159\xEDt. Sd\xEDlet znalosti znamen\xE1 st\xE1t se nesmrteln\xFDm.
+
+        Je d\u016Fle\u017Eit\xE9 stanovit, \u017Ee znalosti by nem\u011Bly b\xFDt n\u011B\u010D\xEDm, co je \u010Dlov\u011Bku vnuceno, m\u011Blo by to b\xFDt takov\xE9, aby se \u010Dlov\u011Bk v\xEDce soust\u0159edil na sd\xEDlen\xED a zlep\u0161ov\xE1n\xED z\xEDskan\xFDch znalost\xED. Pr\xE1v\u011B te\u010F je jedine\u010Dn\xE1 dovednost to, co vede \u010Dlov\u011Bka na cestu bohatstv\xED, ale je to pouze do bodu, kdy ho nelze snadno nahradit nebo kdy si vytvo\u0159\xED dostatek bohatstv\xED k dosa\u017Een\xED nez\xE1vislosti. Z v\u011Bt\u0161\xEDho hlediska jedin\xE9, o co \u010Dlov\u011Bk tou\u017E\xED, je zdrav\xED, bohatstv\xED a \u0161t\u011Bst\xED, ale co je to bohatstv\xED, kdy\u017E \u010Dlov\u011Bk v\u017Edy tou\u017E\xED po tom, co je ciz\xED, a po\u010D\xEDt\xE1 jen to, co je\u0161t\u011B mus\xED z\xEDskat, a nikdy ne to, co u\u017E m\xE1. Jedin\u011B tak, \u017Ee bude \u017E\xEDt a nebude p\u0159\xEDli\u0161 hodnotit v\u011Bci, kter\xE9 mu mohou b\xFDt kdykoli odebr\xE1ny, m\u016F\u017Ee objevit ten prav\xFD, neot\u0159esiteln\xFD klid a spokojenost.
+       
+        P\u0159ed z\xEDsk\xE1n\xEDm znalost\xED by m\u011Bla b\xFDt prok\xE1z\xE1na pravdivost argumentu, ale jak m\u016F\u017Eeme rozli\u0161it pravdu od klamn\xFDch l\u017E\xED? Kdy\u017E \u010Dlov\u011Bk l\u017Ee, sna\u017E\xED se lidi v\xEDce p\u0159esv\u011Bd\u010Dit o sv\xE9m argumentu a \u017Ee neexistuje \u017E\xE1dn\xE1 mo\u017Enost, \u017Ee by to nebylo spr\xE1vn\xE9, pak pokud mluvil pravdu. V prudk\xFDch h\xE1dk\xE1ch n\xE1s \u0159e\u010D t\u011Bla u\u010D\xED, \u017Ee \u010Dlov\u011Bk bude pou\u017E\xEDvat otev\u0159enou \u0159e\u010D t\u011Bla d\u016Frazn\u011Bji (bouch\xE1 rukama do stolu s otev\u0159en\xFDmi dlan\u011Bmi, pou\u017E\xEDv\xE1 v\xEDce gest), kdy\u017E se ze v\u0161ech sil sna\u017E\xED vyj\xE1d\u0159it sv\u016Fj n\xE1zor. Nejhor\u0161\xED sc\xE9n\xE1\u0159 je, pokud \u010Dlov\u011Bk v\u011B\u0159\xED, \u017Ee to, co sd\xEDl\xED, je pravda, co\u017E mu d\xE1v\xE1 jistotu o jeho \u010Dinech. To se m\u016F\u017Ee st\xE1t pouze \u010Dlov\u011Bku, kter\xFD se slep\u011B pod\u0159\xEDdil informac\xEDm, ani\u017E by o tom p\u0159em\xFD\u0161lel. Zabij\xE1kem duch\u016F je tak\xE9 v\u011B\u0159it v n\xE1bo\u017Eenstv\xED nebo um\u011Ble vytvo\u0159en\xE1 p\u0159esv\u011Bd\u010Den\xED v\xEDce ne\u017E ve filozofii a psychologii.
+       
+        \u010Clov\u011Bk, kter\xFD nev\xED, do kter\xE9ho p\u0159\xEDstavu pluje, neshled\xE1v\xE1 \u017E\xE1dn\xFD p\u0159\xEDstav v\xFDhodn\xFD. Jin\xFDmi slovy, \u017Eivot beze smyslu znamen\xE1 v\u017Edy se ocitnout v m\xEDst\u011B nejist\xE9 budoucnosti, kr\xE1tkodob\xE9ho uspokojen\xED, bez sebereflexe a bez jak\xE9koli mo\u017Enosti \xFAniku. \u010C\xEDm d\u0159\xEDve p\u0159estanete d\xE1vat lidem \u0161anci zni\u010Dit va\u0161i p\u0159edstavivost, t\xEDm d\u0159\xEDve najdete sv\u016Fj v\xFDznam. V p\u0159edstav\xE1ch trp\xEDme v\xEDce ne\u017E v re\xE1ln\xE9m \u017Eivot\u011B, proto\u017Ee skute\u010Dn\xFD \u017Eivot je v\xFDsledkem p\u0159edstavivosti, pokud si dok\xE1\u017Eete spr\xE1vn\u011B nastavit sv\xE9 my\u0161len\xED. Ur\u010Dete, co bude v\xFDsledkem va\u0161ich \u010Din\u016F, ne\u017E se vyd\xE1te na tuto cestu, jestli to p\u0159inese sv\u011Btu kolem v\xE1s n\u011Bjakou skute\u010Dnou hodnotu a zm\u011Bn\xED \u017Eivoty lid\xED, nebo jestli to jen pom\u016F\u017Ee rozto\u010Dit nekone\u010Dn\xE1 kola syst\xE9mu. Neztr\xE1cejte \u010Das mluven\xEDm o tom, jak\xFD je dobr\xFD mu\u017E, m\u011Bli byste j\xEDm b\xFDt. Kdy\u017E najdete sv\u016Fj v\xFDznam, dr\u017Ete se ho a v\u011Bnujte mu sto procent sv\xE9ho \xFAsil\xED. Brzy pochop\xEDte, \u017Ee pokud chcete j\xEDt rychle, jd\u011Bte sami, ale pokud chcete j\xEDt daleko, najd\u011Bte si spolehliv\xFD t\xFDm, kter\xFD bude sd\xEDlet va\u0161i vizi. Kdy\u017E pe\u010Dujete o sv\u016Fj c\xEDl, je t\u011B\u017Ek\xE9 sv\u011B\u0159it n\u011Bkomu p\xE9\u010Di o n\u011Bj, ale b\xFDt v\u0161ude znamen\xE1 neb\xFDt nikde a pomal\xFDm p\u0159ed\xE1v\xE1n\xEDm pod\u0159\xEDzen\xFDch \xFAkol\u016F jin\xFDm lidem se m\u016F\u017Eete soust\u0159edit na \u0161ir\u0161\xED obraz.
+       
+        Zab\xFDv\xE1me se marketingem, i kdy\u017E v\xEDme, \u017Ee v\u0161echny na\u0161e celebrity a idoly jsou pad\u011Blky. Pro\u010D plat\xEDme n\u011Bkoho, kdo um\xED kopat do m\xED\u010De v milionech, a l\xE9ka\u0159i a v\u011Bdci nedostanou prakticky nic. N\xE1\u0161 \xFAsudek nem\u016F\u017Ee b\xFDt takov\xFD, dokud tyto hodnoty nebudou obnoveny`
       }
     },
     messages: {
@@ -1883,7 +1891,8 @@ var projects = [
     skillUrl: "https://www.figma.com/",
     imgUrl: "img/skills/figma.svg"
   }
-], socials = [
+];
+var socials = [
   {
     url: "https://github.com/TurniXXD",
     icon: "github" /* github */
@@ -2043,7 +2052,7 @@ function Contact() {
             className: `relative h-20 w-full border-2 sm:h-full ${(_a = actionData == null ? void 0 : actionData.formErrors) != null && _a.name ? "border-error" : "border-sky-400"}`,
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                className: `bg-main absolute left-4 -top-3 h-10 px-2 text-sm sm:-top-2 ${((_b = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _b.name) && "text-error"}`,
+                className: `bg-main absolute left-4 h-10 px-2 text-sm t-contact-field-title ${((_b = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _b.name) && "text-error"}`,
                 children: (_c = actionData == null ? void 0 : actionData.formErrors) != null && _c.name ? (_d = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _d.name : t.fields.name.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
@@ -2073,7 +2082,7 @@ function Contact() {
             className: `relative h-20 w-full border-2 sm:h-full ${(_e = actionData == null ? void 0 : actionData.formErrors) != null && _e.email ? "border-error" : "border-sky-400"}`,
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                className: `bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${((_f = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _f.email) && "text-error"}`,
+                className: `bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${((_f = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _f.email) && "text-error"}`,
                 children: (_g = actionData == null ? void 0 : actionData.formErrors) != null && _g.email ? (_h = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _h.email : t.fields.email.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
@@ -2103,7 +2112,7 @@ function Contact() {
             className: `relative h-20 w-full border-2 sm:h-full ${(_i = actionData == null ? void 0 : actionData.formErrors) != null && _i.phone ? "border-error" : "border-sky-400"}`,
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                className: `bg-main absolute left-4 -top-3 h-10 px-2 text-sm ${((_j = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _j.phone) && "text-error"}`,
+                className: `bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${((_j = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _j.phone) && "text-error"}`,
                 children: (_k = actionData == null ? void 0 : actionData.formErrors) != null && _k.phone ? (_l = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _l.phone : t.fields.phone.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
@@ -2247,25 +2256,272 @@ var routes_exports = {};
 __export(routes_exports, {
   default: () => Index
 });
+var import_react12 = require("react");
+
+// app/data/locales/about/common.ts
+var cz3 = {
+  title: "Jakub Vantuch",
+  desc: "Webov\xE9 str\xE1nky a dal\u0161\xED \u0159e\u0161en\xED na m\xEDru pro v\xE1\u0161 z\xE1m\u011Br",
+  customers: [
+    {
+      title: "E-Commerce",
+      icon: "cart" /* Cart */,
+      text: ""
+    },
+    {
+      title: "Blog",
+      icon: "blog" /* Blog */,
+      text: ""
+    },
+    {
+      title: "Chata",
+      icon: "cabin" /* Cabin */,
+      text: ""
+    },
+    {
+      title: "Kav\xE1rna",
+      icon: "coffee" /* Coffee */,
+      text: ""
+    },
+    {
+      title: "\u010Cajovna",
+      icon: "tea" /* Tea */,
+      text: ""
+    },
+    {
+      title: "\u0158emesln\xEDk",
+      icon: "hammer" /* Hammer */,
+      text: ""
+    },
+    {
+      title: "Z\xE1me\u010Dn\xEDk",
+      icon: "lock" /* Lock */,
+      text: ""
+    },
+    {
+      title: "Cestovn\xED agentura",
+      icon: "plane" /* Plane */,
+      text: ""
+    },
+    {
+      title: "Kade\u0159n\xEDk / Barber",
+      icon: "scissors" /* Scissors */,
+      text: ""
+    },
+    {
+      title: "Kapela",
+      icon: "guitar" /* Guitar */,
+      text: ""
+    },
+    {
+      title: "Startup",
+      icon: "lightbulb" /* Lightbulb */,
+      text: ""
+    },
+    {
+      title: "Ostatn\xED",
+      icon: "other" /* Other */,
+      text: ""
+    }
+  ]
+}, en3 = {
+  title: "Jakub Vantuch",
+  desc: "Websites and other solutions tailored to your needs",
+  customers: [
+    {
+      title: "E-Commerce",
+      icon: "cart" /* Cart */,
+      text: ""
+    },
+    {
+      title: "Blog",
+      icon: "blog" /* Blog */,
+      text: ""
+    },
+    {
+      title: "Cabin",
+      icon: "cabin" /* Cabin */,
+      text: ""
+    },
+    {
+      title: "Cafe",
+      icon: "coffee" /* Coffee */,
+      text: ""
+    },
+    {
+      title: "Teahouse",
+      icon: "tea" /* Tea */,
+      text: ""
+    },
+    {
+      title: "Craftsman",
+      icon: "hammer" /* Hammer */,
+      text: ""
+    },
+    {
+      title: "Locksmith",
+      icon: "lock" /* Lock */,
+      text: ""
+    },
+    {
+      title: "Travel agency",
+      icon: "plane" /* Plane */,
+      text: ""
+    },
+    {
+      title: "Hairdresser / Barber",
+      icon: "scissors" /* Scissors */,
+      text: ""
+    },
+    {
+      title: "Music band",
+      icon: "guitar" /* Guitar */,
+      text: ""
+    },
+    {
+      title: "Startup",
+      icon: "lightbulb" /* Lightbulb */,
+      text: ""
+    },
+    {
+      title: "Other",
+      icon: "other" /* Other */,
+      text: ""
+    }
+  ]
+};
+
+// app/routes/index.tsx
 var import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Index() {
+  let { locale } = useLocale(), [activeCustomerField, setActiveCustomerField] = (0, import_react12.useState)(0), t = (0, import_react12.useMemo)(() => locale === "en" /* en */ ? en3 : cz3, [locale]);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-    className: "h-full p-4",
+    className: "h-full",
     children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-      className: "grid h-full place-items-center",
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Loader, {}, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 7,
-        columnNumber: 9
-      }, this)
-    }, void 0, !1, {
+      className: "flex flex-col",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+          className: "flex flex-row contact-link text-xl sm:text-4xl mb-3",
+          children: t.title
+        }, void 0, !1, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 18,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+          className: "flex flex-row contact-link text-lg sm:text-xl",
+          children: t.desc
+        }, void 0, !1, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 21,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+          className: "flex flex-row border-sky-400 border-t-2 w-full my-10"
+        }, void 0, !1, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 24,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+          className: "flex flex-row",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+              className: "flex-col w-content-half",
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                className: "flex flex-row gap-4 flex-wrap",
+                children: t.customers.map((c, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                  className: `relative flex flex-row customer-field py-2 border-sky-400 border-2 hover:cursor-pointer ${activeCustomerField === i && "customer-field-active"} items-center`,
+                  onClick: () => setActiveCustomerField(i),
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                      className: "t-customer-field l-customer-field border-r-sky-400 bg-main absolute hidden h-4 w-4 rotate-45 border-r-2 sm:block"
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 34,
+                      columnNumber: 19
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                      className: "b-customer-field r-customer-field border-r-sky-400 bg-main absolute hidden h-4 w-4 rotate-45 border-l-2 sm:block"
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 35,
+                      columnNumber: 19
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
+                      src: activeCustomerField === i ? `/svg/icons/dark/${c.icon}.svg` : `/svg/icons/${c.icon}.svg`,
+                      className: "h-8 scale-75 w-1/5",
+                      alt: c.title
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 36,
+                      columnNumber: 19
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                      className: "contact-link w-4/5",
+                      children: c.title
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 41,
+                      columnNumber: 19
+                    }, this)
+                  ]
+                }, i, !0, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 29,
+                  columnNumber: 17
+                }, this))
+              }, void 0, !1, {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 27,
+                columnNumber: 13
+              }, this)
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 26,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+              className: "flex-col w-content-half sm:px-8",
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                className: "flex flex-row contact-link text-lg sm:hidden sm:text-xl lg:block items-center",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
+                    src: `/svg/icons/${t.customers[activeCustomerField].icon}.svg`,
+                    className: "h-10 scale-75 w-1/5",
+                    alt: t.customers[activeCustomerField].title
+                  }, void 0, !1, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 50,
+                    columnNumber: 15
+                  }, this),
+                  t.customers[activeCustomerField].title
+                ]
+              }, void 0, !0, {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 49,
+                columnNumber: 13
+              }, this)
+            }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 48,
+              columnNumber: 11
+            }, this)
+          ]
+        }, void 0, !0, {
+          fileName: "app/routes/index.tsx",
+          lineNumber: 25,
+          columnNumber: 9
+        }, this)
+      ]
+    }, void 0, !0, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 6,
+      lineNumber: 17,
       columnNumber: 7
     }, this)
   }, void 0, !1, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 5,
+    lineNumber: 16,
     columnNumber: 5
   }, this);
 }
@@ -2376,7 +2632,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "e54a7af1", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-O3GTPK75.js", imports: ["/build/_shared/chunk-M4DL4YJW.js", "/build/_shared/chunk-7BWQAFJL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-7WPP3PW2.js", imports: ["/build/_shared/chunk-7TLAXZTF.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2JVVSAIE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-FBOWWWOF.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-7TLAXZTF.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-SIY6OO4E.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-7TLAXZTF.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E54A7AF1.js" };
+var assets_manifest_default = { version: "dbdb45c0", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XXTNIM54.js", imports: ["/build/_shared/chunk-GGQIRRYN.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-VDRJ2BQF.js", imports: ["/build/_shared/chunk-BBKSCBK3.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-WERAFH7W.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-MS7Y4TBJ.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-JEHT25P3.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DBDB45C0.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
