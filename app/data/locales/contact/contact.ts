@@ -18,9 +18,9 @@ export const cz: IContact = {
     },
     phone: {
       title: "Telefon",
-      placeholder: "+420123456789",
+      placeholder: "123456789",
     },
-    messagePlaceholder: "Dovolte mi vám pomoc s vaší vizí...",
+    messagePlaceholder: "Dovolte mi proměnit Vaši vizi v realitu...",
     send: "Odeslat",
     messages: {
       requiredField: "Toto pole je povinné",
@@ -50,7 +50,7 @@ export const en: IContact = {
     },
     phone: {
       title: "Phone",
-      placeholder: "+420123456789",
+      placeholder: "123456789",
     },
     messagePlaceholder: "Let me make your dream come true...",
     send: "Send",

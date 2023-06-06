@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
 :root {
   --grey: #0f1524;
@@ -15,7 +15,7 @@
 
   html,
   body {
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Play', sans-serif;
     color: var(--blue);
     overflow: hidden;
     background: var(--grey);

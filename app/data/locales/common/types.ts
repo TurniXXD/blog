@@ -20,9 +20,11 @@ interface TerminalCommands {
     skills: string;
     contact: string;
     meTxt: string;
+    meditationsTxt: string;
   };
   cat: {
     meTxt: string;
+    meditationsTxt: string;
   };
 }
 

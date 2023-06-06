@@ -8,22 +8,12 @@ export const projects: Projects[] = [
     imgUrl: "img/projects/steepens.png",
     isRocket: false,
   },
-  {
-    name: "Mezi Kozy",
-    url: "https://www.mezikozyband.cz/",
-    imgUrl: "img/projects/mezikozy.png",
-    isRocket: false,
-  },
 ];
 
 export const skills: Skills[] = [
   {
     skillUrl: "https://nextjs.org/",
     imgUrl: "img/skills/nextjs.svg",
-  },
-  {
-    skillUrl: "https://remix.run/",
-    imgUrl: "img/skills/remix.svg",
   },
   {
     skillUrl: "https://www.typescriptlang.org/",
@@ -40,6 +30,10 @@ export const skills: Skills[] = [
   {
     skillUrl: "https://archlinux.org/",
     imgUrl: "img/skills/linux.svg",
+  },
+  {
+    skillUrl: "https://www.figma.com/",
+    imgUrl: "img/skills/figma.svg",
   },
 ];
 

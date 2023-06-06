@@ -649,9 +649,9 @@ function Navigation({
     className: "relative w-full flex-col justify-evenly gap-8 sm:items-end sm:gap-0",
     children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-        className: "mx-auto flex-row px-4 sm:w-full lg:px-8",
+        className: "mx-auto flex-row px-4 sm:w-full lg:px-8 md:mt-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-2xl",
+          className: "nav-link text-3xl sm:text-xl md:text-3xl",
           children: t.menu.about
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -666,7 +666,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-2xl",
+          className: "nav-link text-3xl sm:text-xl md:text-3xl",
           children: t.menu.work
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -681,7 +681,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-2xl",
+          className: "nav-link text-3xl sm:text-xl md:text-3xl",
           children: t.menu.skills
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -696,7 +696,7 @@ function Navigation({
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
         className: "mx-auto flex-row px-4 pb-8 sm:w-full sm:pb-0 lg:px-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "nav-link text-3xl sm:text-xl md:text-2xl",
+          className: "nav-link text-3xl sm:text-xl md:text-3xl",
           children: t.menu.contact
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
@@ -815,7 +815,7 @@ function InputLine({
         let dataCommandHistory = data && [...data];
         return dataCommandHistory.push(command), dataCommandHistory || [];
       }), commandProcessed[0] === "cd")
-        commandProcessed[1] ? /.txt/g.test(commandProcessed[1]) ? commandProcessed[1] === t.terminal.commands.ls.meTxt ? handleOutput(
+        commandProcessed[1] ? /.txt/g.test(commandProcessed[1]) ? commandProcessed[1] === t.terminal.commands.ls.meditationsTxt || commandProcessed[1] === t.terminal.commands.ls.meTxt ? handleOutput(
           fieldWithValue(t.terminal.messages.isFile, {
             file: commandProcessed[1]
           })
@@ -839,12 +839,13 @@ function InputLine({
               <a href="/work"><strong>${t.terminal.commands.ls.work}</strong></a> <br/>
               <a href="/skills"><strong>${t.terminal.commands.ls.skills}</strong></a> <br/>
               <a href="/contact"><strong>${t.terminal.commands.ls.contact}</strong></a> <br/>
-              ${t.terminal.commands.ls.meTxt}
+              ${t.terminal.commands.ls.meTxt} <br/>
+              ${t.terminal.commands.ls.meditationsTxt}
             `;
           handleOutput(dirs);
         }
       else
-        commandProcessed[0] === "cat" ? commandProcessed[1] === t.terminal.commands.ls.meTxt ? handleOutput(t.terminal.commands.cat.meTxt) : commandProcessed[1] ? commandProcessed[1] === t.terminal.commands.ls.about || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? handleOutput(
+        commandProcessed[0] === "cat" ? (commandProcessed[1] === t.terminal.commands.ls.meTxt && handleOutput(t.terminal.commands.cat.meTxt), commandProcessed[1] === t.terminal.commands.ls.meditationsTxt ? handleOutput(t.terminal.commands.cat.meditationsTxt) : commandProcessed[1] ? commandProcessed[1] === t.terminal.commands.ls.about || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? handleOutput(
           fieldWithValue(t.terminal.messages.isDir, {
             dir: commandProcessed[1]
           })
@@ -852,7 +853,7 @@ function InputLine({
           fieldWithValue(t.terminal.messages.cannotFind, {
             dir: commandProcessed[1]
           })
-        ) : handleOutput(t.terminal.messages.noFile) : (commandProcessed[0], handleOutput(t.terminal.commands.help));
+        ) : handleOutput(t.terminal.messages.noFile)) : (commandProcessed[0], handleOutput(t.terminal.commands.help));
       setDisableInput(!0);
     }
   };
@@ -870,12 +871,12 @@ function InputLine({
           ]
         }, void 0, !0, {
           fileName: "app/components/terminal/inputLine.tsx",
-          lineNumber: 143,
+          lineNumber: 146,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/terminal/inputLine.tsx",
-        lineNumber: 142,
+        lineNumber: 145,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -893,18 +894,18 @@ function InputLine({
           onKeyDown: (e) => handleKeyEvent(e)
         }, void 0, !1, {
           fileName: "app/components/terminal/inputLine.tsx",
-          lineNumber: 146,
+          lineNumber: 149,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/terminal/inputLine.tsx",
-        lineNumber: 145,
+        lineNumber: 148,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/components/terminal/inputLine.tsx",
-    lineNumber: 141,
+    lineNumber: 144,
     columnNumber: 5
   }, this);
 }
@@ -1046,7 +1047,7 @@ function Stats({ t }) {
           className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-              className: "hidden text-lg min-[1370px]:block",
+              className: "hidden text-xl min-[1370px]:block",
               children: t.stats.cpu
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
@@ -1077,7 +1078,7 @@ function Stats({ t }) {
           className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-              className: "hidden text-lg min-[1370px]:block",
+              className: "hidden text-xl min-[1370px]:block",
               children: t.stats.mem
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
@@ -1108,7 +1109,7 @@ function Stats({ t }) {
           className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-              className: "hidden text-lg min-[1370px]:block",
+              className: "hidden text-xl min-[1370px]:block",
               children: t.stats.net
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
@@ -1139,7 +1140,7 @@ function Stats({ t }) {
           className: "flex-row justify-center gap-5 min-[1370px]:justify-between",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-              className: "hidden text-lg min-[1370px]:block",
+              className: "hidden text-xl min-[1370px]:block",
               children: t.stats.disk
             }, void 0, !1, {
               fileName: "app/components/stats.tsx",
@@ -1292,10 +1293,10 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-V324E77E.css";
+var tailwind_default = "/build/_assets/tailwind-MSSM7K5A.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-CEY3VDOY.css";
+var global_default = "/build/_assets/global-Y7ECPUJR.css";
 
 // app/root.tsx
 var import_mail = __toESM(require("@sendgrid/mail"));
@@ -1324,10 +1325,12 @@ var cz = {
         work: "projekty",
         skills: "dovednosti",
         contact: "kontakt",
-        meTxt: "m\u016Fj_p\u0159\xEDb\u011Bh.txt"
+        meTxt: "j\xE1.txt",
+        meditationsTxt: "moje_meditace.txt"
       },
       cat: {
-        meTxt: "Jsem full-stack web developer z \u010Cesk\xE9 republiky zam\u011B\u0159uj\xEDc\xED se p\u0159edev\u0161\xEDm na technologie postaven\xE9 na frameworku React.js, a backendov\xE9 \u0159e\u0161en\xED v Go nebo Node.js."
+        meTxt: "Jsem full-stack web developer z \u010Cesk\xE9 republiky zam\u011B\u0159uj\xEDc\xED se p\u0159edev\u0161\xEDm na technologie postaven\xE9 na frameworku React.js, a backendov\xE9 \u0159e\u0161en\xED v Go nebo Node.js.",
+        meditationsTxt: ""
       }
     },
     messages: {
@@ -1362,10 +1365,20 @@ var cz = {
         work: "work",
         skills: "skills",
         contact: "contact",
-        meTxt: "me.txt"
+        meTxt: "me.txt",
+        meditationsTxt: "my_meditations.txt"
       },
       cat: {
-        meTxt: "It's me! I am a full-stack web developer from Czech Republic. My main focus are technologies built on top of the React.js framework, and Go or Node.js backend solutions to power my projects."
+        meTxt: "It's me! I am a full-stack web developer from Czech Republic. My main focus are technologies built on top of the React.js framework, and Go or Node.js backend solutions to power my projects.",
+        meditationsTxt: `We shouldn't be afraid of death, there is absolute nothingness that you won't have to expirience compared to any other fear that is proven by experience. It is not even the fear of the unknown that proceeds death it's the fear that the knowledge that you gained won't be preserved. On the evolution level, sharing knowledge by reproducing, was the key to today's life. On a molecular level all that cells do is share information or die. To share knowledge is to become immortal.
+
+        It's important to establish that knowledge shouldn't be something that is forced to a person, it should be of a kind that makes a person more focused on sharing and improving his gained knowledge. Right now unique skill is what leads a person to the path of wealth, but it is only to a point when person cannot be easilly replaced or when he establishes enough wealth to reach independence. From a bigger point of view the only things that a person strives for are health, wealth and happiness, but what is wealth if person is always after what is another's and only counts what he has yet to get, and never what he already has. Only by living thus, and not setting too high value on things which can at any moment be taken away from him, can he discover that true, unshakable peace and contentment.
+        
+        Before acquiring knowledge the truthfulness of an argument should be established, but how can we tell the truth from deceptive lies? When person lies he is trying to convince people more about his argument, and that there is no possibilty that it isn't right, then if he was telling the truth. In heated arguments body language teaches us that person will use open body language more forcefully (banging his hands on the table with his palms open, using more gestures) when he tries his best to express his opinion. The worst scenario is if a person believes that what he shares is the truth, which gaves him assurance about his acts. This can only happen to a person who blindly subjugated to the information without contemplating about it. It is also a spirit killer to believe in religion or artificially created beliefs more than philosophy and psychology.
+        
+        A man who knows not to which port he sails doesn't find any port favorable. In other words, living without meaning is always finding yourself in a place of uncertain future, short lasting gratification, no self reflection and without any possibility of escape. The sooner you begin to stop giving people chances to destroy your imagination, the sooner you can find your meaning. We suffer more in imagination then in real life, because real life is the result of imagination, if you can set you mindset properly. Determine what will be the result of your doings before going on this path, if it will bring any real value to the world around you and change people's lives, or if it will just help to spin the neverending wheels of the system. Don't waste your time talking about what good man is like, you should be one. When you find your meaning stick to it and give it hundred percent of your effort. Soon you'll understand that if you wanna go fast then go alone, but if you wanna go far then go find a reliable team that will share your vision. When you nurture your goal it's hard to entrust someone with care of it, but to be everywhere is to be nowhere, and by slowly passing on subordinate tasks to other people you can focus on the bigger picture.
+        
+        We pursue marketing even though we know all of our celebrities and idols are counterfits. Why are we paying off someone who can kick ball in millions, and doctors and scientists get practically nothing. Our judgement cannot be thus until these values are restored`
       }
     },
     messages: {
@@ -1793,9 +1806,9 @@ var cz2 = {
     },
     phone: {
       title: "Telefon",
-      placeholder: "+420123456789"
+      placeholder: "123456789"
     },
-    messagePlaceholder: "Dovolte mi v\xE1m pomoc s va\u0161\xED viz\xED...",
+    messagePlaceholder: "Dovolte mi prom\u011Bnit Va\u0161i vizi v realitu...",
     send: "Odeslat",
     messages: {
       requiredField: "Toto pole je povinn\xE9",
@@ -1823,7 +1836,7 @@ var cz2 = {
     },
     phone: {
       title: "Phone",
-      placeholder: "+420123456789"
+      placeholder: "123456789"
     },
     messagePlaceholder: "Let me make your dream come true...",
     send: "Send",
@@ -1844,21 +1857,11 @@ var projects = [
     url: "https://www.steepensband.eu/",
     imgUrl: "img/projects/steepens.png",
     isRocket: !1
-  },
-  {
-    name: "Mezi Kozy",
-    url: "https://www.mezikozyband.cz/",
-    imgUrl: "img/projects/mezikozy.png",
-    isRocket: !1
   }
 ], skills = [
   {
     skillUrl: "https://nextjs.org/",
     imgUrl: "img/skills/nextjs.svg"
-  },
-  {
-    skillUrl: "https://remix.run/",
-    imgUrl: "img/skills/remix.svg"
   },
   {
     skillUrl: "https://www.typescriptlang.org/",
@@ -1875,6 +1878,10 @@ var projects = [
   {
     skillUrl: "https://archlinux.org/",
     imgUrl: "img/skills/linux.svg"
+  },
+  {
+    skillUrl: "https://www.figma.com/",
+    imgUrl: "img/skills/figma.svg"
   }
 ], socials = [
   {
@@ -1908,8 +1915,8 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), action = async ({
       ...!message && { message: "This field is required" }
     };
     return Object.values(formErrors).some(Boolean) ? { formErrors } : (await import_mail2.default.send({
-      to: "contact@vantuch.dev",
-      from: "contact@vantuch.dev",
+      to: "kontakt@horal.app",
+      from: "kontakt@horal.app",
       subject: "New contact from blog",
       html: `
       <div>
@@ -1922,7 +1929,9 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), action = async ({
       </div>
       `
     }).then(() => {
-    }).catch((err) => console.error(err)), "success");
+    }).catch((err) => {
+      console.error(err), console.error(err.response.body.errors);
+    }), "success");
   }
 };
 function Contact() {
@@ -1948,7 +1957,7 @@ function Contact() {
         className: "t-01 l-01 border-r-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-r-2 sm:block"
       }, void 0, !1, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 85,
+        lineNumber: 88,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1966,7 +1975,7 @@ function Contact() {
                     alt: s.icon
                   }, void 0, !1, {
                     fileName: "app/routes/contact.tsx",
-                    lineNumber: 93,
+                    lineNumber: 96,
                     columnNumber: 15
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -1974,13 +1983,13 @@ function Contact() {
                     children: t.links[s.icon]
                   }, void 0, !1, {
                     fileName: "app/routes/contact.tsx",
-                    lineNumber: 98,
+                    lineNumber: 101,
                     columnNumber: 15
                   }, this)
                 ]
               }, i, !0, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 89,
+                lineNumber: 92,
                 columnNumber: 13
               }, this)),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -1993,38 +2002,38 @@ function Contact() {
                   children: " "
                 }, i, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 105,
+                  lineNumber: 108,
                   columnNumber: 15
                 }, this))
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 103,
+                lineNumber: 106,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 87,
+            lineNumber: 90,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: "contact-socials-corner-tr border-r-sky-400 bg-main absolute border-r-2 sm:hidden"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 117,
+            lineNumber: 120,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
             className: "contact-socials-corner-tl border-r-sky-400 bg-main absolute border-r-2 sm:hidden"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 118,
+            lineNumber: 121,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 86,
+        lineNumber: 89,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2038,7 +2047,7 @@ function Contact() {
                 children: (_c = actionData == null ? void 0 : actionData.formErrors) != null && _c.name ? (_d = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _d.name : t.fields.name.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 126,
+                lineNumber: 129,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2051,13 +2060,13 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 135,
+                lineNumber: 138,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 121,
+            lineNumber: 124,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2068,7 +2077,7 @@ function Contact() {
                 children: (_g = actionData == null ? void 0 : actionData.formErrors) != null && _g.email ? (_h = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _h.email : t.fields.email.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 150,
+                lineNumber: 153,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2081,13 +2090,13 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 159,
+                lineNumber: 162,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 145,
+            lineNumber: 148,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2098,7 +2107,7 @@ function Contact() {
                 children: (_k = actionData == null ? void 0 : actionData.formErrors) != null && _k.phone ? (_l = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _l.phone : t.fields.phone.title
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 174,
+                lineNumber: 177,
                 columnNumber: 11
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
@@ -2111,19 +2120,19 @@ function Contact() {
                 className: "bg-main h-full w-full px-16 text-center text-xl outline-none"
               }, void 0, !1, {
                 fileName: "app/routes/contact.tsx",
-                lineNumber: 183,
+                lineNumber: 186,
                 columnNumber: 11
               }, this)
             ]
           }, void 0, !0, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 169,
+            lineNumber: 172,
             columnNumber: 9
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 120,
+        lineNumber: 123,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2140,7 +2149,7 @@ function Contact() {
             className: "bg-main row-span-3 mb-6 grid resize-none p-10 text-xl outline-none"
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 199,
+            lineNumber: 202,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2153,7 +2162,7 @@ function Contact() {
                   className: "border-r-sky-400 bg-main absolute -top-4 -left-4 h-8 w-8 rotate-45 border-r-2"
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 214,
+                  lineNumber: 217,
                   columnNumber: 13
                 }, this),
                 /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
@@ -2161,18 +2170,18 @@ function Contact() {
                   children: t.fields.send
                 }, void 0, !1, {
                   fileName: "app/routes/contact.tsx",
-                  lineNumber: 215,
+                  lineNumber: 218,
                   columnNumber: 13
                 }, this)
               ]
             }, void 0, !0, {
               fileName: "app/routes/contact.tsx",
-              lineNumber: 210,
+              lineNumber: 213,
               columnNumber: 11
             }, this)
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 209,
+            lineNumber: 212,
             columnNumber: 9
           }, this),
           ((_n = actionData == null ? void 0 : actionData.formErrors) == null ? void 0 : _n.phone) && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2180,19 +2189,19 @@ function Contact() {
             children: actionData.formErrors.message
           }, void 0, !1, {
             fileName: "app/routes/contact.tsx",
-            lineNumber: 219,
+            lineNumber: 222,
             columnNumber: 11
           }, this)
         ]
       }, void 0, !0, {
         fileName: "app/routes/contact.tsx",
-        lineNumber: 194,
+        lineNumber: 197,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/routes/contact.tsx",
-    lineNumber: 81,
+    lineNumber: 84,
     columnNumber: 5
   }, this);
 }
@@ -2367,7 +2376,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "32ee924d", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-NM5IV4D3.js", imports: ["/build/_shared/chunk-YNFLQMFC.js", "/build/_shared/chunk-7BWQAFJL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-6IYD22A5.js", imports: ["/build/_shared/chunk-2P2F64XQ.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-XJFZG46T.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-5UQDJWHQ.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-2P2F64XQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-X65LYRFK.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-2P2F64XQ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-32EE924D.js" };
+var assets_manifest_default = { version: "e54a7af1", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-O3GTPK75.js", imports: ["/build/_shared/chunk-M4DL4YJW.js", "/build/_shared/chunk-7BWQAFJL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-7WPP3PW2.js", imports: ["/build/_shared/chunk-7TLAXZTF.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2JVVSAIE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-FBOWWWOF.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-7TLAXZTF.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-SIY6OO4E.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-7TLAXZTF.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E54A7AF1.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

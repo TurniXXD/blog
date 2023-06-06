@@ -32,8 +32,8 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
 
     await sendgrid
       .send({
-        to: "contact@vantuch.dev",
-        from: "contact@vantuch.dev",
+        to: "kontakt@horal.app",
+        from: "kontakt@horal.app",
         subject: "New contact from blog",
         html: `
       <div>
@@ -47,7 +47,10 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
       `,
       })
       .then(() => {})
-      .catch((err) => console.error(err)); // eslint-disable-line no-console
+      .catch((err) => {
+        console.error(err)
+        console.error(err.response.body.errors)
+      }); // eslint-disable-line no-console
 
     return "success";
   }

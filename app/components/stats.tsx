@@ -90,7 +90,7 @@ export default function Stats({ t }: { t: ICommon }) {
       {isPC ? (
         <>
           <div className="flex-row justify-center gap-5 min-[1370px]:justify-between">
-            <span className="hidden text-lg min-[1370px]:block">
+            <span className="hidden text-xl min-[1370px]:block">
               {t.stats.cpu}
             </span>
             <div className="pt-01">
@@ -98,7 +98,7 @@ export default function Stats({ t }: { t: ICommon }) {
             </div>
           </div>
           <div className="flex-row justify-center gap-5 min-[1370px]:justify-between">
-            <span className="hidden text-lg min-[1370px]:block">
+            <span className="hidden text-xl min-[1370px]:block">
               {t.stats.mem}
             </span>
             <div className="pt-01">
@@ -106,7 +106,7 @@ export default function Stats({ t }: { t: ICommon }) {
             </div>
           </div>
           <div className="flex-row justify-center gap-5 min-[1370px]:justify-between">
-            <span className="hidden text-lg min-[1370px]:block">
+            <span className="hidden text-xl min-[1370px]:block">
               {t.stats.net}
             </span>
             <div className="pt-01">
@@ -114,7 +114,7 @@ export default function Stats({ t }: { t: ICommon }) {
             </div>
           </div>
           <div className="flex-row justify-center gap-5 min-[1370px]:justify-between">
-            <span className="hidden text-lg min-[1370px]:block">
+            <span className="hidden text-xl min-[1370px]:block">
               {t.stats.disk}
             </span>
             <div className="pt-01">
