@@ -652,7 +652,7 @@ function Navigation({
         className: "mx-auto flex-row px-4 sm:w-full lg:px-8 md:mt-8",
         children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
           className: "nav-link text-3xl sm:text-xl md:text-2xl",
-          children: t.menu.about
+          children: t.menu.services
         }, void 0, !1, {
           fileName: "app/components/navigation.tsx",
           lineNumber: 36,
@@ -815,7 +815,7 @@ function InputLine({
         let dataCommandHistory = data && [...data];
         return dataCommandHistory.push(command), dataCommandHistory || [];
       }), commandProcessed[0] === "cd")
-        commandProcessed[1] ? /.txt/g.test(commandProcessed[1]) ? commandProcessed[1] === t.terminal.commands.ls.meditationsTxt || commandProcessed[1] === t.terminal.commands.ls.meTxt ? handleOutput(
+        commandProcessed[1] ? /.txt/g.test(commandProcessed[1]) ? commandProcessed[1] === t.terminal.commands.ls.meditationsTxt || commandProcessed[1] === t.terminal.commands.ls.meTxt || commandProcessed[1] === t.terminal.commands.ls.startupGuide ? handleOutput(
           fieldWithValue(t.terminal.messages.isFile, {
             file: commandProcessed[1]
           })
@@ -823,8 +823,8 @@ function InputLine({
           fieldWithValue(t.terminal.messages.cannotFind, {
             dir: commandProcessed[1]
           })
-        ) : commandProcessed[1] === t.terminal.commands.ls.about || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? (navigate(
-          commandProcessed[1] === t.terminal.commands.ls.about ? "/" : commandProcessed[1]
+        ) : commandProcessed[1] === t.terminal.commands.ls.services || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? (navigate(
+          commandProcessed[1] === t.terminal.commands.ls.services ? "/" : commandProcessed[1]
         ), handleOutput("no_output_line")) : handleOutput(
           fieldWithValue(t.terminal.messages.cannotFind, {
             dir: commandProcessed[1]
@@ -835,17 +835,18 @@ function InputLine({
           handleOutput(t.terminal.messages.lsNoParam);
         else {
           let dirs = `
-              <a href="/"><strong>${t.terminal.commands.ls.about}</strong></a> <br/>
+              <a href="/"><strong>${t.terminal.commands.ls.services}</strong></a> <br/>
               <a href="/work"><strong>${t.terminal.commands.ls.work}</strong></a> <br/>
               <a href="/skills"><strong>${t.terminal.commands.ls.skills}</strong></a> <br/>
               <a href="/contact"><strong>${t.terminal.commands.ls.contact}</strong></a> <br/>
               ${t.terminal.commands.ls.meTxt} <br/>
-              ${t.terminal.commands.ls.meditationsTxt}
+              ${t.terminal.commands.ls.meditationsTxt} <br/>
+              ${t.terminal.commands.ls.startupGuide}
             `;
           handleOutput(dirs);
         }
       else
-        commandProcessed[0] === "cat" ? (commandProcessed[1] === t.terminal.commands.ls.meTxt && handleOutput(t.terminal.commands.cat.meTxt), commandProcessed[1] === t.terminal.commands.ls.meditationsTxt ? handleOutput(t.terminal.commands.cat.meditationsTxt) : commandProcessed[1] ? commandProcessed[1] === t.terminal.commands.ls.about || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? handleOutput(
+        commandProcessed[0] === "cat" ? commandProcessed[1] === t.terminal.commands.ls.meTxt ? handleOutput(t.terminal.commands.cat.meTxt) : commandProcessed[1] === t.terminal.commands.ls.meditationsTxt ? handleOutput(t.terminal.commands.cat.meditationsTxt) : commandProcessed[1] === t.terminal.commands.ls.startupGuide ? handleOutput(t.terminal.commands.cat.startupGuide) : commandProcessed[1] ? commandProcessed[1] === t.terminal.commands.ls.services || commandProcessed[1] === t.terminal.commands.ls.work || commandProcessed[1] === t.terminal.commands.ls.skills || commandProcessed[1] === t.terminal.commands.ls.contact ? handleOutput(
           fieldWithValue(t.terminal.messages.isDir, {
             dir: commandProcessed[1]
           })
@@ -853,7 +854,7 @@ function InputLine({
           fieldWithValue(t.terminal.messages.cannotFind, {
             dir: commandProcessed[1]
           })
-        ) : handleOutput(t.terminal.messages.noFile)) : (commandProcessed[0], handleOutput(t.terminal.commands.help));
+        ) : handleOutput(t.terminal.messages.noFile) : (commandProcessed[0], handleOutput(t.terminal.commands.help));
       setDisableInput(!0);
     }
   };
@@ -871,12 +872,12 @@ function InputLine({
           ]
         }, void 0, !0, {
           fileName: "app/components/terminal/inputLine.tsx",
-          lineNumber: 146,
+          lineNumber: 152,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/terminal/inputLine.tsx",
-        lineNumber: 145,
+        lineNumber: 151,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -894,18 +895,18 @@ function InputLine({
           onKeyDown: (e) => handleKeyEvent(e)
         }, void 0, !1, {
           fileName: "app/components/terminal/inputLine.tsx",
-          lineNumber: 149,
+          lineNumber: 155,
           columnNumber: 9
         }, this)
       }, void 0, !1, {
         fileName: "app/components/terminal/inputLine.tsx",
-        lineNumber: 148,
+        lineNumber: 154,
         columnNumber: 7
       }, this)
     ]
   }, void 0, !0, {
     fileName: "app/components/terminal/inputLine.tsx",
-    lineNumber: 144,
+    lineNumber: 150,
     columnNumber: 5
   }, this);
 }
@@ -1293,10 +1294,10 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-MCGSLHET.css";
+var tailwind_default = "/build/_assets/tailwind-ZR4TTUH4.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-T5OLQGNM.css";
+var global_default = "/build/_assets/global-LCL5MHPX.css";
 
 // app/root.tsx
 var import_mail = __toESM(require("@sendgrid/mail"));
@@ -1304,7 +1305,7 @@ var import_mail = __toESM(require("@sendgrid/mail"));
 // app/data/locales/common/common.ts
 var cz = {
   menu: {
-    about: "O m\u011B",
+    services: "Slu\u017Eby",
     work: "Projekty",
     skills: "Dovednosti",
     contact: "Kontakt"
@@ -1321,12 +1322,13 @@ var cz = {
     commands: {
       help: "Dostupn\xE9 p\u0159\xEDkazy jsou 'help', 'cd', 'ls', 'cat'",
       ls: {
-        about: "o_m\u011B",
+        services: "slu\u017Eby",
         work: "projekty",
         skills: "dovednosti",
         contact: "kontakt",
         meTxt: "j\xE1.txt",
-        meditationsTxt: "moje_meditace.txt"
+        meditationsTxt: "moje_meditace.txt",
+        startupGuide: "pr\u016Fvodce_startupem.txt"
       },
       cat: {
         meTxt: "Jsem full-stack web developer z \u010Cesk\xE9 republiky zam\u011B\u0159uj\xEDc\xED se p\u0159edev\u0161\xEDm na technologie postaven\xE9 na frameworku React.js, a backendov\xE9 \u0159e\u0161en\xED v Go nebo Node.js.",
@@ -1338,7 +1340,17 @@ var cz = {
        
         \u010Clov\u011Bk, kter\xFD nev\xED, do kter\xE9ho p\u0159\xEDstavu pluje, neshled\xE1v\xE1 \u017E\xE1dn\xFD p\u0159\xEDstav v\xFDhodn\xFD. Jin\xFDmi slovy, \u017Eivot beze smyslu znamen\xE1 v\u017Edy se ocitnout v m\xEDst\u011B nejist\xE9 budoucnosti, kr\xE1tkodob\xE9ho uspokojen\xED, bez sebereflexe a bez jak\xE9koli mo\u017Enosti \xFAniku. \u010C\xEDm d\u0159\xEDve p\u0159estanete d\xE1vat lidem \u0161anci zni\u010Dit va\u0161i p\u0159edstavivost, t\xEDm d\u0159\xEDve najdete sv\u016Fj v\xFDznam. V p\u0159edstav\xE1ch trp\xEDme v\xEDce ne\u017E v re\xE1ln\xE9m \u017Eivot\u011B, proto\u017Ee skute\u010Dn\xFD \u017Eivot je v\xFDsledkem p\u0159edstavivosti, pokud si dok\xE1\u017Eete spr\xE1vn\u011B nastavit sv\xE9 my\u0161len\xED. Ur\u010Dete, co bude v\xFDsledkem va\u0161ich \u010Din\u016F, ne\u017E se vyd\xE1te na tuto cestu, jestli to p\u0159inese sv\u011Btu kolem v\xE1s n\u011Bjakou skute\u010Dnou hodnotu a zm\u011Bn\xED \u017Eivoty lid\xED, nebo jestli to jen pom\u016F\u017Ee rozto\u010Dit nekone\u010Dn\xE1 kola syst\xE9mu. Neztr\xE1cejte \u010Das mluven\xEDm o tom, jak\xFD je dobr\xFD mu\u017E, m\u011Bli byste j\xEDm b\xFDt. Kdy\u017E najdete sv\u016Fj v\xFDznam, dr\u017Ete se ho a v\u011Bnujte mu sto procent sv\xE9ho \xFAsil\xED. Brzy pochop\xEDte, \u017Ee pokud chcete j\xEDt rychle, jd\u011Bte sami, ale pokud chcete j\xEDt daleko, najd\u011Bte si spolehliv\xFD t\xFDm, kter\xFD bude sd\xEDlet va\u0161i vizi. Kdy\u017E pe\u010Dujete o sv\u016Fj c\xEDl, je t\u011B\u017Ek\xE9 sv\u011B\u0159it n\u011Bkomu p\xE9\u010Di o n\u011Bj, ale b\xFDt v\u0161ude znamen\xE1 neb\xFDt nikde a pomal\xFDm p\u0159ed\xE1v\xE1n\xEDm pod\u0159\xEDzen\xFDch \xFAkol\u016F jin\xFDm lidem se m\u016F\u017Eete soust\u0159edit na \u0161ir\u0161\xED obraz.
        
-        Zab\xFDv\xE1me se marketingem, i kdy\u017E v\xEDme, \u017Ee v\u0161echny na\u0161e celebrity a idoly jsou pad\u011Blky. Pro\u010D plat\xEDme n\u011Bkoho, kdo um\xED kopat do m\xED\u010De v milionech, a l\xE9ka\u0159i a v\u011Bdci nedostanou prakticky nic. N\xE1\u0161 \xFAsudek nem\u016F\u017Ee b\xFDt takov\xFD, dokud tyto hodnoty nebudou obnoveny`
+        Zab\xFDv\xE1me se marketingem, i kdy\u017E v\xEDme, \u017Ee v\u0161echny na\u0161e celebrity a idoly jsou pad\u011Blky. Pro\u010D plat\xEDme n\u011Bkoho, kdo um\xED kopat do m\xED\u010De v milionech, a l\xE9ka\u0159i a v\u011Bdci nedostanou prakticky nic. N\xE1\u0161 \xFAsudek nem\u016F\u017Ee b\xFDt takov\xFD, dokud tyto hodnoty nebudou obnoveny`,
+        startupGuide: `1. Vytvo\u0159te strategickou s\xED\u0165 <br/>
+        2. Najd\u011Bte probl\xE9m / N\u011Bkdo za v\xE1mi p\u0159ijde s probl\xE9mem / Pokud p\u0159ijdete s \u0159e\u0161en\xEDm nejprve ov\u011B\u0159te, \u017Ee existuje probl\xE9m, zam\u011B\u0159te se na B2B <br/>
+        3. Ov\u011B\u0159te, \u017Ee probl\xE9m existuje s v\xEDce lidmi <br/>
+        4. Najd\u011Bte \u0159e\u0161en\xED <br/>
+        5. Ur\u010Dete c\xEDlov\xE9 publikum, bu\u010Fte konkr\xE9tn\xED, je v po\u0159\xE1dku vytv\xE1\u0159et r\u016Fzn\xE9 pl\xE1ny pro r\u016Fzn\xE9 c\xEDlov\xE9 skupiny <br/>
+        6. Vytvo\u0159te \u0161t\xEDhl\xE9 pl\xE1tno a swot <br/>
+        7. Validace probl\xE9m a anyl\xE1za trhu formou obvol\xE1n\xED potencion\xE1ln\xEDch z\xE1kazn\xEDk\u016F / Formul\xE1\u0159em /  P\u0159imou konzultac\xED s n\u011Bk\xFDm z c\xEDlov\xE9 skupiny <br/>
+        8. Vytvo\u0159te MVP <br/>
+        9. P\u0159ipojte se k sout\u011B\u017Ei / Akceler\xE1toru <br/>
+        10. Najd\u011Bte investora <br/>`
       }
     },
     messages: {
@@ -1352,7 +1364,7 @@ var cz = {
   }
 }, en = {
   menu: {
-    about: "About",
+    services: "Services",
     work: "Work",
     skills: "Skills",
     contact: "Contact"
@@ -1369,12 +1381,13 @@ var cz = {
     commands: {
       help: "Available commands are 'help', 'cd', 'ls', 'cat'",
       ls: {
-        about: "about",
+        services: "services",
         work: "work",
         skills: "skills",
         contact: "contact",
         meTxt: "me.txt",
-        meditationsTxt: "my_meditations.txt"
+        meditationsTxt: "my_meditations.txt",
+        startupGuide: "startup_guide.txt"
       },
       cat: {
         meTxt: "It's me! I am a full-stack web developer from Czech Republic. My main focus are technologies built on top of the React.js framework, and Go or Node.js backend solutions to power my projects.",
@@ -1386,7 +1399,17 @@ var cz = {
         
         A man who knows not to which port he sails doesn't find any port favorable. In other words, living without meaning is always finding yourself in a place of uncertain future, short lasting gratification, no self reflection and without any possibility of escape. The sooner you begin to stop giving people chances to destroy your imagination, the sooner you can find your meaning. We suffer more in imagination then in real life, because real life is the result of imagination, if you can set you mindset properly. Determine what will be the result of your doings before going on this path, if it will bring any real value to the world around you and change people's lives, or if it will just help to spin the neverending wheels of the system. Don't waste your time talking about what good man is like, you should be one. When you find your meaning stick to it and give it hundred percent of your effort. Soon you'll understand that if you wanna go fast then go alone, but if you wanna go far then go find a reliable team that will share your vision. When you nurture your goal it's hard to entrust someone with care of it, but to be everywhere is to be nowhere, and by slowly passing on subordinate tasks to other people you can focus on the bigger picture.
         
-        We pursue marketing even though we know all of our celebrities and idols are counterfits. Why are we paying off someone who can kick ball in millions, and doctors and scientists get practically nothing. Our judgement cannot be thus until these values are restored`
+        We pursue marketing even though we know all of our celebrities and idols are counterfits. Why are we paying off someone who can kick ball in millions, and doctors and scientists get practically nothing. Our judgement cannot be thus until these values are restored`,
+        startupGuide: `1. Create strategic network <br/>
+        2. Find problem / Someone comes to you with a problem / If you come up with a solutions first validate that there is a problem, focus on B2B <br/>
+        3. Validate that a problem exists with more people <br/>
+        4. Find solutions <br/>
+        5. Determine target audience, be specific it is okay to create different plans for different audiences <br/>
+        6. Create lean canvas and swot <br/>
+        7. Validate market direct approach / Call / Form / Consult with someone from target group <br/>
+        8. Create MVP <br/>
+        9. Join contest / Accelerator <br/>
+        10. Find investor <br/>`
       }
     },
     messages: {
@@ -2258,70 +2281,186 @@ __export(routes_exports, {
 });
 var import_react12 = require("react");
 
-// app/data/locales/about/common.ts
+// app/data/locales/services/common.ts
 var cz3 = {
   title: "Jakub Vantuch",
-  desc: "Webov\xE9 str\xE1nky a dal\u0161\xED \u0159e\u0161en\xED na m\xEDru pro v\xE1\u0161 z\xE1m\u011Br",
+  desc: "Webov\xE9 str\xE1nky a dal\u0161\xED \u0159e\u0161en\xED na m\xEDru va\u0161emu z\xE1m\u011Bru",
   customers: [
     {
       title: "E-Commerce",
       icon: "cart" /* Cart */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Tvorba e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce. P\u0159ipojen\xED a nastaven\xED platebn\xED br\xE1ny, kter\xE1 bude nejvhodn\u011Bj\u0161\xED pro v\xE1\u0161 p\u0159\xEDpad."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
+        },
+        {
+          title: "Focen\xED produktu",
+          text: "Domluven\xED fotografa ve va\u0161em okol\xED, kter\xFD fotografie va\u0161eho produktu p\u0159izp\u016Fsob\xED designu."
+        },
+        {
+          title: "Design",
+          text: "Design grafiky loga, produkt\u016F, merche, soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
+        }
+      ]
     },
     {
       title: "Blog",
       icon: "blog" /* Blog */,
-      text: ""
+      desc: [
+        {
+          title: "Webov\xE1 prezentace",
+          text: "Va\u0161e str\xE1nka, kter\xE1 v\xE1m pom\u016F\u017Ee prezentovat va\u0161e osobn\xED z\xE1m\u011Bry a my\u0161lenky jasn\xFDm a srozumiteln\xFDm zp\u016Fsobem."
+        },
+        {
+          title: "Design",
+          text: "Design grafiky soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
+        }
+      ]
     },
     {
       title: "Chata",
       icon: "cabin" /* Cabin */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Kav\xE1rna",
       icon: "coffee" /* Coffee */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "\u010Cajovna",
       icon: "tea" /* Tea */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "\u0158emesln\xEDk",
       icon: "hammer" /* Hammer */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Z\xE1me\u010Dn\xEDk",
       icon: "lock" /* Lock */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Cestovn\xED agentura",
       icon: "plane" /* Plane */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Kade\u0159n\xEDk / Barber",
       icon: "scissors" /* Scissors */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Kapela",
       icon: "guitar" /* Guitar */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Startup",
       icon: "lightbulb" /* Lightbulb */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Ostatn\xED",
       icon: "other" /* Other */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     }
   ]
 }, en3 = {
@@ -2331,62 +2470,170 @@ var cz3 = {
     {
       title: "E-Commerce",
       icon: "cart" /* Cart */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Blog",
       icon: "blog" /* Blog */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Cabin",
       icon: "cabin" /* Cabin */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Cafe",
       icon: "coffee" /* Coffee */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Teahouse",
       icon: "tea" /* Tea */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Craftsman",
       icon: "hammer" /* Hammer */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Locksmith",
       icon: "lock" /* Lock */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Travel agency",
       icon: "plane" /* Plane */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Hairdresser / Barber",
       icon: "scissors" /* Scissors */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Music band",
       icon: "guitar" /* Guitar */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Startup",
       icon: "lightbulb" /* Lightbulb */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     },
     {
       title: "Other",
       icon: "other" /* Other */,
-      text: ""
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
     }
   ]
 };
@@ -2409,7 +2656,7 @@ function Index() {
           columnNumber: 9
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-          className: "flex flex-row contact-link text-lg sm:text-xl",
+          className: "flex flex-row contact-link sm:text-xl",
           children: t.desc
         }, void 0, !1, {
           fileName: "app/routes/index.tsx",
@@ -2427,7 +2674,7 @@ function Index() {
           className: "flex flex-row",
           children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-              className: "flex-col w-content-half",
+              className: "flex-col w-content-one-third sm:w-content-half",
               children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                 className: "flex flex-row gap-4 flex-wrap",
                 children: t.customers.map((c, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
@@ -2435,14 +2682,14 @@ function Index() {
                   onClick: () => setActiveCustomerField(i),
                   children: [
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                      className: "t-customer-field l-customer-field border-r-sky-400 bg-main absolute hidden h-4 w-4 rotate-45 border-r-2 sm:block"
+                      className: "t-customer-field l-customer-field border-r-sky-400 bg-main absolute h-4 w-4 rotate-45 border-r-2"
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
                       lineNumber: 34,
                       columnNumber: 19
                     }, this),
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                      className: "b-customer-field r-customer-field border-r-sky-400 bg-main absolute hidden h-4 w-4 rotate-45 border-l-2 sm:block"
+                      className: "b-customer-field r-customer-field border-r-sky-400 bg-main absolute h-4 w-4 rotate-45 border-l-2"
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
                       lineNumber: 35,
@@ -2450,7 +2697,7 @@ function Index() {
                     }, this),
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
                       src: activeCustomerField === i ? `/svg/icons/dark/${c.icon}.svg` : `/svg/icons/${c.icon}.svg`,
-                      className: "h-8 scale-75 w-1/5",
+                      className: "h-8 scale-75 w-1/5 mx-1 sm:mr-0",
                       alt: c.title
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
@@ -2458,7 +2705,7 @@ function Index() {
                       columnNumber: 19
                     }, this),
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-                      className: "contact-link w-4/5",
+                      className: "text-xs sm:text-base w-4/5",
                       children: c.title
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
@@ -2482,27 +2729,67 @@ function Index() {
               columnNumber: 11
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-              className: "flex-col w-content-half sm:px-8",
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-                className: "flex flex-row contact-link text-lg sm:hidden sm:text-xl lg:block items-center",
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
-                    src: `/svg/icons/${t.customers[activeCustomerField].icon}.svg`,
-                    className: "h-10 scale-75 w-1/5",
-                    alt: t.customers[activeCustomerField].title
-                  }, void 0, !1, {
-                    fileName: "app/routes/index.tsx",
-                    lineNumber: 50,
-                    columnNumber: 15
-                  }, this),
-                  t.customers[activeCustomerField].title
-                ]
-              }, void 0, !0, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 49,
-                columnNumber: 13
-              }, this)
-            }, void 0, !1, {
+              className: "flex-col w-content-two-thirds sm:w-content-half pl-3 sm:px-8",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                  className: "flex flex-row justify-start items-center",
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
+                      src: `/svg/icons/${t.customers[activeCustomerField].icon}.svg`,
+                      className: "h-8 sm:h-10 scale-75 mr-2",
+                      alt: t.customers[activeCustomerField].title
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 50,
+                      columnNumber: 15
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                      className: "text-base sm:text-xl ",
+                      children: t.customers[activeCustomerField].title
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 55,
+                      columnNumber: 15
+                    }, this)
+                  ]
+                }, void 0, !0, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 49,
+                  columnNumber: 13
+                }, this),
+                t.customers[activeCustomerField].desc.map((desc, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                  className: "mt-5 ml-1",
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                      className: "",
+                      children: desc.title
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 61,
+                      columnNumber: 17
+                    }, this),
+                    " ",
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("br", {}, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 61,
+                      columnNumber: 56
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
+                      className: "mt-2 text-customer-desc",
+                      children: desc.text
+                    }, void 0, !1, {
+                      fileName: "app/routes/index.tsx",
+                      lineNumber: 62,
+                      columnNumber: 17
+                    }, this)
+                  ]
+                }, i, !0, {
+                  fileName: "app/routes/index.tsx",
+                  lineNumber: 60,
+                  columnNumber: 15
+                }, this))
+              ]
+            }, void 0, !0, {
               fileName: "app/routes/index.tsx",
               lineNumber: 48,
               columnNumber: 11
@@ -2632,7 +2919,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "dbdb45c0", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XXTNIM54.js", imports: ["/build/_shared/chunk-GGQIRRYN.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-VDRJ2BQF.js", imports: ["/build/_shared/chunk-BBKSCBK3.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-WERAFH7W.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-MS7Y4TBJ.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-JEHT25P3.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DBDB45C0.js" };
+var assets_manifest_default = { version: "01884a45", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-EZTON2HQ.js", imports: ["/build/_shared/chunk-NDU6BNZR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-X4IMRDZB.js", imports: ["/build/_shared/chunk-BBKSCBK3.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-6VQ22LDQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-MS7Y4TBJ.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-JEHT25P3.js", imports: ["/build/_shared/chunk-VDWFF27J.js", "/build/_shared/chunk-BBKSCBK3.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-01884A45.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

@@ -115,6 +115,32 @@ textarea::placeholder {
   width: 49.19%;
 }
 
+.w-content-one-third {
+  width: 50%;
+}
+
+.text-customer-desc {
+  font-size: 0.65rem;
+  line-height: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .text-customer-desc {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.w-content-two-thirds {
+  width: 65.19%;
+}
+
+@media (max-width: 1150px) {
+  .customer-field {
+    width: 100%;
+  }
+}
+
 .t-contact-field-title {
   top: -0.4rem;
 }

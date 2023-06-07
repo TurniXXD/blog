@@ -62,7 +62,9 @@ export default function InputLine({
         if (commandProcessed[0] === "cd") {
           if (!commandProcessed[1]) handleOutput(t.terminal.messages.noDir);
           else if (/.txt/g.test(commandProcessed[1])) {
-            if (commandProcessed[1] === t.terminal.commands.ls.meditationsTxt || commandProcessed[1] === t.terminal.commands.ls.meTxt)
+            if (commandProcessed[1] === t.terminal.commands.ls.meditationsTxt ||
+              commandProcessed[1] === t.terminal.commands.ls.meTxt ||
+              commandProcessed[1] === t.terminal.commands.ls.startupGuide)
               handleOutput(
                 fieldWithValue(t.terminal.messages.isFile, {
                   file: commandProcessed[1],
@@ -75,13 +77,13 @@ export default function InputLine({
                 })
               );
           } else if (
-            commandProcessed[1] === t.terminal.commands.ls.about ||
+            commandProcessed[1] === t.terminal.commands.ls.services ||
             commandProcessed[1] === t.terminal.commands.ls.work ||
             commandProcessed[1] === t.terminal.commands.ls.skills ||
             commandProcessed[1] === t.terminal.commands.ls.contact
           ) {
             navigate(
-              commandProcessed[1] === t.terminal.commands.ls.about
+              commandProcessed[1] === t.terminal.commands.ls.services
                 ? "/"
                 : commandProcessed[1]
             );
@@ -97,24 +99,28 @@ export default function InputLine({
             handleOutput(t.terminal.messages.lsNoParam);
           } else {
             const dirs = `
-              <a href="/"><strong>${t.terminal.commands.ls.about}</strong></a> <br/>
+              <a href="/"><strong>${t.terminal.commands.ls.services}</strong></a> <br/>
               <a href="/work"><strong>${t.terminal.commands.ls.work}</strong></a> <br/>
               <a href="/skills"><strong>${t.terminal.commands.ls.skills}</strong></a> <br/>
               <a href="/contact"><strong>${t.terminal.commands.ls.contact}</strong></a> <br/>
               ${t.terminal.commands.ls.meTxt} <br/>
-              ${t.terminal.commands.ls.meditationsTxt}
+              ${t.terminal.commands.ls.meditationsTxt} <br/>
+              ${t.terminal.commands.ls.startupGuide}
             `;
             handleOutput(dirs);
           }
         } else if (commandProcessed[0] === "cat") {
           if (commandProcessed[1] === t.terminal.commands.ls.meTxt)
             handleOutput(t.terminal.commands.cat.meTxt);
-          if (commandProcessed[1] === t.terminal.commands.ls.meditationsTxt)
+          else if (commandProcessed[1] === t.terminal.commands.ls.meditationsTxt)
             handleOutput(t.terminal.commands.cat.meditationsTxt);
+          else if (commandProcessed[1] === t.terminal.commands.ls.startupGuide) {
+            handleOutput(t.terminal.commands.cat.startupGuide);
+          }
           else if (!commandProcessed[1])
             handleOutput(t.terminal.messages.noFile);
           else if (
-            commandProcessed[1] === t.terminal.commands.ls.about ||
+            commandProcessed[1] === t.terminal.commands.ls.services ||
             commandProcessed[1] === t.terminal.commands.ls.work ||
             commandProcessed[1] === t.terminal.commands.ls.skills ||
             commandProcessed[1] === t.terminal.commands.ls.contact

@@ -1,12 +1,17 @@
 import type { Icons } from "~/data/types";
 
+interface CustomerFieldDesc {
+  title: string
+  text: string
+}
+
 interface CustomerField {
 	title: string;
 	icon: Icons;
-	text: string;
+	desc: Array<CustomerFieldDesc>
 }
 
-export default interface IAbout {
+export default interface IServices {
   title: string;
   desc: string;
   customers: Array<CustomerField>

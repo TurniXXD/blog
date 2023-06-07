@@ -2,7 +2,7 @@ import type ICommon from "./types";
 
 export const cz: ICommon = {
 	menu: {
-		about: "O mě",
+		services: "Služby",
 		work: "Projekty",
 		skills: "Dovednosti",
 		contact: "Kontakt",
@@ -20,12 +20,13 @@ export const cz: ICommon = {
 		commands: {
 			help: "Dostupné příkazy jsou 'help', 'cd', 'ls', 'cat'",
 			ls: {
-				about: "o_mě",
+				services: "služby",
 				work: "projekty",
 				skills: "dovednosti",
 				contact: "kontakt",
 				meTxt: "já.txt",
 				meditationsTxt: "moje_meditace.txt",
+        startupGuide: "průvodce_startupem.txt",
 			},
 			cat: {
 				meTxt:
@@ -39,6 +40,16 @@ export const cz: ICommon = {
         Člověk, který neví, do kterého přístavu pluje, neshledává žádný přístav výhodný. Jinými slovy, život beze smyslu znamená vždy se ocitnout v místě nejisté budoucnosti, krátkodobého uspokojení, bez sebereflexe a bez jakékoli možnosti úniku. Čím dříve přestanete dávat lidem šanci zničit vaši představivost, tím dříve najdete svůj význam. V představách trpíme více než v reálném životě, protože skutečný život je výsledkem představivosti, pokud si dokážete správně nastavit své myšlení. Určete, co bude výsledkem vašich činů, než se vydáte na tuto cestu, jestli to přinese světu kolem vás nějakou skutečnou hodnotu a změní životy lidí, nebo jestli to jen pomůže roztočit nekonečná kola systému. Neztrácejte čas mluvením o tom, jaký je dobrý muž, měli byste jím být. Když najdete svůj význam, držte se ho a věnujte mu sto procent svého úsilí. Brzy pochopíte, že pokud chcete jít rychle, jděte sami, ale pokud chcete jít daleko, najděte si spolehlivý tým, který bude sdílet vaši vizi. Když pečujete o svůj cíl, je těžké svěřit někomu péči o něj, ale být všude znamená nebýt nikde a pomalým předáváním podřízených úkolů jiným lidem se můžete soustředit na širší obraz.
        
         Zabýváme se marketingem, i když víme, že všechny naše celebrity a idoly jsou padělky. Proč platíme někoho, kdo umí kopat do míče v milionech, a lékaři a vědci nedostanou prakticky nic. Náš úsudek nemůže být takový, dokud tyto hodnoty nebudou obnoveny`,
+				startupGuide: `1. Vytvořte strategickou síť <br/>
+        2. Najděte problém / Někdo za vámi přijde s problémem / Pokud přijdete s řešením nejprve ověřte, že existuje problém, zaměřte se na B2B <br/>
+        3. Ověřte, že problém existuje s více lidmi <br/>
+        4. Najděte řešení <br/>
+        5. Určete cílové publikum, buďte konkrétní, je v pořádku vytvářet různé plány pro různé cílové skupiny <br/>
+        6. Vytvořte štíhlé plátno a swot <br/>
+        7. Validace problém a anyláza trhu formou obvolání potencionálních zákazníků / Formulářem /  Přimou konzultací s někým z cílové skupiny <br/>
+        8. Vytvořte MVP <br/>
+        9. Připojte se k soutěži / Akcelerátoru <br/>
+        10. Najděte investora <br/>`,
 			},
 		},
 		messages: {
@@ -54,7 +65,7 @@ export const cz: ICommon = {
 
 export const en: ICommon = {
 	menu: {
-		about: "About",
+		services: "Services",
 		work: "Work",
 		skills: "Skills",
 		contact: "Contact",
@@ -71,12 +82,13 @@ export const en: ICommon = {
 		commands: {
 			help: "Available commands are 'help', 'cd', 'ls', 'cat'",
 			ls: {
-				about: "about",
+				services: "services",
 				work: "work",
 				skills: "skills",
 				contact: "contact",
 				meTxt: "me.txt",
-        meditationsTxt: "my_meditations.txt",
+				meditationsTxt: "my_meditations.txt",
+        startupGuide: "startup_guide.txt",
 			},
 			cat: {
 				meTxt:
@@ -90,6 +102,16 @@ export const en: ICommon = {
         A man who knows not to which port he sails doesn't find any port favorable. In other words, living without meaning is always finding yourself in a place of uncertain future, short lasting gratification, no self reflection and without any possibility of escape. The sooner you begin to stop giving people chances to destroy your imagination, the sooner you can find your meaning. We suffer more in imagination then in real life, because real life is the result of imagination, if you can set you mindset properly. Determine what will be the result of your doings before going on this path, if it will bring any real value to the world around you and change people's lives, or if it will just help to spin the neverending wheels of the system. Don't waste your time talking about what good man is like, you should be one. When you find your meaning stick to it and give it hundred percent of your effort. Soon you'll understand that if you wanna go fast then go alone, but if you wanna go far then go find a reliable team that will share your vision. When you nurture your goal it's hard to entrust someone with care of it, but to be everywhere is to be nowhere, and by slowly passing on subordinate tasks to other people you can focus on the bigger picture.
         
         We pursue marketing even though we know all of our celebrities and idols are counterfits. Why are we paying off someone who can kick ball in millions, and doctors and scientists get practically nothing. Our judgement cannot be thus until these values are restored`,
+				startupGuide: `1. Create strategic network <br/>
+        2. Find problem / Someone comes to you with a problem / If you come up with a solutions first validate that there is a problem, focus on B2B <br/>
+        3. Validate that a problem exists with more people <br/>
+        4. Find solutions <br/>
+        5. Determine target audience, be specific it is okay to create different plans for different audiences <br/>
+        6. Create lean canvas and swot <br/>
+        7. Validate market direct approach / Call / Form / Consult with someone from target group <br/>
+        8. Create MVP <br/>
+        9. Join contest / Accelerator <br/>
+        10. Find investor <br/>`
 			},
 		},
 		messages: {

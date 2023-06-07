@@ -1,5 +1,5 @@
 interface Menu {
-  about: string;
+  services: string;
   work: string;
   skills: string;
   contact: string;
@@ -15,16 +15,18 @@ interface Stats {
 interface TerminalCommands {
   help: string;
   ls: {
-    about: string;
+    services: string;
     work: string;
     skills: string;
     contact: string;
     meTxt: string;
     meditationsTxt: string;
+    startupGuide: string;
   };
   cat: {
     meTxt: string;
     meditationsTxt: string;
+    startupGuide: string;
   };
 }
 
