@@ -6,6 +6,7 @@ import { en, cz } from "@locales/contact";
 import { Langs } from "@locales/config";
 import { useLocale } from "../root";
 import { socials } from "@data/models";
+import { useMedia } from "react-use";
 
 export const action: ActionFunction = async ({ request }: ActionArgs) => {
   const formData = Object.fromEntries(await request.formData());
@@ -22,8 +23,8 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
       ...(!email
         ? { email: "This field is required" }
         : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && {
-            email: "Invalid email address",
-          }),
+          email: "Invalid email address",
+        }),
       ...(phone && !/^\d+$/.test(phone) && { phone: "Invalid phone number" }),
       ...(!message && { message: "This field is required" }),
     };
@@ -46,7 +47,7 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
       </div>
       `,
       })
-      .then(() => {})
+      .then(() => { })
       .catch((err) => {
         console.error(err)
         console.error(err.response.body.errors)
@@ -59,6 +60,8 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
 export default function Contact() {
   const actionData = useActionData();
   const { locale } = useLocale();
+  const isEmailFieldNameOnlyMin = useMedia("(min-width: 1024px)", false);
+  const isEmailFieldNameOnlyMax = useMedia("(max-width: 1500px)", false);
 
   const t = useMemo(() => {
     const t = locale === Langs.en ? en : cz;
@@ -99,7 +102,7 @@ export default function Contact() {
                 alt={s.icon}
               />
               <span className="contact-link block text-base sm:hidden sm:text-lg lg:block">
-                {t.links[s.icon]}
+                {i === socials.length - 1 ? isEmailFieldNameOnlyMax && isEmailFieldNameOnlyMin ? 'Email' : t.links[s.icon] : t.links[s.icon]}
               </span>
             </div>
           ))}
@@ -122,14 +125,12 @@ export default function Contact() {
       </div>
       <div className="col-span-2 row-span-2 my-4 grid h-full grid-rows-3 gap-4 sm:m-0">
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.name ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.name ? "border-error" : "border-sky-400"
+            }`}
         >
           <div
-            className={`bg-main absolute left-4 h-10 px-2 text-sm t-contact-field-title ${
-              actionData?.formErrors?.name && "text-error"
-            }`}
+            className={`bg-main absolute left-4 h-10 px-2 text-sm t-contact-field-title ${actionData?.formErrors?.name && "text-error"
+              }`}
           >
             {actionData?.formErrors?.name
               ? actionData?.formErrors?.name
@@ -138,7 +139,6 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            id=""
             placeholder={t.fields.name.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
@@ -146,14 +146,12 @@ export default function Contact() {
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.email ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.email ? "border-error" : "border-sky-400"
+            }`}
         >
           <div
-            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${
-              actionData?.formErrors?.email && "text-error"
-            }`}
+            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${actionData?.formErrors?.email && "text-error"
+              }`}
           >
             {actionData?.formErrors?.email
               ? actionData?.formErrors?.email
@@ -162,7 +160,6 @@ export default function Contact() {
           <input
             type="text"
             name="email"
-            id=""
             placeholder={t.fields.email.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
@@ -170,14 +167,12 @@ export default function Contact() {
           />
         </div>
         <div
-          className={`relative h-20 w-full border-2 sm:h-full ${
-            actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
-          }`}
+          className={`relative h-20 w-full border-2 sm:h-full ${actionData?.formErrors?.phone ? "border-error" : "border-sky-400"
+            }`}
         >
           <div
-            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${
-              actionData?.formErrors?.phone && "text-error"
-            }`}
+            className={`bg-main absolute left-4 t-contact-field-title h-10 px-2 text-sm ${actionData?.formErrors?.phone && "text-error"
+              }`}
           >
             {actionData?.formErrors?.phone
               ? actionData?.formErrors?.phone
@@ -186,7 +181,6 @@ export default function Contact() {
           <input
             type="text"
             name="phone"
-            id=""
             placeholder={t.fields.phone.placeholder || ""}
             spellCheck="false"
             autoCorrect="off"
@@ -195,13 +189,11 @@ export default function Contact() {
         </div>
       </div>
       <div
-        className={`border-red relative col-span-3 row-span-2 grid grid-rows-4 border-2 ${
-          actionData?.formErrors?.message ? "border-error" : "border-sky-400"
-        }`}
+        className={`border-red relative col-span-3 row-span-2 grid grid-rows-4 border-2 ${actionData?.formErrors?.message ? "border-error" : "border-sky-400"
+          }`}
       >
         <textarea
           name="message"
-          id=""
           spellCheck="false"
           autoCorrect="off"
           placeholder={t.fields.messagePlaceholder || ""}

@@ -265,9 +265,23 @@ textarea::placeholder {
   word-spacing: 5px;
 }
 
-.skills-card:hover .skills-card-logo {
-  transform: scale(1.15);
+.skills-card:hover .skills-border { 
+  stroke: var(--blue);
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: fillPath .5s linear forwards;
 }
+
+@keyframes fillPath {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 
 .work-card-cover {
   height: 105%;

@@ -1,5 +1,4 @@
 import type { Projects, Skills } from "./types";
-import { Icons } from "./types";
 
 export const projects: Projects[] = [
   {
@@ -10,30 +9,39 @@ export const projects: Projects[] = [
   },
 ];
 
+export enum EnumSkills {
+  NextJs = "nextjs",
+  Typescript = "typescript",
+  Golang = "golang",
+  PostgreSql = "postgresql",
+  Linux = "linux",
+  Figma = "figma",
+}
+
 export const skills: Skills[] = [
   {
     skillUrl: "https://nextjs.org/",
-    imgUrl: "img/skills/nextjs.svg",
+    skillSvg: EnumSkills.NextJs,
   },
   {
     skillUrl: "https://www.typescriptlang.org/",
-    imgUrl: "img/skills/typescript.svg",
+    skillSvg: EnumSkills.Typescript,
   },
   {
     skillUrl: "https://go.dev/",
-    imgUrl: "img/skills/golang.svg",
+    skillSvg: EnumSkills.Golang,
   },
   {
     skillUrl: "https://www.postgresql.org/",
-    imgUrl: "img/skills/postgresql.svg",
+    skillSvg: EnumSkills.PostgreSql,
   },
   {
     skillUrl: "https://archlinux.org/",
-    imgUrl: "img/skills/linux.svg",
+    skillSvg: EnumSkills.Linux,
   },
   {
     skillUrl: "https://www.figma.com/",
-    imgUrl: "img/skills/figma.svg",
+    skillSvg: EnumSkills.Figma,
   },
 ];
 

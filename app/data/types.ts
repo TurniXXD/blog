@@ -1,3 +1,5 @@
+import type { EnumSkills } from "./models";
+
 export interface Projects {
 	name: string;
 	url: string;
@@ -7,7 +9,7 @@ export interface Projects {
 
 export interface Skills {
 	skillUrl: string;
-	imgUrl: string;
+	skillSvg: EnumSkills;
 }
 
 export enum Icons {
