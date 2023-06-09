@@ -14,7 +14,7 @@ export const cz: IServices = {
           text: "Tvorba e-shopu s administračním prostředím pro malé i velké prodejce. Připojení a nastavení platební brány, která bude nejvhodnější pro váš případ."
         },
         {
-          title: "Podpora",
+          title: "Partneři",
           text: "Napojení na strategické partnery, specialisty na sociální sítě a marketingové firmy."
         },
         {
@@ -46,12 +46,16 @@ export const cz: IServices = {
 			icon: Icons.Cabin,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké chaty."
         },
         {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
+          title: "Rezervační systém",
+          text: "Díky rezervačnímu systému napojenému na kalendář budete mít dokonalý přehled o všech rezervacích."
+        },
+        {
+          title: "Focení chaty a ubytování",
+          text: "Domluvení fotografa a popřípadě i projektového designera ve vašem okolí, kteří vaší chatě zajistí nejlepší možný vzhled použitelný jak na webu tak i na sociálních stránkách."
         }
       ],
 		},
@@ -60,12 +64,20 @@ export const cz: IServices = {
 			icon: Icons.Coffee,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké kavárny."
         },
         {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
+          title: "E-Shop",
+          text: "Pokud máte vlastní praženou kávu nebo chcete prodávat produkty, které pomohou vašemu podniku tak je pro vás e-shopu nezbytný. E-shop dokážete jednoduše spravovat přes jednoduché administrační prostředí nebo se domluvit na správě e-shopu mnou. Pro jakýkoliv dotaz poté stačí napsat na můj e-mail"
+        },
+        {
+          title: "Design",
+          text: "Design grafiky loga, produktů, merche, sociálních sítí, vizitek a emailů."
+        },
+        {
+          title: "Focení chaty a ubytování",
+          text: "Domluvení fotografa a popřípadě i projektového designera ve vašem okolí, kteří vaší kavárně zajistí nejlepší možný vzhled použitelný jak na webu tak i na sociálních stránkách."
         }
       ],
 		},
@@ -74,13 +86,13 @@ export const cz: IServices = {
 			icon: Icons.Tea,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké čajovny."
         },
         {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
-        }
+          title: "E-Shop",
+          text: "Pokud máte vlastní produkty, které pomohou vašemu podniku tak je pro vás e-shopu nezbytný. E-shop dokážete jednoduše spravovat přes jednoduché administrační prostředí nebo se domluvit na správě e-shopu mnou. Pro jakýkoliv dotaz poté stačí napsat na můj e-mail"
+        },
       ],
 		},
     {
@@ -88,13 +100,9 @@ export const cz: IServices = {
 			icon: Icons.Hammer,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím, kde zřetelně popíšete a uspořádáte informace o vaší nabídce."
         },
-        {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
-        }
       ],
 		},
     {
@@ -102,13 +110,9 @@ export const cz: IServices = {
 			icon: Icons.Lock,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro samostatné zámečníky i větší podniky."
         },
-        {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
-        }
       ],
 		},
     {
@@ -116,13 +120,9 @@ export const cz: IServices = {
 			icon: Icons.Plane,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké agentury."
         },
-        {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
-        }
       ],
 		},
     {
@@ -130,13 +130,27 @@ export const cz: IServices = {
 			icon: Icons.Scissors,
 			desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké podniky."
         },
         {
-          title: "Podpora",
-          text: "Napojení na strategické partnery a marketingové firmy."
-        }
+          title: "Design",
+          text: "Design grafiky sociálních sítí, vizitek a emailů."
+        },
+        {
+          title: "Partneři",
+          text: "Napojení na strategické partnery, specialisty na sociální sítě a marketingové firmy."
+        },
+      ],
+		},
+    {
+			title: "Autoškola",
+			icon: Icons.Car,
+			desc: [
+        {
+          title: "Webová stránka",
+          text: "Design a tvorba webové stránky s administračním prostředím pro malé i velké autoškoly."
+        },
       ],
 		},
     {
@@ -303,6 +317,20 @@ export const en: IServices = {
     {
 			title: "Hairdresser / Barber",
 			icon: Icons.Scissors,
+			desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvoření e-shopu s administračním prostředím pro malé i velké prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojení na strategické partnery a marketingové firmy."
+        }
+      ],
+		},
+    {
+			title: "Driving school",
+			icon: Icons.Car,
 			desc: [
         {
           title: "E-Shop",

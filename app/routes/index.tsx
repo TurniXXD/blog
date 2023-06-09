@@ -59,7 +59,7 @@ export default function Index() {
             {t.customers[activeCustomerField].desc.map((desc, i) => (
               <div key={i} className="mt-5 ml-1">
                 <span>{desc.title}</span> <br />
-                <p className="mt-2 text-customer-desc">
+                <p className="mt-1 text-customer-desc">
                   {desc.text}
                 </p>
               </div>

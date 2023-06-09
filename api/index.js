@@ -1294,7 +1294,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-XIGQ3EK7.css";
+var tailwind_default = "/build/_assets/tailwind-UUYCQ7MC.css";
 
 // app/styles/global.css
 var global_default = "/build/_assets/global-SDRHPUYE.css";
@@ -3336,7 +3336,7 @@ var cz3 = {
           text: "Tvorba e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce. P\u0159ipojen\xED a nastaven\xED platebn\xED br\xE1ny, kter\xE1 bude nejvhodn\u011Bj\u0161\xED pro v\xE1\u0161 p\u0159\xEDpad."
         },
         {
-          title: "Podpora",
+          title: "Partne\u0159i",
           text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         },
         {
@@ -3368,12 +3368,16 @@ var cz3 = {
       icon: "cabin" /* Cabin */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 chaty."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Rezerva\u010Dn\xED syst\xE9m",
+          text: "D\xEDky rezerva\u010Dn\xEDmu syst\xE9mu napojen\xE9mu na kalend\xE1\u0159 budete m\xEDt dokonal\xFD p\u0159ehled o v\u0161ech rezervac\xEDch."
+        },
+        {
+          title: "Focen\xED chaty a ubytov\xE1n\xED",
+          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i projektov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED chat\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
         }
       ]
     },
@@ -3382,12 +3386,20 @@ var cz3 = {
       icon: "coffee" /* Coffee */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 kav\xE1rny."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "E-Shop",
+          text: "Pokud m\xE1te vlastn\xED pra\u017Eenou k\xE1vu nebo chcete prod\xE1vat produkty, kter\xE9 pomohou va\u0161emu podniku tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail"
+        },
+        {
+          title: "Design",
+          text: "Design grafiky loga, produkt\u016F, merche, soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
+        },
+        {
+          title: "Focen\xED chaty a ubytov\xE1n\xED",
+          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i projektov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED kav\xE1rn\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
         }
       ]
     },
@@ -3396,12 +3408,12 @@ var cz3 = {
       icon: "tea" /* Tea */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 \u010Dajovny."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "E-Shop",
+          text: "Pokud m\xE1te vlastn\xED produkty, kter\xE9 pomohou va\u0161emu podniku tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail"
         }
       ]
     },
@@ -3410,12 +3422,8 @@ var cz3 = {
       icon: "hammer" /* Hammer */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
-        },
-        {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm, kde z\u0159eteln\u011B pop\xED\u0161ete a uspo\u0159\xE1d\xE1te informace o va\u0161\xED nab\xEDdce."
         }
       ]
     },
@@ -3424,12 +3432,8 @@ var cz3 = {
       icon: "lock" /* Lock */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
-        },
-        {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro samostatn\xE9 z\xE1me\u010Dn\xEDky i v\u011Bt\u0161\xED podniky."
         }
       ]
     },
@@ -3438,12 +3442,8 @@ var cz3 = {
       icon: "plane" /* Plane */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
-        },
-        {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 agentury."
         }
       ]
     },
@@ -3452,12 +3452,26 @@ var cz3 = {
       icon: "scissors" /* Scissors */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 podniky."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Design",
+          text: "Design grafiky soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
+        },
+        {
+          title: "Partne\u0159i",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
+        }
+      ]
+    },
+    {
+      title: "Auto\u0161kola",
+      icon: "car" /* Car */,
+      desc: [
+        {
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 auto\u0161koly."
         }
       ]
     },
@@ -3623,6 +3637,20 @@ var cz3 = {
     {
       title: "Hairdresser / Barber",
       icon: "scissors" /* Scissors */,
+      desc: [
+        {
+          title: "E-Shop",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+        }
+      ]
+    },
+    {
+      title: "Driving school",
+      icon: "car" /* Car */,
       desc: [
         {
           title: "E-Shop",
@@ -3815,7 +3843,7 @@ function Index() {
                       columnNumber: 43
                     }, this),
                     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
-                      className: "mt-2 text-customer-desc",
+                      className: "mt-1 text-customer-desc",
                       children: desc.text
                     }, void 0, !1, {
                       fileName: "app/routes/index.tsx",
@@ -3959,7 +3987,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "747689be", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VI2BIU3Q.js", imports: ["/build/_shared/chunk-3XPE2KFF.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-5GSASPMB.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-VXW6DCLV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-RMDYLX7T.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-BFH4IUWZ.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-747689BE.js" };
+var assets_manifest_default = { version: "84b23552", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6MY46ZP6.js", imports: ["/build/_shared/chunk-VJ5NUVZ3.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-HD4TCATM.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-KX2GEDD3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-RMDYLX7T.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-BFH4IUWZ.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-84B23552.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

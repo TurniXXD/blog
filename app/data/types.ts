@@ -29,5 +29,6 @@ export enum Icons {
   Scissors = "scissors",
   Guitar = "guitar",
   Lightbulb = "lightbulb",
+  Car = "car",
   Other = "other",
 }
