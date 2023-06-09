@@ -521,6 +521,10 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -635,6 +639,10 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .block {
@@ -995,6 +1003,14 @@ video {
 
 .pl-3 {
   padding-left: 0.75rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-72 {
+  padding-bottom: 18rem;
 }
 
 .text-center {

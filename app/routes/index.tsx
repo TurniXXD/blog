@@ -46,24 +46,26 @@ export default function Index() {
             </div>
           </div>
           <div className="flex-col w-content-two-thirds sm:w-content-half pl-3 sm:px-8">
-            <div className="flex flex-row justify-start items-center">
-              <img
-                src={`/svg/icons/${t.customers[activeCustomerField].icon}.svg`}
-                className="h-8 sm:h-10 scale-75 mr-2"
-                alt={t.customers[activeCustomerField].title}
-              />
-              <span className="text-base sm:text-xl ">
-                {t.customers[activeCustomerField].title}
-              </span>
-            </div>
-            {t.customers[activeCustomerField].desc.map((desc, i) => (
-              <div key={i} className="mt-5 ml-1">
-                <span>{desc.title}</span> <br />
-                <p className="mt-1 text-customer-desc">
-                  {desc.text}
-                </p>
+            <div className="sticky top-0">
+              <div className="flex flex-row justify-start items-center">
+                <img
+                  src={`/svg/icons/${t.customers[activeCustomerField].icon}.svg`}
+                  className="h-8 sm:h-10 scale-75 mr-2"
+                  alt={t.customers[activeCustomerField].title}
+                />
+                <span className="text-base sm:text-xl ">
+                  {t.customers[activeCustomerField].title}
+                </span>
               </div>
-            ))}
+              {t.customers[activeCustomerField].desc.map((desc, i) => (
+                <div key={i} className="mt-5 ml-1">
+                  <span>{desc.title}</span> <br />
+                  <p className="mt-1 text-customer-desc">
+                    {desc.text}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

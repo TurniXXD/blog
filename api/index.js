@@ -1294,7 +1294,7 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-UUYCQ7MC.css";
+var tailwind_default = "/build/_assets/tailwind-ES43U7X5.css";
 
 // app/styles/global.css
 var global_default = "/build/_assets/global-SDRHPUYE.css";
@@ -1498,7 +1498,7 @@ function App() {
             className: "grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5",
             children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                className: "col-span-4 row-span-4 gap-4 overflow-y-scroll pb-24 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:pb-0 2xl:col-span-4",
+                className: "col-span-4 row-span-4 gap-4 overflow-y-scroll mb-24 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:pb-0 2xl:col-span-4",
                 children: transition.state === "loading" ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
                   className: "grid h-full place-items-center",
                   children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Loader, {}, void 0, !1, {
@@ -1837,7 +1837,7 @@ var cz2 = {
     },
     phone: {
       title: "Telefon",
-      placeholder: "123456789"
+      placeholder: "797800313"
     },
     messagePlaceholder: "Dovolte mi prom\u011Bnit Va\u0161i vizi v realitu...",
     send: "Odeslat",
@@ -1867,7 +1867,7 @@ var cz2 = {
     },
     phone: {
       title: "Phone",
-      placeholder: "123456789"
+      placeholder: "797800313"
     },
     messagePlaceholder: "Let me make your dream come true...",
     send: "Send",
@@ -3799,65 +3799,72 @@ function Index() {
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
               className: "flex-col w-content-two-thirds sm:w-content-half pl-3 sm:px-8",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                  className: "flex flex-row justify-start items-center",
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
-                      src: `/svg/icons/${t.customers[activeCustomerField].icon}.svg`,
-                      className: "h-8 sm:h-10 scale-75 mr-2",
-                      alt: t.customers[activeCustomerField].title
-                    }, void 0, !1, {
-                      fileName: "app/routes/index.tsx",
-                      lineNumber: 50,
-                      columnNumber: 15
-                    }, this),
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-                      className: "text-base sm:text-xl ",
-                      children: t.customers[activeCustomerField].title
-                    }, void 0, !1, {
-                      fileName: "app/routes/index.tsx",
-                      lineNumber: 55,
-                      columnNumber: 15
-                    }, this)
-                  ]
-                }, void 0, !0, {
-                  fileName: "app/routes/index.tsx",
-                  lineNumber: 49,
-                  columnNumber: 13
-                }, this),
-                t.customers[activeCustomerField].desc.map((desc, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-                  className: "mt-5 ml-1",
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
-                      children: desc.title
-                    }, void 0, !1, {
-                      fileName: "app/routes/index.tsx",
-                      lineNumber: 61,
-                      columnNumber: 17
-                    }, this),
-                    " ",
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("br", {}, void 0, !1, {
-                      fileName: "app/routes/index.tsx",
-                      lineNumber: 61,
-                      columnNumber: 43
-                    }, this),
-                    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
-                      className: "mt-1 text-customer-desc",
-                      children: desc.text
-                    }, void 0, !1, {
-                      fileName: "app/routes/index.tsx",
-                      lineNumber: 62,
-                      columnNumber: 17
-                    }, this)
-                  ]
-                }, i, !0, {
-                  fileName: "app/routes/index.tsx",
-                  lineNumber: 60,
-                  columnNumber: 15
-                }, this))
-              ]
-            }, void 0, !0, {
+              children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                className: "sticky top-0",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                    className: "flex flex-row justify-start items-center",
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", {
+                        src: `/svg/icons/${t.customers[activeCustomerField].icon}.svg`,
+                        className: "h-8 sm:h-10 scale-75 mr-2",
+                        alt: t.customers[activeCustomerField].title
+                      }, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 51,
+                        columnNumber: 17
+                      }, this),
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                        className: "text-base sm:text-xl ",
+                        children: t.customers[activeCustomerField].title
+                      }, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 56,
+                        columnNumber: 17
+                      }, this)
+                    ]
+                  }, void 0, !0, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 50,
+                    columnNumber: 15
+                  }, this),
+                  t.customers[activeCustomerField].desc.map((desc, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+                    className: "mt-5 ml-1",
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("span", {
+                        children: desc.title
+                      }, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 62,
+                        columnNumber: 19
+                      }, this),
+                      " ",
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("br", {}, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 62,
+                        columnNumber: 45
+                      }, this),
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", {
+                        className: "mt-1 text-customer-desc",
+                        children: desc.text
+                      }, void 0, !1, {
+                        fileName: "app/routes/index.tsx",
+                        lineNumber: 63,
+                        columnNumber: 19
+                      }, this)
+                    ]
+                  }, i, !0, {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 61,
+                    columnNumber: 17
+                  }, this))
+                ]
+              }, void 0, !0, {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 49,
+                columnNumber: 13
+              }, this)
+            }, void 0, !1, {
               fileName: "app/routes/index.tsx",
               lineNumber: 48,
               columnNumber: 11
@@ -3987,7 +3994,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "84b23552", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6MY46ZP6.js", imports: ["/build/_shared/chunk-VJ5NUVZ3.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-HD4TCATM.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-KX2GEDD3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-RMDYLX7T.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-BFH4IUWZ.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-84B23552.js" };
+var assets_manifest_default = { version: "01c21529", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-6VC5RVCY.js", imports: ["/build/_shared/chunk-FJFXXDDK.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-GPQHMYDD.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-RK6MR4RG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-RMDYLX7T.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-BFH4IUWZ.js", imports: ["/build/_shared/chunk-PH4JMBAY.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-01C21529.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
