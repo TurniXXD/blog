@@ -254,13 +254,6 @@ textarea::placeholder {
   grid-template-columns: repeat(30, minmax(0, 1fr));
 }
 
-@media (max-width: 640px) {
-  .text-2xs {
-    font-size: 0.55rem;
-    line-height: 1rem;
-  }
-}
-
 .word-spacing-lg {
   word-spacing: 5px;
 }
@@ -271,6 +264,20 @@ textarea::placeholder {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: fillPath .5s linear forwards;
+}
+
+@media (max-width: 640px) {
+  .text-2xs {
+    font-size: 0.55rem;
+    line-height: 1rem;
+  }
+  .skills-card:hover .skills-border { 
+    stroke: none;
+    stroke-width: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: none;
+    animation: none;
+  }
 }
 
 @keyframes fillPath {

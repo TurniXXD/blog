@@ -617,8 +617,8 @@ video {
   margin-right: 0.25rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
+.mb-40 {
+  margin-bottom: 10rem;
 }
 
 .mb-6 {
@@ -643,10 +643,6 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
-}
-
-.mb-40 {
-  margin-bottom: 10rem;
 }
 
 .block {
@@ -1120,12 +1116,12 @@ video {
     margin-bottom: 0.5rem;
   }
 
-  .sm\:mr-0 {
-    margin-right: 0px;
-  }
-
   .sm\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .sm\:mr-0 {
+    margin-right: 0px;
   }
 
   .sm\:block {
