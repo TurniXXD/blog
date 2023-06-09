@@ -15,6 +15,7 @@ export enum EnumSkills {
   Golang = "golang",
   PostgreSql = "postgresql",
   Linux = "linux",
+  NodeJs = "nodejs",
   Figma = "figma",
 }
 
@@ -26,6 +27,10 @@ export const skills: Skills[] = [
   {
     skillUrl: "https://www.typescriptlang.org/",
     skillSvg: EnumSkills.Typescript,
+  },
+  {
+    skillUrl: "https://nodejs.org/",
+    skillSvg: EnumSkills.NodeJs,
   },
   {
     skillUrl: "https://go.dev/",

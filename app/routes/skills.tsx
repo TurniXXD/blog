@@ -5,6 +5,7 @@ import Nextjs from "~/components/skills/nextjs";
 import Typescript from "~/components/skills/typescript";
 import Linux from "~/components/skills/linux";
 import Postgresql from "~/components/skills/postgresql";
+import Nodejs from "~/components/skills/nodejs";
 import Figma from "~/components/skills/figma";
 
 export default function Skills() {
@@ -23,6 +24,7 @@ export default function Skills() {
           {skill.skillSvg === EnumSkills.Typescript && <Typescript/>}
           {skill.skillSvg === EnumSkills.NextJs && <Nextjs/>}
           {skill.skillSvg === EnumSkills.Linux && <Linux/>}
+          {skill.skillSvg === EnumSkills.NodeJs && <Nodejs/>}
           {skill.skillSvg === EnumSkills.PostgreSql && <Postgresql/>}
           {/* <Image
             loaderUrl="/api/image"

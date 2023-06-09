@@ -84,7 +84,7 @@ export default function App() {
         <div className="b-01 l-01 border-t-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-t-2 sm:block"></div>
         <div className="b-01 r-01 border-l-sky-400 bg-main absolute hidden h-8 w-8 rotate-45 border-l-2 sm:block"></div>
         <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5">
-          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll mb-24 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:pb-0 2xl:col-span-4">
+          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll mb-40 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:mb-0 2xl:col-span-4">
             {transition.state === "loading" ? (
               <div className="grid h-full place-items-center">
                 <Loader />
