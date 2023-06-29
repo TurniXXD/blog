@@ -3478,7 +3478,7 @@ var cz3 = {
           text: "Tvorba e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce. P\u0159ipojen\xED a nastaven\xED platebn\xED br\xE1ny, kter\xE1 bude nejvhodn\u011Bj\u0161\xED pro v\xE1\u0161 p\u0159\xEDpad."
         },
         {
-          title: "Partne\u0159i",
+          title: "Podpora",
           text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         },
         {
@@ -3502,6 +3502,10 @@ var cz3 = {
         {
           title: "Design",
           text: "Design grafiky soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3519,7 +3523,11 @@ var cz3 = {
         },
         {
           title: "Focen\xED chaty a ubytov\xE1n\xED",
-          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i projektov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED chat\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
+          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i interierov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED chat\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled, pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3533,15 +3541,19 @@ var cz3 = {
         },
         {
           title: "E-Shop",
-          text: "Pokud m\xE1te vlastn\xED pra\u017Eenou k\xE1vu nebo chcete prod\xE1vat produkty, kter\xE9 pomohou va\u0161emu podniku tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail"
+          text: "Pokud m\xE1te vlastn\xED pra\u017Eenou k\xE1vu nebo chcete prod\xE1vat produkty, kter\xE9 pomohou va\u0161emu podniku tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail."
         },
         {
           title: "Design",
           text: "Design grafiky loga, produkt\u016F, merche, soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
         },
         {
-          title: "Focen\xED chaty a ubytov\xE1n\xED",
-          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i projektov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED kav\xE1rn\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
+          title: "Focen\xED kav\xE1rny",
+          text: "Domluven\xED fotografa a pop\u0159\xEDpad\u011B i interierov\xE9ho designera ve va\u0161em okol\xED, kte\u0159\xED va\u0161\xED kav\xE1rn\u011B zajist\xED nejlep\u0161\xED mo\u017En\xFD vzhled, pou\u017Eiteln\xFD jak na webu tak i na soci\xE1ln\xEDch str\xE1nk\xE1ch."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3555,7 +3567,11 @@ var cz3 = {
         },
         {
           title: "E-Shop",
-          text: "Pokud m\xE1te vlastn\xED produkty, kter\xE9 pomohou va\u0161emu podniku tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail"
+          text: "Pokud m\xE1te vlastn\xED produkty, kter\xE9 v\xE1\u0161 podnik nab\xEDz\xED tak je pro v\xE1s e-shopu nezbytn\xFD. E-shop dok\xE1\u017Eete jednodu\u0161e spravovat p\u0159es jednoduch\xE9 administra\u010Dn\xED prost\u0159ed\xED nebo se domluvit na spr\xE1v\u011B e-shopu mnou. Pro jak\xFDkoliv dotaz pot\xE9 sta\u010D\xED napsat na m\u016Fj e-mail."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3575,7 +3591,7 @@ var cz3 = {
       desc: [
         {
           title: "Webov\xE1 str\xE1nka",
-          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro samostatn\xE9 z\xE1me\u010Dn\xEDky i v\u011Bt\u0161\xED podniky."
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro samostatn\xE9 z\xE1me\u010Dn\xEDky i v\u011Bt\u0161\xED firmy."
         }
       ]
     },
@@ -3585,7 +3601,11 @@ var cz3 = {
       desc: [
         {
           title: "Webov\xE1 str\xE1nka",
-          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 agentury."
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 cestovn\xED agentury."
+        },
+        {
+          title: "Podpora",
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3602,7 +3622,7 @@ var cz3 = {
           text: "Design grafiky soci\xE1ln\xEDch s\xEDt\xED, vizitek a email\u016F."
         },
         {
-          title: "Partne\u0159i",
+          title: "Podpora",
           text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
@@ -3613,7 +3633,7 @@ var cz3 = {
       desc: [
         {
           title: "Webov\xE1 str\xE1nka",
-          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 auto\u0161koly."
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 auto\u0161koly, kde se va\u0161i studenti i potencion\xE1ln\xED uchaze\u010Di dozv\xED v\u0161e co je pot\u0159ebn\xE9."
         }
       ]
     },
@@ -3622,12 +3642,12 @@ var cz3 = {
       icon: "guitar" /* Guitar */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a tvorba webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro prezentaci kapel v\u0161ech styl\u016F."
         },
         {
           title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          text: "Napojen\xED na strategick\xE9 partnery, po\u0159adatele akc\xED a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3636,12 +3656,16 @@ var cz3 = {
       icon: "lightbulb" /* Lightbulb */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a vytvo\u0159en\xED webov\xE9 str\xE1nky s administra\u010Dn\xEDm prost\u0159ed\xEDm pro prezentaci va\u0161eho n\xE1padu."
+        },
+        {
+          title: "V\xFDvoj software",
+          text: "Architektura a v\xFDvoj softwaru. Zam\u011B\u0159uji se na webov\xE9 aplikace v React.js nebo Next.js, backendov\xE1 \u0159e\u0161en\xED v Node.js nebo Golang a datab\xE1zov\xE1 \u0159e\u0161en\xED PostgreSQL, MySQL nebo MongoDB."
         },
         {
           title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     },
@@ -3650,12 +3674,24 @@ var cz3 = {
       icon: "other" /* Other */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Webov\xE1 str\xE1nka",
+          text: "Design a vytvo\u0159en\xED webov\xE9 str\xE1nky bez, a nebo s administra\u010Dn\xEDm prost\u0159ed\xEDm pro jednoduch\xE9 blogy ale i komplexn\xED webov\xE9 prezentace."
+        },
+        {
+          title: "Ecommerce",
+          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce. Nasteven\xED platebn\xED br\xE1ny a datab\xE1ze produkt\u016F a email\u016F."
+        },
+        {
+          title: "V\xFDvoj software",
+          text: "Architektura a v\xFDvoj softwaru. Zam\u011B\u0159uji se na webov\xE9 aplikace v React.js nebo Next.js, backendov\xE1 \u0159e\u0161en\xED v Node.js nebo Golang a datab\xE1zov\xE1 \u0159e\u0161en\xED PostgreSQL, MySQL nebo MongoDB."
+        },
+        {
+          title: "Design",
+          text: "Design loga, vizitek, email\u016F, produkt\u016F a dal\u0161\xED grafiky."
         },
         {
           title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          text: "Napojen\xED na strategick\xE9 partnery, specialisty na soci\xE1ln\xED s\xEDt\u011B a marketingov\xE9 firmy."
         }
       ]
     }
@@ -3670,11 +3706,11 @@ var cz3 = {
       desc: [
         {
           title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          text: "Development of an e-shop with an administrative environment for small and large sellers. Connecting and setting up the payment gateway that will be most suitable for your case."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3683,12 +3719,12 @@ var cz3 = {
       icon: "blog" /* Blog */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Web presentation",
+          text: "Your page to help you present your personal intentions and thoughts in a clear and understandable way."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3697,12 +3733,20 @@ var cz3 = {
       icon: "cabin" /* Cabin */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and creation of a website with an administrative environment for small and large cabins."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Reservation system",
+          text: "Thanks to reservation system connected to your calendar, you will have a perfect overview of all reservations."
+        },
+        {
+          title: "Photography of the cabin and its interior",
+          text: "Arranging a photographer and possibly a interior designer in your area, who will ensure your cabin with the best possible appearance that can be used both on the web and on social media."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3711,12 +3755,24 @@ var cz3 = {
       icon: "coffee" /* Coffee */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for small and large cafes."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "E-Shop",
+          text: "If you have your own roasted coffee or want to sell products that will help your business, then an e-shop is essential for you. You can easily manage the e-shop through a simple administrative environment or arrange for me to manage the e-shop. For any question after that, just write to my e-mail."
+        },
+        {
+          title: "Design",
+          text: "Graphic design of logos, products, merch, social networks, business cards and emails."
+        },
+        {
+          title: "Cafe photo shoot",
+          text: "Arranging a photographer and possibly a interior designer in your area, who will ensure your cafe with the best possible appearance that can be used both on the web and on social media."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3725,12 +3781,16 @@ var cz3 = {
       icon: "tea" /* Tea */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for small and large teahouses."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "E-Shop",
+          text: "If you have your own products that your company offers, then an e-shop is essential for you. You can easily manage the e-shop through a simple administrative environment or arrange for me to manage the e-shop. For any question after that, just write to my e-mail."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3739,12 +3799,8 @@ var cz3 = {
       icon: "hammer" /* Hammer */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
-        },
-        {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment where you clearly describe and organize information about your offer."
         }
       ]
     },
@@ -3753,12 +3809,8 @@ var cz3 = {
       icon: "lock" /* Lock */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
-        },
-        {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for independent locksmiths and larger companies."
         }
       ]
     },
@@ -3767,12 +3819,12 @@ var cz3 = {
       icon: "plane" /* Plane */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and creation of a website with an administrative environment for small and large travel agencies."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3781,12 +3833,12 @@ var cz3 = {
       icon: "scissors" /* Scissors */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for small and large businesses."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3799,8 +3851,12 @@ var cz3 = {
           text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Design",
+          text: "Graphic design of social networks, business cards and emails."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3809,12 +3865,12 @@ var cz3 = {
       icon: "guitar" /* Guitar */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for the presentation of bands of all styles."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3823,12 +3879,16 @@ var cz3 = {
       icon: "lightbulb" /* Lightbulb */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website with an administrative environment for the presentation of your idea."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Software development",
+          text: "Software architecture and development. I focus on web applications in React.js or Next.js, backend solutions in Node.js or Golang and database solutions in PostgreSQL, MySQL or MongoDB."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     },
@@ -3837,12 +3897,24 @@ var cz3 = {
       icon: "other" /* Other */,
       desc: [
         {
-          title: "E-Shop",
-          text: "Design a vytvo\u0159en\xED e-shopu s administra\u010Dn\xEDm prost\u0159ed\xEDm pro mal\xE9 i velk\xE9 prodejce."
+          title: "Website",
+          text: "Design and development of a website without or with an administrative environment for simple blogs as well as complex web presentations."
         },
         {
-          title: "Podpora",
-          text: "Napojen\xED na strategick\xE9 partnery a marketingov\xE9 firmy."
+          title: "Ecommerce",
+          text: "Design and development of an e-shop with an administrative environment for small and large sellers. Setting up the payment gateway and the database of products and emails."
+        },
+        {
+          title: "Software development",
+          text: "Software architecture and development. I focus on web applications in React.js or Next.js, backend solutions in Node.js or Golang and database solutions in PostgreSQL, MySQL or MongoDB."
+        },
+        {
+          title: "Design",
+          text: "Design of logos, business cards, emails, products and other graphics."
+        },
+        {
+          title: "Support",
+          text: "Recommendations for strategic partners, social network specialists and marketing companies."
         }
       ]
     }
@@ -4136,7 +4208,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "32a57a66", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KR4HQ3DP.js", imports: ["/build/_shared/chunk-6DQFZR7M.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-P6RKX5M3.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2IIZLBK5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-52L3MTT3.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-766OAARS.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-32A57A66.js" };
+var assets_manifest_default = { version: "04c0a77c", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-KR4HQ3DP.js", imports: ["/build/_shared/chunk-6DQFZR7M.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-P6RKX5M3.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-DL3BPVSP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-52L3MTT3.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-766OAARS.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-04C0A77C.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
