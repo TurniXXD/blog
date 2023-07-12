@@ -3,6 +3,7 @@ import { Form, useActionData } from "@remix-run/react";
 import { useEffect, useMemo } from "react";
 import sendgrid from "@sendgrid/mail";
 import { en, cz } from "@locales/contact";
+import { en as enCommon, cz as czCommon } from "@locales/common";
 import { Langs } from "@locales/config";
 import { useLocale } from "../root";
 import { socials } from "@data/models";
@@ -67,6 +68,12 @@ export default function Contact() {
     const t = locale === Langs.en ? en : cz;
     return t;
   }, [locale]);
+
+  const tCommon = useMemo(() => {
+    const t = locale === Langs.en ? enCommon : czCommon;
+    return t;
+  }, [locale]);
+
 
   useEffect(() => {
     const contactLinks = document.getElementsByClassName("contact-link");
@@ -215,6 +222,9 @@ export default function Contact() {
             {actionData.formErrors.message}
           </div>
         )}
+      </div>
+      <div className="mt-4 sm:hidden">
+        {tCommon.identification.content}
       </div>
     </Form>
   );

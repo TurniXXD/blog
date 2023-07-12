@@ -46,8 +46,14 @@ interface Terminal {
   messages: TerminalMessages;
 }
 
+interface Identification {
+  btn: string;
+  content: string;
+}
+
 export default interface ICommon {
   menu: Menu;
   stats: Stats;
   terminal: Terminal;
+  identification: Identification;
 }

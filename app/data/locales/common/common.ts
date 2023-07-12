@@ -61,6 +61,10 @@ export const cz: ICommon = {
 			lsNoParam: "Příkaz ls nemá žádný parametr",
 		},
 	},
+  identification: {
+    btn: "Identifikace",
+    content: "Jakub Vantuch, IČO: 19462590, místo podnikání M. Chasáka 3142, 738 01, Frýdek-Místek, zapsaný v živnostenském rejstříku"
+  }
 };
 
 export const en: ICommon = {
@@ -123,4 +127,8 @@ export const en: ICommon = {
 			lsNoParam: "Command ls has no parameters",
 		},
 	},
+  identification: {
+    btn: "Identification",
+    content: "Jakub Vantuch, IČO: 19462590, místo podnikání M. Chasáka 3142, 738 01, Frýdek-Místek, zapsaný v živnostenském rejstříku"
+  }
 };

@@ -131,6 +131,31 @@ textarea::placeholder {
   }
 }
 
+.identification-wrapper:hover .identification-btn,
+.identification-content {
+  display: none;
+}
+
+.identification-wrapper:hover  {
+  background-color: var(--grey);
+  height: 100%;
+}
+
+.identification-wrapper:hover > div {
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .identification-wrapper:hover,
+  .identification-wrapper:hover > div {
+    height: 25% !important;
+  }
+}
+
+.identification-wrapper:hover .identification-content {
+  display: flex;
+}
+
 .w-content-two-thirds {
   width: 65.19%;
 }
