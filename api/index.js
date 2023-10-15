@@ -817,11 +817,11 @@ var import_jsx_runtime10 = require("react/jsx-runtime"), StackedElements = ({
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "grid-cols-30 grid-rows-15 grid h-full w-full", children: cols });
 };
 
-// node_modules/remix-image/remix-image.css
+// node_modules/.pnpm/remix-image@1.4.0_sntao6pqg4uiyrtil6oukyyhqm/node_modules/remix-image/remix-image.css
 var remix_image_default = "/build/_assets/remix-image-WUAL5MSX.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-4ICTSVRA.css";
+var tailwind_default = "/build/_assets/tailwind-EVNN3RWO.css";
 
 // app/styles/global.css
 var global_default = "/build/_assets/global-A2JCZXY7.css";
@@ -988,18 +988,25 @@ function App() {
   return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("html", { lang: locale, children: [
     /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("head", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react9.Meta, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+        "meta",
+        {
+          name: "description",
+          content: "Websites and other solutions tailored to your needs"
+        }
+      ),
       /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react9.Links, {})
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("body", { className: "h-screen", children: [
       /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "col-span-4 row-span-4 gap-4 overflow-y-scroll mb-40 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:mb-0 2xl:col-span-4", children: transition.state === "loading" ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid h-full place-items-center", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Loader, {}) }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react9.Outlet, { context: { locale } }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "border-sky-400 row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4 relative", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "col-span-4 row-span-4 mb-40 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 sm:mb-0 2xl:col-span-4", children: transition.state === "loading" ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid h-full place-items-center", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Loader, {}) }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_react9.Outlet, { context: { locale } }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "border-sky-400 relative row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "row-span-4 sm:grid lg:row-span-3", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "relative grid-rows-2 sm:grid", children: [
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "row-span-1 grid h-full", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Navigation, { t, locale, setLocale }) }),
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "border-t-sky-400 row-span-1 grid h-full place-items-center border-t-2 p-6 lg:place-items-stretch 2xl:px-3 2xl:py-8 3xl:p-8", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Stats, { t }) })
           ] }) }),
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Identification, { t }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "row-span-1 w-full px-8 hidden lg:grid pt-4 relative", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "relative row-span-1 hidden w-full px-8 pt-4 lg:grid", children: [
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Matrix, {}),
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Identification, { t, isDesktop: !0 })
           ] })
@@ -1049,14 +1056,22 @@ function App() {
             className: `border-sky-400 bg-main grid content-end border-2 ${mobileMenuOpen && "h-mobile-menu"}`,
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex-row", children: [
-                mobileMenuOpen && mobileNavigationOpen && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Navigation, { t, locale, setLocale, setMobileMenuOpen }),
+                mobileMenuOpen && mobileNavigationOpen && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+                  Navigation,
+                  {
+                    t,
+                    locale,
+                    setLocale,
+                    setMobileMenuOpen
+                  }
+                ),
                 mobileMenuOpen && mobileTerminalOpen && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Terminal, { t })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex-row justify-between", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
                   "div",
                   {
-                    className: "h-20 w-3/12 flex-col items-center justify-center pr-1 bg-blue",
+                    className: "h-20 w-3/12 flex-col items-center justify-center bg-blue pr-1",
                     onClick: () => {
                       setMobileMenuOpen(!0), mobileNavigationOpen && setMobileNavigationOpen(!1), setMobileTerminalOpen(!0);
                     },
@@ -2773,7 +2788,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-RQHVTCCR.js", imports: ["/build/_shared/chunk-XXHV35Y2.js", "/build/_shared/chunk-3RWUHEQO.js", "/build/_shared/chunk-G5WX4PPA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-AUDTNPGH.js", imports: ["/build/_shared/chunk-C66DBCHR.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-NSNWNJ3I.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-ALFNWUVN.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-ZWYEMD2V.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-NJT26FGG.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-OVGVYGFH.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "f5bd6b32", hmr: void 0, url: "/build/manifest-F5BD6B32.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TO4QAUJW.js", imports: ["/build/_shared/chunk-7YHENAN7.js", "/build/_shared/chunk-TINLJUTU.js", "/build/_shared/chunk-G5WX4PPA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4GC4EBMO.js", imports: ["/build/_shared/chunk-GDCB4YLG.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-NSNWNJ3I.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-S7Y5Z4EJ.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-WHEMRWRI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-FNO3Q5SK.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-ZILAQ2ET.js", imports: ["/build/_shared/chunk-66WW3VMZ.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "4393d4b4", hmr: void 0, url: "/build/manifest-4393D4B4.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_headers: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
