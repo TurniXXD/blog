@@ -39,6 +39,7 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Jakub Vantuch",
   viewport: "width=device-width,initial-scale=1",
+  dsc: "",
 });
 
 export const loader: LoaderFunction = async () => {
@@ -78,11 +79,15 @@ export default function App() {
     <html lang={locale}>
       <head>
         <Meta />
+        <meta
+          name="description"
+          content="Websites and other solutions tailored to your needs"
+        />
         <Links />
       </head>
       <body className="h-screen">
         <div className="grid h-screen grid-cols-4 grid-rows-4 gap-4 p-8 sm:p-4 2xl:grid-cols-5">
-          <div className="col-span-4 row-span-4 gap-4 overflow-y-scroll mb-40 scrollbar-hide sm:col-span-3 sm:row-span-3 sm:mb-0 2xl:col-span-4">
+          <div className="col-span-4 row-span-4 mb-40 gap-4 overflow-y-scroll scrollbar-hide sm:col-span-3 sm:row-span-3 sm:mb-0 2xl:col-span-4">
             {transition.state === "loading" ? (
               <div className="grid h-full place-items-center">
                 <Loader />
@@ -91,7 +96,7 @@ export default function App() {
               <Outlet context={{ locale }} />
             )}
           </div>
-          <div className="border-sky-400 row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4 relative">
+          <div className="border-sky-400 relative row-span-4 hidden border-2 sm:grid sm:grid-cols-1 sm:grid-rows-4">
             <div className="row-span-4 sm:grid lg:row-span-3">
               <div className="relative grid-rows-2 sm:grid">
                 <div className="row-span-1 grid h-full">
@@ -103,7 +108,7 @@ export default function App() {
               </div>
             </div>
             <Identification t={t} />
-            <div className="row-span-1 w-full px-8 hidden lg:grid pt-4 relative">
+            <div className="relative row-span-1 hidden w-full px-8 pt-4 lg:grid">
               <Matrix />
               <Identification t={t} isDesktop />
             </div>
@@ -138,19 +143,25 @@ export default function App() {
           <div className={`p-4 ${mobileMenuOpen && "pt-24"}`}>
             {/* //Need to fix this to h-full somehow */}
             <div
-              className={`border-sky-400 bg-main grid content-end border-2 ${mobileMenuOpen && "h-mobile-menu"
-                }`}
+              className={`border-sky-400 bg-main grid content-end border-2 ${
+                mobileMenuOpen && "h-mobile-menu"
+              }`}
             >
               <div className="flex-row">
                 {mobileMenuOpen && mobileNavigationOpen && (
-                  <Navigation t={t} locale={locale} setLocale={setLocale} setMobileMenuOpen={setMobileMenuOpen} />
+                  <Navigation
+                    t={t}
+                    locale={locale}
+                    setLocale={setLocale}
+                    setMobileMenuOpen={setMobileMenuOpen}
+                  />
                 )}
                 {mobileMenuOpen && mobileTerminalOpen && <Terminal t={t} />}
               </div>
               <div className="grid">
                 <div className="flex-row justify-between">
                   <div
-                    className="h-20 w-3/12 flex-col items-center justify-center pr-1 bg-blue"
+                    className="h-20 w-3/12 flex-col items-center justify-center bg-blue pr-1"
                     onClick={() => {
                       setMobileMenuOpen(true);
                       mobileNavigationOpen && setMobileNavigationOpen(false);
