@@ -3,11 +3,11 @@ import { Image } from "remix-image";
 
 export default function Work() {
   return (
-    <div className="flex-row flex-wrap gap-4 lg:flex-nowrap">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       {projects.map((project, i) => (
         <div
           key={i}
-          className="work-card border-sky-400 w-work-card max-h-full flex-col overflow-hidden border-2"
+          className="work-card border-sky-400 max-h-full overflow-hidden border-2"
         >
           <div className="relative">
             <a
@@ -32,7 +32,7 @@ export default function Work() {
             </a>
             {project.isRocket && (
               <a
-                className="absolute bottom-0 right-0 flex h-16 w-16 items-center justify-center bg-[#1e1a49]"
+                className="absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center bg-[#1e1a49]"
                 href="https://www.prorocketeers.com/"
                 target="_blank"
                 rel="noreferrer noopener nofollow"

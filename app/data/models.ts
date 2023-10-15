@@ -2,6 +2,42 @@ import type { Projects, Skills } from "./types";
 
 export const projects: Projects[] = [
   {
+    name: "Revizio",
+    url: "https://www.revizio.app/",
+    imgUrl: "img/projects/revizio.png",
+    isRocket: false,
+  },
+  {
+    name: "My213",
+    url: "https://www.my213.cz/",
+    imgUrl: "img/projects/my213.png",
+    isRocket: true,
+  },
+  {
+    name: "Horal",
+    url: "https://www.horal.app/",
+    imgUrl: "img/projects/horal.png",
+    isRocket: false,
+  },
+  {
+    name: "ONDRÁŠEK",
+    url: "https://www.ondrasek.cz/",
+    imgUrl: "img/projects/ondrasek.png",
+    isRocket: true,
+  },
+  {
+    name: "Orexin Solutions",
+    url: "https://orexin.fsik.dev/",
+    imgUrl: "img/projects/orexin.png",
+    isRocket: false,
+  },
+  {
+    name: "Formaster",
+    url: "https://formaster.vantuch.dev",
+    imgUrl: "img/projects/formaster.png",
+    isRocket: false,
+  },
+  {
     name: "Steepens",
     url: "https://www.steepensband.eu/",
     imgUrl: "img/projects/steepens.png",

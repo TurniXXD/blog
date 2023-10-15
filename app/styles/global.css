@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 
 :root {
   --grey: #0f1524;
@@ -8,14 +8,14 @@
   --error: rgb(239 68 68);
 }
 
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark
+    color-scheme: dark;
   }
 
   html,
   body {
-    font-family: 'Bruno Ace', cursive;
+    font-family: "Bruno Ace", cursive;
     color: var(--blue);
     overflow: hidden;
     background: var(--grey);
@@ -31,31 +31,31 @@
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--blue-darker)
+  color: var(--blue-darker);
 }
 
 .bg-main {
   background-color: var(--grey);
 }
 
-[class*=loader-sec] {
+[class*="loader-sec"] {
   opacity: 0;
 }
 
 .loader-sec-a {
-  animation: blink .8s infinite;
+  animation: blink 0.8s infinite;
 }
 
 .loader-sec-b {
-  animation: blink .8s .2s infinite;
+  animation: blink 0.8s 0.2s infinite;
 }
 
 .loader-sec-c {
-  animation: blink .8s .4s infinite;
+  animation: blink 0.8s 0.4s infinite;
 }
 
 .loader-sec-d {
-  animation: blink .8s .6s infinite;
+  animation: blink 0.8s 0.6s infinite;
 }
 
 @keyframes blink {
@@ -69,19 +69,17 @@ textarea::placeholder {
 
   66% {
     opacity: 0;
-
   }
 
   100% {
     opacity: 0;
-
   }
 }
 
 .nav-link,
 .contact-link,
 .contact-button span {
-  transition: .3s;
+  transition: 0.3s;
   text-shadow: none;
 }
 
@@ -93,12 +91,8 @@ textarea::placeholder {
   color: var(--error);
 }
 
-.w-work-card {
-  width: 100%;
-}
-
 .customer-field {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 48%;
 }
 
@@ -136,7 +130,7 @@ textarea::placeholder {
   display: none;
 }
 
-.identification-wrapper:hover  {
+.identification-wrapper:hover {
   background-color: var(--grey);
   height: 100%;
 }
@@ -186,18 +180,6 @@ textarea::placeholder {
   bottom: -0.55rem;
 }
 
-@media (min-width: 705px) {
-  .w-work-card {
-    width: 48.4%;
-  }
-}
-
-@media (min-width: 1050px) {
-  .w-work-card {
-    width: 32.4%;
-  }
-}
-
 .contact-socials-corner-tr {
   width: 1rem;
   height: 1.6rem;
@@ -228,13 +210,13 @@ textarea::placeholder {
 }
 
 @media (max-width: 950px) {
-  .status-bar-cols>svg:last-child {
+  .status-bar-cols > svg:last-child {
     display: none;
   }
 }
 
 @media (max-width: 850px) {
-  .status-bar-cols>svg:nth-child(2) {
+  .status-bar-cols > svg:nth-child(2) {
     display: none;
   }
 }
@@ -247,11 +229,13 @@ textarea::placeholder {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue-dark), 0 0 40px var(--blue-dark);
+    text-shadow: 0 0 20px var(--blue), 0 0 30px var(--blue-dark),
+      0 0 40px var(--blue-dark);
   }
 
   to {
-    text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue), 0 0 30px var(--blue), 0 0 40px var(--blue-dark);
+    text-shadow: 0 0 10px var(--blue), 0 0 20px var(--blue),
+      0 0 30px var(--blue), 0 0 40px var(--blue-dark);
   }
 }
 
@@ -283,12 +267,12 @@ textarea::placeholder {
   word-spacing: 5px;
 }
 
-.skills-card:hover .skills-border { 
+.skills-card:hover .skills-border {
   stroke: var(--blue);
   stroke-width: 2;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: fillPath .5s linear forwards;
+  animation: fillPath 0.5s linear forwards;
 }
 
 @media (max-width: 640px) {
@@ -296,7 +280,7 @@ textarea::placeholder {
     font-size: 0.55rem;
     line-height: 1rem;
   }
-  .skills-card:hover .skills-border { 
+  .skills-card:hover .skills-border {
     stroke: none;
     stroke-width: none;
     stroke-dasharray: none;
@@ -314,10 +298,9 @@ textarea::placeholder {
   }
 }
 
-
 .work-card-cover {
   height: 105%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background-color: #070e1da6;
 }
 
@@ -404,8 +387,8 @@ textarea::placeholder {
   rotate: -45deg;
 }
 
-[class*=flex-] {
-  display: flex
+[class*="flex-"] {
+  display: flex;
 }
 
 @tailwind base;

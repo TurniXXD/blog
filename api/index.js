@@ -1334,10 +1334,10 @@ var import_jsx_dev_runtime = require("react/jsx-dev-runtime"), StackedElements =
 var remix_image_default = "/build/_assets/remix-image-UKLG3K75.css";
 
 // app/styles/tailwind.css
-var tailwind_default = "/build/_assets/tailwind-3IQ6E55S.css";
+var tailwind_default = "/build/_assets/tailwind-OTA5EHRQ.css";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-XRWV74JB.css";
+var global_default = "/build/_assets/global-6CIHBE5C.css";
 
 // app/root.tsx
 var import_mail = __toESM(require("@sendgrid/mail"));
@@ -1948,6 +1948,42 @@ var cz2 = {
 
 // app/data/models.ts
 var projects = [
+  {
+    name: "Revizio",
+    url: "https://www.revizio.app/",
+    imgUrl: "img/projects/revizio.png",
+    isRocket: !1
+  },
+  {
+    name: "My213",
+    url: "https://www.my213.cz/",
+    imgUrl: "img/projects/my213.png",
+    isRocket: !0
+  },
+  {
+    name: "Horal",
+    url: "https://www.horal.app/",
+    imgUrl: "img/projects/horal.png",
+    isRocket: !1
+  },
+  {
+    name: "ONDR\xC1\u0160EK",
+    url: "https://www.ondrasek.cz/",
+    imgUrl: "img/projects/ondrasek.png",
+    isRocket: !0
+  },
+  {
+    name: "Orexin Solutions",
+    url: "https://orexin.fsik.dev/",
+    imgUrl: "img/projects/orexin.png",
+    isRocket: !1
+  },
+  {
+    name: "Formaster",
+    url: "https://formaster.vantuch.dev",
+    imgUrl: "img/projects/formaster.png",
+    isRocket: !1
+  },
   {
     name: "Steepens",
     url: "https://www.steepensband.eu/",
@@ -4183,9 +4219,9 @@ __export(work_exports, {
 var import_remix_image2 = require("remix-image"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function Work() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-    className: "flex-row flex-wrap gap-4 lg:flex-nowrap",
+    className: "grid md:grid-cols-2 lg:grid-cols-3 gap-4",
     children: projects.map((project, i) => /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
-      className: "work-card border-sky-400 w-work-card max-h-full flex-col overflow-hidden border-2",
+      className: "work-card border-sky-400 max-h-full overflow-hidden border-2",
       children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
           className: "relative",
@@ -4235,7 +4271,7 @@ function Work() {
               columnNumber: 13
             }, this),
             project.isRocket && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("a", {
-              className: "absolute bottom-0 right-0 flex h-16 w-16 items-center justify-center bg-[#1e1a49]",
+              className: "absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center bg-[#1e1a49]",
               href: "https://www.prorocketeers.com/",
               target: "_blank",
               rel: "noreferrer noopener nofollow",
@@ -4281,7 +4317,7 @@ function Work() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "3c609633", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-AX4OOOZ7.js", imports: ["/build/_shared/chunk-BFNG6SPP.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-KKISXZCC.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-IOUWRKOX.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-52L3MTT3.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-766OAARS.js", imports: ["/build/_shared/chunk-BE6DD247.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-3C609633.js" };
+var assets_manifest_default = { version: "508e6974", entry: { module: "/build/entry.client-VD5M43FA.js", imports: ["/build/_shared/chunk-GZLMHRJT.js", "/build/_shared/chunk-VFZ2QWLC.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OYGOI24G.js", imports: ["/build/_shared/chunk-ITPURT5M.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/api/image": { id: "routes/api/image", parentId: "root", path: "api/image", index: void 0, caseSensitive: void 0, module: "/build/routes/api/image-H3LVIN35.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/contact": { id: "routes/contact", parentId: "root", path: "contact", index: void 0, caseSensitive: void 0, module: "/build/routes/contact-ZDLN4GZ3.js", imports: ["/build/_shared/chunk-SUVEJI5X.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-HKAVUAJW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/skills": { id: "routes/skills", parentId: "root", path: "skills", index: void 0, caseSensitive: void 0, module: "/build/routes/skills-PPALMPAR.js", imports: ["/build/_shared/chunk-SUVEJI5X.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/work": { id: "routes/work", parentId: "root", path: "work", index: void 0, caseSensitive: void 0, module: "/build/routes/work-UQYCJEG2.js", imports: ["/build/_shared/chunk-SUVEJI5X.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-508E6974.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
