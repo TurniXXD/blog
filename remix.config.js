@@ -3,8 +3,9 @@
  */
 module.exports = {
   serverBuildTarget: "vercel",
-  server: process.env.NODE_ENV === "development" ? undefined : "./server.js",
-  ignoredRouteFiles: [".*"],
+  // server: process.env.NODE_ENV === "development" ? undefined : "./server.js",
+  ignoredRouteFiles: ["**/.*"],
+  serverModuleFormat: "cjs",
   browserNodeBuiltinsPolyfill: { modules: { fs: true, path: true } },
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",

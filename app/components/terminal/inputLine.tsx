@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import type ICommon from "@locales/common/types";
 import { fieldWithValue } from "@locales/fields";
+import { redirect } from "@remix-run/node";
+import { useNavigate } from "@remix-run/react";
 
 export default function InputLine({
   t,
@@ -16,10 +17,10 @@ export default function InputLine({
   output: string;
   setOutput: React.Dispatch<React.SetStateAction<string>>;
 }) {
-  const navigate = useNavigate();
   const [historyLookback, setHistoryLookback] = useState(0);
   const [disableInput, setDisableInput] = useState(false);
   const [command, setCommand] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => document.getElementById("terminal-input")?.focus(), []);
   useEffect(() => {
@@ -73,7 +74,7 @@ export default function InputLine({
             else
               handleOutput(
                 fieldWithValue(t.terminal.messages.cannotFind, {
-                  dir: commandProcessed[1],
+                  value: commandProcessed[1],
                 })
               );
           } else if (
@@ -91,7 +92,7 @@ export default function InputLine({
           } else
             handleOutput(
               fieldWithValue(t.terminal.messages.cannotFind, {
-                dir: commandProcessed[1],
+                value: commandProcessed[1],
               })
             );
         } else if (commandProcessed[0] === "ls") {
@@ -133,7 +134,7 @@ export default function InputLine({
           else
             handleOutput(
               fieldWithValue(t.terminal.messages.cannotFind, {
-                dir: commandProcessed[1],
+                value: commandProcessed[1],
               })
             );
         } else if (commandProcessed[0] === "help")

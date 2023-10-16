@@ -54,7 +54,7 @@ export const cz: ICommon = {
 		},
 		messages: {
 			noDir: "Nebyl zvolen adresář",
-			cannotFind: "Adresář {{dir}} nebyl nalezen",
+			cannotFind: "Adresář {{value}} nebyl nalezen",
 			noFile: "Nebyl specifikován žádný soubor",
 			isDir: "{{dir}} je adresář",
 			isFile: "{{file}} je soubor",

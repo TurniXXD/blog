@@ -7,7 +7,6 @@ import type {
 } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -39,7 +38,6 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Jakub Vantuch",
   viewport: "width=device-width,initial-scale=1",
-  dsc: "",
 });
 
 export const loader: LoaderFunction = async () => {
@@ -210,7 +208,7 @@ export default function App() {
           </div>
         </div>
         <Scripts />
-        <LiveReload />
+        {/* <LiveReload /> */}
       </body>
     </html>
   );
