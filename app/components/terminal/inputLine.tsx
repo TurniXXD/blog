@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import type ICommon from "@locales/common/types";
 import { fieldWithValue } from "@locales/fields";
-import { redirect } from "@remix-run/node";
 import { useNavigate } from "@remix-run/react";
 
 export default function InputLine({
