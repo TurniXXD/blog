@@ -4,7 +4,8 @@ export interface Projects {
 	name: string;
 	url: string;
 	imgUrl: string;
-	isRocket: boolean;
+	isRocket?: boolean;
+	isAppio?: boolean;
 }
 
 export interface Skills {

@@ -30,7 +30,7 @@ export default function Work() {
                 </div>
               </div>
             </a>
-            {project.isRocket && (
+            {project?.isRocket && (
               <a
                 className="absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center bg-[#1e1a49]"
                 href="https://www.prorocketeers.com/"
@@ -40,6 +40,21 @@ export default function Work() {
                 <Image
                   loaderUrl="/api/image"
                   src="img/rocket-logo.png"
+                  dprVariants={[1, 3]}
+                  className="h-10 w-10"
+                />
+              </a>
+            )}
+            {project?.isAppio && (
+              <a
+                className="absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center bg-[#ffffff]"
+                href="https://www.appio.dev/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+              >
+                <Image
+                  loaderUrl="/api/image"
+                  src="img/appio-logo.png"
                   dprVariants={[1, 3]}
                   className="h-10 w-10"
                 />
